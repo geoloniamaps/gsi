@@ -1,9 +1,9 @@
-# Default style for Geolonia Map
+# Default style with building layer from GSI Japan for Geolonia Map
 
 This is a Mapbox GL JS based style for [Geolonia](https://geolonia.com/).
 
-* [DEMO](https://geolonia.github.io/preview/#geolonia/basic)
-* [DEMO on editor](https://editor.geolonia.com/?style=https://raw.githubusercontent.com/geolonia/basic/master/style.json)
+* [DEMO](https://geolonia.github.io/preview/#geolonia/basic-gsij)
+* [DEMO on editor](https://editor.geolonia.com/?style=https://raw.githubusercontent.com/geolonia/basic-gsij/master/style.json)
 
 ## Development
 

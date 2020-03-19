@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Geolonia Basic",
+  "name": "Geolonia Basic with buildings from GSI Japan",
   "sources": {
     "gsi-japan": {
       "type": "vector",
@@ -4075,5 +4075,5 @@
       }
     }
   ],
-  "id": "geolonia-basic"
+  "id": "geolonia-basic-gsij"
 }
