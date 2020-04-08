@@ -476,8 +476,8 @@
     {
       "id": "water",
       "type": "fill",
-      "source": "geolonia",
-      "source-layer": "water",
+      "source": "gsi-japan",
+      "source-layer": "waterarea",
       "layout": {
         "visibility": "visible"
       },
@@ -707,27 +707,36 @@
     {
       "id": "tunnel-trunk-primary-casing",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
       "filter": [
         "all",
         [
           "==",
-          "brunnel",
-          "tunnel"
+          "ftCode",
+          2704
         ],
         [
-          "in",
-          "class",
-          "primary",
-          "trunk"
+          "==",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
         ]
       ],
       "layout": {
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#e9ac77",
+        "line-color": "rgba(222, 222, 222, 1)",
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -748,7 +757,11 @@
               22
             ]
           ]
-        }
+        },
+        "line-dasharray": [
+          0.5,
+          0.3
+        ]
       }
     },
     {
@@ -981,27 +994,36 @@
     {
       "id": "tunnel-trunk-primary",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
       "filter": [
         "all",
         [
           "==",
-          "brunnel",
-          "tunnel"
+          "ftCode",
+          2704
         ],
         [
-          "in",
-          "class",
-          "primary",
-          "trunk"
+          "==",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
         ]
       ],
       "layout": {
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#fff4c6",
+        "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -1799,55 +1821,6 @@
       }
     },
     {
-      "id": "highway-path",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "all",
-          [
-            "!in",
-            "brunnel",
-            "bridge",
-            "tunnel"
-          ],
-          [
-            "==",
-            "class",
-            "path"
-          ]
-        ]
-      ],
-      "paint": {
-        "line-color": "#dddddd",
-        "line-dasharray": [
-          1.5,
-          0.75
-        ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              15,
-              1.2
-            ],
-            [
-              20,
-              4
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "highway-motorway-link",
       "type": "line",
       "source": "geolonia",
@@ -2394,20 +2367,29 @@
     {
       "id": "bridge-trunk-primary-casing",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
       "filter": [
         "all",
         [
           "==",
-          "brunnel",
-          "bridge"
+          "ftCode",
+          2703
         ],
         [
-          "in",
-          "class",
-          "primary",
-          "trunk"
+          "==",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
         ]
       ],
       "layout": {
@@ -2432,7 +2414,7 @@
             ],
             [
               20,
-              26
+              22
             ]
           ]
         }
@@ -2715,20 +2697,29 @@
     {
       "id": "bridge-trunk-primary",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
       "filter": [
         "all",
         [
           "==",
-          "brunnel",
-          "bridge"
+          "ftCode",
+          2703
         ],
         [
-          "in",
-          "class",
-          "primary",
-          "trunk"
+          "==",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
         ]
       ],
       "layout": {
