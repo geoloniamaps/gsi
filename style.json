@@ -1333,23 +1333,258 @@
       }
     },
     {
-      "id": "highway-motorway-link-casing",
+      "id": "highway-trunk-casing",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 12,
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 5,
       "filter": [
         "all",
         [
-          "!in",
-          "brunnel",
-          "bridge",
-          "tunnel"
+          "==",
+          "ftCode",
+          2701
         ],
         [
           "==",
-          "class",
-          "motorway_link"
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(222, 222, 222, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0.6
+            ],
+            [
+              7,
+              1.5
+            ],
+            [
+              20,
+              22
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-primary-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 5,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2701
+        ],
+        [
+          "==",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(222, 222, 222, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        },
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0.6
+            ],
+            [
+              9,
+              1.5
+            ],
+            [
+              20,
+              22
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-secondary-tertiary-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2701
+        ],
+        [
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "any",
+          [
+            "==",
+            "rnkWidth",
+            0
+          ],
+          [
+            ">=",
+            "rnkWidth",
+            5
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(222, 222, 222, 1)",
+        "line-opacity": 1,
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              8,
+              1.5
+            ],
+            [
+              20,
+              7
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-minor-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2701
+        ],
+        [
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "<=",
+          "rnkWidth",
+          2
+        ],
+        [
+          ">=",
+          "rnkWidth",
+          1
         ]
       ],
       "layout": {
@@ -1357,18 +1592,29 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#e9ac77",
-        "line-opacity": 1,
+        "line-color": "rgba(222, 222, 222, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              12.5,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
             [
               12,
-              1
+              0.5
             ],
             [
               13,
-              3
+              1
             ],
             [
               14,
@@ -1437,32 +1683,23 @@
       }
     },
     {
-      "id": "highway-minor-casing",
+      "id": "highway-motorway-link-casing",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 13,
+      "minzoom": 12,
       "filter": [
         "all",
         [
-          "==",
-          "$type",
-          "LineString"
+          "!in",
+          "brunnel",
+          "bridge",
+          "tunnel"
         ],
         [
-          "all",
-          [
-            "!=",
-            "brunnel",
-            "tunnel"
-          ],
-          [
-            "in",
-            "class",
-            "minor",
-            "service",
-            "track"
-          ]
+          "==",
+          "class",
+          "motorway_link"
         ]
       ],
       "layout": {
@@ -1470,29 +1707,18 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              12,
-              0
-            ],
-            [
-              12.5,
-              1
-            ]
-          ]
-        },
+        "line-color": "#e9ac77",
+        "line-opacity": 1,
         "line-width": {
           "base": 1.2,
           "stops": [
             [
               12,
-              0.5
+              1
             ],
             [
               13,
-              1
+              3
             ],
             [
               14,
@@ -1501,173 +1727,6 @@
             [
               20,
               15
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-secondary-tertiary-casing",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "filter": [
-        "all",
-        [
-          "!in",
-          "brunnel",
-          "bridge",
-          "tunnel"
-        ],
-        [
-          "in",
-          "class",
-          "secondary",
-          "tertiary"
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": 1,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8,
-              1.5
-            ],
-            [
-              20,
-              17
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-primary-casing",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "!in",
-          "brunnel",
-          "bridge",
-          "tunnel"
-        ],
-        [
-          "in",
-          "class",
-          "primary"
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              7,
-              0
-            ],
-            [
-              8,
-              1
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              7,
-              0
-            ],
-            [
-              8,
-              0.6
-            ],
-            [
-              9,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-trunk-casing",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "!in",
-          "brunnel",
-          "bridge",
-          "tunnel"
-        ],
-        [
-          "in",
-          "class",
-          "trunk"
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              5,
-              0
-            ],
-            [
-              6,
-              1
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              5,
-              0
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              22
             ]
           ]
         }
@@ -1893,30 +1952,45 @@
     {
       "id": "highway-minor",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 13,
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 14,
       "filter": [
         "all",
         [
           "==",
-          "$type",
-          "LineString"
+          "ftCode",
+          2701
         ],
         [
-          "all",
-          [
-            "!=",
-            "brunnel",
-            "tunnel"
-          ],
-          [
-            "in",
-            "class",
-            "minor",
-            "service",
-            "track"
-          ]
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "<=",
+          "rnkWidth",
+          2
+        ],
+        [
+          ">=",
+          "rnkWidth",
+          1
         ]
       ],
       "layout": {
@@ -1948,21 +2022,47 @@
     {
       "id": "highway-secondary-tertiary",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
       "filter": [
         "all",
         [
-          "!in",
-          "brunnel",
-          "bridge",
-          "tunnel"
+          "==",
+          "ftCode",
+          2701
         ],
         [
-          "in",
-          "class",
-          "secondary",
-          "tertiary"
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "any",
+          [
+            "==",
+            "rnkWidth",
+            0
+          ],
+          [
+            ">=",
+            "rnkWidth",
+            5
+          ]
         ]
       ],
       "layout": {
@@ -1985,7 +2085,7 @@
             ],
             [
               20,
-              13
+              5
             ]
           ]
         }
@@ -1994,28 +2094,29 @@
     {
       "id": "highway-primary",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
       "filter": [
         "all",
         [
           "==",
-          "$type",
-          "LineString"
+          "ftCode",
+          2701
         ],
         [
-          "all",
-          [
-            "!in",
-            "brunnel",
-            "bridge",
-            "tunnel"
-          ],
-          [
-            "in",
-            "class",
-            "primary"
-          ]
+          "==",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
         ]
       ],
       "layout": {
@@ -2047,28 +2148,30 @@
     {
       "id": "highway-trunk",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 5,
       "filter": [
         "all",
         [
           "==",
-          "$type",
-          "LineString"
+          "ftCode",
+          2701
         ],
         [
-          "all",
-          [
-            "!in",
-            "brunnel",
-            "bridge",
-            "tunnel"
-          ],
-          [
-            "in",
-            "class",
-            "trunk"
-          ]
+          "==",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          2
         ]
       ],
       "layout": {
