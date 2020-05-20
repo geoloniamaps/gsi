@@ -9,7 +9,7 @@
         "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
       ],
       "attribution": "<a href=\"https://www.gsi.go.jp/\">© GSI</a>",
-      "minzoom": 8,
+      "minzoom": 4,
       "maxzoom": 16
     },
     "geolonia": {
@@ -693,135 +693,14 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "filter": [
-        "all",
-        [
-          "==",
-          "ftCode",
-          2701
-        ]
-      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#000000",
+        "line-color": "#FF0000",
         "line-width": 1
-      }
-    },
-    {
-      "id": "highway-primary-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 11,
-      "filter": [
-        "all",
-        [
-          "==",
-          "ftCode",
-          2701
-        ],
-        [
-          "!=",
-          "motorway",
-          1
-        ],
-        [
-          "==",
-          "rnkWidth",
-          4
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#CCCCCC",
-        "line-width": {
-          "stops": [
-            [
-              11,
-              0.1
-            ],
-            [
-              14,
-              4
-            ],
-            [
-              17,
-              20
-            ],
-            [
-              20,
-              202
-            ],
-            [
-              24,
-              1202
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-primary",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "filter": [
-        "all",
-        [
-          "==",
-          "ftCode",
-          2701
-        ],
-        [
-          "!=",
-          "motorway",
-          1
-        ],
-        [
-          "==",
-          "rnkWidth",
-          4
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#FFFFFF",
-        "line-width": {
-          "stops": [
-            [
-              11,
-              0.1
-            ],
-            [
-              14,
-              2
-            ],
-            [
-              17,
-              18
-            ],
-            [
-              20,
-              200
-            ],
-            [
-              24,
-              1200
-            ]
-          ]
-        }
       }
     },
     {
