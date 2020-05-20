@@ -1,6 +1,7 @@
 {
   "version": 8,
   "name": "Geolonia Basic with buildings from GSI Japan",
+  "metadata": {},
   "sources": {
     "gsi-japan": {
       "type": "vector",
@@ -110,6 +111,9 @@
         "$type",
         "Polygon"
       ],
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "fill-color": "rgba(102, 170, 68, 1)",
         "fill-opacity": {
@@ -124,9 +128,6 @@
             ]
           ]
         }
-      },
-      "layout": {
-        "visibility": "visible"
       }
     },
     {
@@ -1222,10 +1223,6 @@
       "source": "gsi-japan",
       "source-layer": "building",
       "minzoom": 15,
-      "paint": {
-        "line-color": "#eeeeee",
-        "line-width": 3
-      },
       "filter": [
         "all",
         [
@@ -1233,7 +1230,11 @@
           "$type",
           "LineString"
         ]
-      ]
+      ],
+      "paint": {
+        "line-color": "#eeeeee",
+        "line-width": 3
+      }
     },
     {
       "id": "building",
@@ -1241,14 +1242,6 @@
       "source": "gsi-japan",
       "source-layer": "building",
       "minzoom": 15,
-      "paint": {
-        "fill-color": "#f7f7f7",
-        "fill-outline-color": "transparent",
-        "fill-antialias": true
-      },
-      "layout": {
-        "visibility": "visible"
-      },
       "filter": [
         "all",
         [
@@ -1256,7 +1249,15 @@
           "$type",
           "Polygon"
         ]
-      ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#f7f7f7",
+        "fill-outline-color": "transparent",
+        "fill-antialias": true
+      }
     },
     {
       "id": "building-3d",
@@ -1264,6 +1265,9 @@
       "source": "geolonia",
       "source-layer": "building",
       "minzoom": 15,
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         "fill-extrusion-color": "#dedede",
         "fill-extrusion-height": [
@@ -1299,9 +1303,6 @@
           ]
         ],
         "fill-extrusion-opacity": 0.6
-      },
-      "layout": {
-        "visibility": "none"
       }
     },
     {
