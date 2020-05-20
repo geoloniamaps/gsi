@@ -689,19 +689,119 @@
       }
     },
     {
-      "id": "road",
+      "id": "highway-secondary-casing",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 8,
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2701
+        ],
+        [
+          "==",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          4
+        ]
+      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#000000",
-        "line-width": 1
+        "line-color": "#CCCCCC",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              17,
+              20
+            ],
+            [
+              20,
+              202
+            ],
+            [
+              24,
+              1202
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-secondary",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2701
+        ],
+        [
+          "==",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "==",
+          "rnkWidth",
+          4
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              17,
+              18
+            ],
+            [
+              20,
+              200
+            ],
+            [
+              24,
+              1200
+            ]
+          ]
+        }
       }
     },
     {
