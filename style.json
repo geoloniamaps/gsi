@@ -8,7 +8,7 @@
       "tiles": [
         "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
       ],
-      "attribution": "<a href=\"https://www.gsi.go.jp/\">GSI Japan</a>",
+      "attribution": "<a href=\"https://www.gsi.go.jp/\">© GSI</a>",
       "minzoom": 8,
       "maxzoom": 16
     },
@@ -689,7 +689,30 @@
       }
     },
     {
-      "id": "highway-secondary-casing",
+      "id": "road",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2701
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "highway-primary-casing",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
@@ -700,11 +723,6 @@
           "==",
           "ftCode",
           2701
-        ],
-        [
-          "==",
-          "rdCtg",
-          1
         ],
         [
           "!=",
@@ -731,6 +749,10 @@
               0.1
             ],
             [
+              14,
+              4
+            ],
+            [
               17,
               20
             ],
@@ -747,22 +769,16 @@
       }
     },
     {
-      "id": "highway-secondary",
+      "id": "highway-primary",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 11,
       "filter": [
         "all",
         [
           "==",
           "ftCode",
           2701
-        ],
-        [
-          "==",
-          "rdCtg",
-          1
         ],
         [
           "!=",
@@ -787,6 +803,10 @@
             [
               11,
               0.1
+            ],
+            [
+              14,
+              2
             ],
             [
               17,
@@ -1583,104 +1603,6 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "road_oneway",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "oneway",
-          1
-        ],
-        [
-          "in",
-          "class",
-          "motorway",
-          "trunk",
-          "primary",
-          "secondary",
-          "tertiary",
-          "minor",
-          "service"
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "icon-image": "oneway",
-        "symbol-spacing": 75,
-        "icon-padding": 2,
-        "icon-rotation-alignment": "map",
-        "icon-rotate": 90,
-        "icon-size": {
-          "stops": [
-            [
-              15,
-              0.5
-            ],
-            [
-              19,
-              1
-            ]
-          ]
-        }
-      },
-      "paint": {
-        "icon-opacity": 0.5
-      }
-    },
-    {
-      "id": "road_oneway_opposite",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "oneway",
-          -1
-        ],
-        [
-          "in",
-          "class",
-          "motorway",
-          "trunk",
-          "primary",
-          "secondary",
-          "tertiary",
-          "minor",
-          "service"
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "icon-image": "oneway",
-        "symbol-spacing": 75,
-        "icon-padding": 2,
-        "icon-rotation-alignment": "map",
-        "icon-rotate": -90,
-        "icon-size": {
-          "stops": [
-            [
-              15,
-              0.5
-            ],
-            [
-              19,
-              1
-            ]
-          ]
-        }
-      },
-      "paint": {
-        "icon-opacity": 0.5
       }
     },
     {
