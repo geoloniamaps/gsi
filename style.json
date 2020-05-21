@@ -693,6 +693,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
+      "minzoom": 13,
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -701,6 +702,62 @@
       "paint": {
         "line-color": "#FF0000",
         "line-width": 1
+      }
+    },
+    {
+      "id": "highway-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "maxzoom": 13,
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              2
+            ],
+            [
+              13,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "maxzoom": 13,
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              13,
+              2
+            ]
+          ]
+        }
       }
     },
     {
