@@ -735,6 +735,11 @@
           "<",
           "ftCode",
           2800
+        ],
+        [
+          "!=",
+          "motorway",
+          1
         ]
       ],
       "layout": {
@@ -759,6 +764,51 @@
       }
     },
     {
+      "id": "highway-motorway-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2700
+        ],
+        [
+          "<",
+          "ftCode",
+          2800
+        ],
+        [
+          "==",
+          "motorway",
+          1
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              3
+            ],
+            [
+              14,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "highway",
       "type": "line",
       "source": "gsi-japan",
@@ -776,6 +826,11 @@
           "<",
           "ftCode",
           2800
+        ],
+        [
+          "!=",
+          "motorway",
+          1
         ]
       ],
       "layout": {
@@ -794,6 +849,51 @@
             [
               13,
               2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-motorway",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2700
+        ],
+        [
+          "<",
+          "ftCode",
+          2800
+        ],
+        [
+          "==",
+          "motorway",
+          1
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              2
+            ],
+            [
+              14,
+              4
             ]
           ]
         }
