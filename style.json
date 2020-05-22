@@ -693,7 +693,20 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 13,
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2700
+        ],
+        [
+          "<",
+          "ftCode",
+          2800
+        ]
+      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -710,7 +723,20 @@
       "source": "gsi-japan",
       "source-layer": "road",
       "minzoom": 4,
-      "maxzoom": 13,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2700
+        ],
+        [
+          "<",
+          "ftCode",
+          2800
+        ]
+      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -738,7 +764,20 @@
       "source": "gsi-japan",
       "source-layer": "road",
       "minzoom": 4,
-      "maxzoom": 13,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2700
+        ],
+        [
+          "<",
+          "ftCode",
+          2800
+        ]
+      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
