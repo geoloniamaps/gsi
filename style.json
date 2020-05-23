@@ -704,12 +704,11 @@
       }
     },
     {
-      "id": "highway-casing",
+      "id": "highway-primary-casing",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
       "minzoom": 4,
-      "maxzoom": 14,
       "filter": [
         "any",
         [
@@ -728,6 +727,11 @@
             "!=",
             "motorway",
             1
+          ],
+          [
+            ">=",
+            "rnkWidth",
+            2
           ]
         ],
         [
@@ -755,11 +759,23 @@
           "stops": [
             [
               4,
-              2
+              4
             ],
             [
-              13,
-              3
+              15,
+              6
+            ],
+            [
+              17,
+              11
+            ],
+            [
+              20,
+              31
+            ],
+            [
+              24,
+              301
             ]
           ]
         }
@@ -823,12 +839,11 @@
       }
     },
     {
-      "id": "highway",
+      "id": "highway-primary",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
       "minzoom": 4,
-      "maxzoom": 14,
       "filter": [
         "any",
         [
@@ -847,6 +862,11 @@
             "!=",
             "motorway",
             1
+          ],
+          [
+            ">=",
+            "rnkWidth",
+            2
           ]
         ],
         [
@@ -874,11 +894,23 @@
           "stops": [
             [
               4,
-              1
+              3
             ],
             [
-              13,
-              2
+              15,
+              5
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              24,
+              300
             ]
           ]
         }
