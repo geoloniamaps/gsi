@@ -808,6 +808,11 @@
           2800
         ],
         [
+          "!=",
+          "ftCode",
+          2704
+        ],
+        [
           "==",
           "motorway",
           1
@@ -844,6 +849,62 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "highway-motorway-tunnel-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2704
+        ],
+        [
+          "==",
+          "motorway",
+          1
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#666666",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              4
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              17,
+              14
+            ],
+            [
+              20,
+              41
+            ],
+            [
+              24,
+              401
+            ]
+          ]
+        },
+        "line-dasharray": [
+          0.5,
+          1.5
+        ]
       }
     },
     {
@@ -951,6 +1012,11 @@
           2800
         ],
         [
+          "!=",
+          "ftCode",
+          2704
+        ],
+        [
           "==",
           "motorway",
           1
@@ -963,6 +1029,58 @@
       },
       "paint": {
         "line-color": "#FFFFFF",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              3
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              17,
+              12
+            ],
+            [
+              20,
+              40
+            ],
+            [
+              24,
+              400
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-motorway-tunnel",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2704
+        ],
+        [
+          "==",
+          "motorway",
+          1
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#EEEEEE",
         "line-width": {
           "stops": [
             [
