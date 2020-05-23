@@ -693,20 +693,6 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          ">=",
-          "ftCode",
-          2700
-        ],
-        [
-          "<",
-          "ftCode",
-          2800
-        ]
-      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -725,21 +711,37 @@
       "minzoom": 4,
       "maxzoom": 14,
       "filter": [
-        "all",
+        "any",
         [
-          ">=",
-          "ftCode",
-          2700
+          "all",
+          [
+            ">=",
+            "ftCode",
+            2700
+          ],
+          [
+            "<",
+            "ftCode",
+            2800
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ]
         ],
         [
-          "<",
-          "ftCode",
-          2800
-        ],
-        [
-          "!=",
-          "motorway",
-          1
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ]
         ]
       ],
       "layout": {
@@ -798,19 +800,23 @@
           "stops": [
             [
               4,
-              5
+              4
             ],
             [
               15,
-              7
+              6
             ],
             [
               17,
-              17
+              14
             ],
             [
               20,
-              42
+              41
+            ],
+            [
+              24,
+              401
             ]
           ]
         }
@@ -824,21 +830,37 @@
       "minzoom": 4,
       "maxzoom": 14,
       "filter": [
-        "all",
+        "any",
         [
-          ">=",
-          "ftCode",
-          2700
+          "all",
+          [
+            ">=",
+            "ftCode",
+            2700
+          ],
+          [
+            "<",
+            "ftCode",
+            2800
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ]
         ],
         [
-          "<",
-          "ftCode",
-          2800
-        ],
-        [
-          "!=",
-          "motorway",
-          1
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ]
         ]
       ],
       "layout": {
@@ -905,11 +927,15 @@
             ],
             [
               17,
-              15
+              12
             ],
             [
               20,
               40
+            ],
+            [
+              24,
+              400
             ]
           ]
         }
