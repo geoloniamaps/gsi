@@ -857,6 +857,85 @@
       }
     },
     {
+      "id": "railway-base",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "filter": [
+        "all"
+      ],
+      "paint": {
+        "line-color": "#FF0000",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "railway",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 6,
+      "maxzoom": 10,
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              6,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-hatching",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 6,
+      "maxzoom": 10,
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-dasharray": [
+          3,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              6,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              18,
+              3
+            ],
+            [
+              22,
+              19
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "highway-secondary-casing",
       "type": "line",
       "source": "gsi-japan",
@@ -1301,87 +1380,6 @@
         },
         "line-blur": 0,
         "line-translate-anchor": "map"
-      }
-    },
-    {
-      "id": "railway-base",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "filter": [
-        "all"
-      ],
-      "paint": {
-        "line-color": "#FF0000",
-        "line-width": 2
-      }
-    },
-    {
-      "id": "railway",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "filter": [
-        "all"
-      ],
-      "paint": {
-        "line-color": "#999999",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              3
-            ],
-            [
-              10,
-              3
-            ],
-            [
-              18,
-              4
-            ],
-            [
-              22,
-              20
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "railway-hatching",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "filter": [
-        "all"
-      ],
-      "paint": {
-        "line-color": "#ffffff",
-        "line-dasharray": [
-          6,
-          4
-        ],
-        "line-width": {
-          "stops": [
-            [
-              4,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              18,
-              2
-            ],
-            [
-              22,
-              18
-            ]
-          ]
-        }
       }
     },
     {
