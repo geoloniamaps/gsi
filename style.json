@@ -633,6 +633,19 @@
       }
     },
     {
+      "id": "road-base",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "filter": [
+        "all"
+      ],
+      "paint": {
+        "line-color": "#FF0000",
+        "line-width": 1
+      }
+    },
+    {
       "id": "road-outline",
       "type": "line",
       "source": "gsi-japan",
@@ -865,7 +878,7 @@
         "all"
       ],
       "paint": {
-        "line-color": "#FF0000",
+        "line-color": "#FF00FF",
         "line-width": 1
       }
     },
@@ -944,14 +957,9 @@
       "filter": [
         "all",
         [
-          ">=",
+          "==",
           "ftCode",
-          2700
-        ],
-        [
-          "<",
-          "ftCode",
-          2800
+          2701
         ],
         [
           "!=",
@@ -1017,14 +1025,9 @@
       "filter": [
         "all",
         [
-          ">=",
+          "==",
           "ftCode",
-          2700
-        ],
-        [
-          "<",
-          "ftCode",
-          2800
+          2701
         ],
         [
           "!=",
@@ -1305,6 +1308,16 @@
             "<",
             "ftCode",
             2800
+          ],
+          [
+            "!=",
+            "ftCode",
+            2702
+          ],
+          [
+            "!=",
+            "ftCode",
+            2703
           ],
           [
             "!=",
@@ -1644,11 +1657,6 @@
             [
               "==",
               "ftCode",
-              2701
-            ],
-            [
-              "==",
-              "ftCode",
               2702
             ],
             [
@@ -1745,19 +1753,17 @@
         [
           "all",
           [
-            ">=",
-            "ftCode",
-            2700
-          ],
-          [
-            "<",
-            "ftCode",
-            2800
-          ],
-          [
-            "!=",
-            "ftCode",
-            2704
+            "any",
+            [
+              "==",
+              "ftCode",
+              2702
+            ],
+            [
+              "==",
+              "ftCode",
+              2703
+            ]
           ],
           [
             "any",
