@@ -1306,28 +1306,22 @@
     {
       "id": "railway",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "railway",
       "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "rail"
-        ],
-        [
-          "!in",
-          "brunnel",
-          "tunnel"
-        ]
+        "all"
       ],
       "paint": {
         "line-color": "#999999",
         "line-width": {
           "stops": [
             [
+              4,
+              3
+            ],
+            [
               10,
-              0.8
+              3
             ],
             [
               18,
@@ -1344,20 +1338,10 @@
     {
       "id": "railway-hatching",
       "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
+      "source": "gsi-japan",
+      "source-layer": "railway",
       "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "rail"
-        ],
-        [
-          "!in",
-          "brunnel",
-          "tunnel"
-        ]
+        "all"
       ],
       "paint": {
         "line-color": "#ffffff",
@@ -1368,8 +1352,12 @@
         "line-width": {
           "stops": [
             [
+              4,
+              1
+            ],
+            [
               10,
-              0.5
+              1
             ],
             [
               18,
