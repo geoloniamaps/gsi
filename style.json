@@ -637,6 +637,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -659,6 +660,8 @@
         "line-color": "#EEEEEE",
         "line-width": 3,
         "line-dasharray": [
+          3,
+          2,
           0.5,
           2
         ]
@@ -680,6 +683,11 @@
           "<",
           "ftCode",
           2800
+        ],
+        [
+          "!=",
+          "ftCode",
+          2704
         ]
       ],
       "layout": {
@@ -830,7 +838,7 @@
             ],
             [
               15,
-              4
+              2
             ],
             [
               17,
@@ -1095,7 +1103,7 @@
             ],
             [
               15,
-              4
+              2
             ],
             [
               17,
@@ -1265,9 +1273,9 @@
         ]
       ],
       "layout": {
-        "line-cap": "butt",
+        "line-cap": "round",
         "visibility": "visible",
-        "line-join": "bevel"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#7FCBB7",
