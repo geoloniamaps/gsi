@@ -164,62 +164,6 @@
       }
     },
     {
-      "id": "landuse-cemetery",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landuse",
-      "filter": [
-        "==",
-        "class",
-        "cemetery"
-      ],
-      "paint": {
-        "fill-color": "#e0e4dd"
-      }
-    },
-    {
-      "id": "landuse-hospital",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landuse",
-      "filter": [
-        "==",
-        "class",
-        "hospital"
-      ],
-      "paint": {
-        "fill-color": "#fde"
-      }
-    },
-    {
-      "id": "landuse-school",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landuse",
-      "filter": [
-        "==",
-        "class",
-        "school"
-      ],
-      "paint": {
-        "fill-color": "#f0e8f8"
-      }
-    },
-    {
-      "id": "landuse-railway",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landuse",
-      "filter": [
-        "==",
-        "class",
-        "railway"
-      ],
-      "paint": {
-        "fill-color": "hsla(30, 19%, 90%, 0.4)"
-      }
-    },
-    {
       "id": "landcover-wood",
       "type": "fill",
       "source": "geolonia",
