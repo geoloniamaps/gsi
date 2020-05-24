@@ -633,6 +633,38 @@
       }
     },
     {
+      "id": "road-outline",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2200
+        ],
+        [
+          "<",
+          "ftCode",
+          2300
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#EEEEEE",
+        "line-width": 3,
+        "line-dasharray": [
+          0.5,
+          2
+        ]
+      }
+    },
+    {
       "id": "road",
       "type": "line",
       "source": "gsi-japan",
@@ -976,6 +1008,11 @@
             "!=",
             "rnkWidth",
             0
+          ],
+          [
+            "!=",
+            "rnkWidth",
+            4
           ],
           [
             "any",
