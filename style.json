@@ -1284,8 +1284,9 @@
         ]
       ],
       "layout": {
-        "line-cap": "round",
-        "visibility": "visible"
+        "line-cap": "butt",
+        "visibility": "visible",
+        "line-join": "bevel"
       },
       "paint": {
         "line-color": "#7FCBB7",
@@ -1308,7 +1309,9 @@
               40
             ]
           ]
-        }
+        },
+        "line-blur": 0,
+        "line-translate-anchor": "map"
       }
     },
     {
