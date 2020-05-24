@@ -9,7 +9,7 @@
         "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
       ],
       "attribution": "<a href=\"https://www.gsi.go.jp/\">© GSI</a>",
-      "minzoom": 4,
+      "minzoom": 6,
       "maxzoom": 16
     },
     "geolonia": {
