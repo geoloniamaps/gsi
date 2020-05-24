@@ -717,6 +717,162 @@
       }
     },
     {
+      "id": "highway-motorway-tunnel",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          2704
+        ],
+        [
+          "any",
+          [
+            "==",
+            "motorway",
+            1
+          ],
+          [
+            "==",
+            "rdCtg",
+            3
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#B2DFD3",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              17,
+              6
+            ],
+            [
+              24,
+              30
+            ]
+          ]
+        },
+        "line-dasharray": [
+          2,
+          0.5
+        ]
+      }
+    },
+    {
+      "id": "highway-primary-tunnel",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "==",
+            "ftCode",
+            2704
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
+            "any",
+            [
+              "==",
+              "rdCtg",
+              0
+            ],
+            [
+              "==",
+              "rdCtg",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              2
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FEE2BF",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              17,
+              6
+            ],
+            [
+              24,
+              30
+            ]
+          ]
+        },
+        "line-dasharray": [
+          2,
+          0.5
+        ]
+      }
+    },
+    {
       "id": "highway-secondary-casing",
       "type": "line",
       "source": "gsi-japan",
@@ -740,27 +896,24 @@
           1
         ],
         [
-          "any",
-          [
-            ">=",
-            "rnkWidth",
-            1
-          ],
-          [
-            "==",
-            "rdCtg",
-            2
-          ],
-          [
-            "==",
-            "rdCtg",
-            5
-          ],
-          [
-            "==",
-            "rdCtg",
-            6
-          ]
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          2
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
         ]
       ],
       "layout": {
@@ -774,7 +927,7 @@
           "stops": [
             [
               4,
-              1.5
+              1
             ],
             [
               15,
@@ -785,12 +938,8 @@
               4
             ],
             [
-              20,
-              16
-            ],
-            [
               24,
-              151
+              20
             ]
           ]
         }
@@ -820,27 +969,24 @@
           1
         ],
         [
-          "any",
-          [
-            ">=",
-            "rnkWidth",
-            1
-          ],
-          [
-            "==",
-            "rdCtg",
-            2
-          ],
-          [
-            "==",
-            "rdCtg",
-            5
-          ],
-          [
-            "==",
-            "rdCtg",
-            6
-          ]
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          2
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
         ]
       ],
       "layout": {
@@ -854,23 +1000,19 @@
           "stops": [
             [
               4,
-              0.5
+              1
             ],
             [
               15,
-              2
-            ],
-            [
-              17,
               3
             ],
             [
-              20,
-              15
+              17,
+              4
             ],
             [
               24,
-              150
+              20
             ]
           ]
         }
@@ -887,19 +1029,22 @@
         [
           "all",
           [
-            ">=",
-            "ftCode",
-            2700
-          ],
-          [
-            "<",
-            "ftCode",
-            2800
-          ],
-          [
-            "!=",
-            "ftCode",
-            2704
+            "any",
+            [
+              "==",
+              "ftCode",
+              2701
+            ],
+            [
+              "==",
+              "ftCode",
+              2702
+            ],
+            [
+              "==",
+              "ftCode",
+              2703
+            ]
           ],
           [
             "!=",
@@ -907,16 +1052,26 @@
             1
           ],
           [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
             "any",
             [
-              ">=",
-              "rnkWidth",
-              2
+              "==",
+              "rdCtg",
+              0
             ],
             [
-              "<=",
+              "==",
               "rdCtg",
               1
+            ],
+            [
+              "==",
+              "rdCtg",
+              2
             ]
           ]
         ],
@@ -945,7 +1100,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#FC9F37",
+        "line-color": "#FDD8AE",
         "line-width": {
           "stops": [
             [
@@ -954,100 +1109,15 @@
             ],
             [
               15,
-              5
+              4
             ],
             [
               17,
-              10
-            ],
-            [
-              20,
-              30
+              6
             ],
             [
               24,
-              300
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-primary-tunnel",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            "==",
-            "ftCode",
-            2704
-          ],
-          [
-            "!=",
-            "motorway",
-            1
-          ],
-          [
-            "any",
-            [
-              ">=",
-              "rnkWidth",
-              2
-            ],
-            [
-              "<=",
-              "rdCtg",
-              1
-            ]
-          ]
-        ],
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            52700
-          ],
-          [
-            "<",
-            "ftCode",
-            52800
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#FDC57E",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              1
-            ],
-            [
-              15,
-              5
-            ],
-            [
-              17,
-              10
-            ],
-            [
-              20,
               30
-            ],
-            [
-              24,
-              300
             ]
           ]
         }
@@ -1079,9 +1149,17 @@
             2704
           ],
           [
-            "==",
-            "motorway",
-            1
+            "any",
+            [
+              "==",
+              "motorway",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              3
+            ]
           ]
         ],
         [
@@ -1092,84 +1170,27 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#2AA988",
+        "line-color": "#7FCBB7",
         "line-width": {
           "stops": [
             [
               4,
-              3
+              1
             ],
             [
               15,
-              5
+              4
             ],
             [
               17,
-              12
-            ],
-            [
-              20,
-              40
+              6
             ],
             [
               24,
-              400
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-motorway-tunnel",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        [
-          "==",
-          "ftCode",
-          2704
-        ],
-        [
-          "==",
-          "motorway",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#83CCB9",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              3
-            ],
-            [
-              15,
-              5
-            ],
-            [
-              17,
-              12
-            ],
-            [
-              20,
-              40
-            ],
-            [
-              24,
-              400
+              30
             ]
           ]
         }
