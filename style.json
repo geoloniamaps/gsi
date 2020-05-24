@@ -1107,7 +1107,435 @@
               "==",
               "ftCode",
               2701
+            ]
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
+            "any",
+            [
+              "==",
+              "rdCtg",
+              0
             ],
+            [
+              "==",
+              "rdCtg",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              2
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FDD8AE",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              2
+            ],
+            [
+              17,
+              6
+            ],
+            [
+              24,
+              30
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-high-primary",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "==",
+            "rnkWidth",
+            4
+          ],
+          [
+            "any",
+            [
+              "==",
+              "ftCode",
+              2701
+            ]
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
+            "any",
+            [
+              "==",
+              "rdCtg",
+              0
+            ],
+            [
+              "==",
+              "rdCtg",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              2
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FDD8AE",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              24,
+              40
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-motorway",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            2700
+          ],
+          [
+            "<",
+            "ftCode",
+            2800
+          ],
+          [
+            "!=",
+            "ftCode",
+            2704
+          ],
+          [
+            "any",
+            [
+              "==",
+              "motorway",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              3
+            ]
+          ]
+        ],
+        [
+          "==",
+          "ftCode",
+          52703
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "visibility": "visible",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#7FCBB7",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              24,
+              40
+            ]
+          ]
+        },
+        "line-blur": 0,
+        "line-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "highway-secondary-bridge-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "any",
+          [
+            "==",
+            "ftCode",
+            2702
+          ],
+          [
+            "==",
+            "ftCode",
+            2703
+          ]
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          2
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              3
+            ],
+            [
+              17,
+              4
+            ],
+            [
+              24,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-secondary-bridge",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "any",
+          [
+            "==",
+            "ftCode",
+            2702
+          ],
+          [
+            "==",
+            "ftCode",
+            2703
+          ]
+        ],
+        [
+          "!=",
+          "motorway",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          0
+        ],
+        [
+          "!=",
+          "rdCtg",
+          1
+        ],
+        [
+          "!=",
+          "rdCtg",
+          2
+        ],
+        [
+          "!=",
+          "rdCtg",
+          3
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              3
+            ],
+            [
+              17,
+              4
+            ],
+            [
+              24,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-primary-bridge",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "!=",
+            "rnkWidth",
+            0
+          ],
+          [
+            "!=",
+            "rnkWidth",
+            4
+          ],
+          [
+            "any",
             [
               "==",
               "ftCode",
@@ -1197,7 +1625,7 @@
       }
     },
     {
-      "id": "highway-high-primary",
+      "id": "highway-high-primary-bridge",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
@@ -1307,7 +1735,7 @@
       }
     },
     {
-      "id": "highway-motorway",
+      "id": "highway-motorway-bridge",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
