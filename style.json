@@ -633,19 +633,6 @@
       }
     },
     {
-      "id": "road-base",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "filter": [
-        "all"
-      ],
-      "paint": {
-        "line-color": "#FF0000",
-        "line-width": 1
-      }
-    },
-    {
       "id": "road-outline",
       "type": "line",
       "source": "gsi-japan",
