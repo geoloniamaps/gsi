@@ -698,7 +698,7 @@
         [
           ">=",
           "ftCode",
-          2700
+          2400
         ],
         [
           "<",
@@ -712,8 +712,8 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#FF0000",
-        "line-width": 1
+        "line-color": "#CCCCCC",
+        "line-width": 2
       }
     },
     {
@@ -1029,6 +1029,11 @@
         [
           "all",
           [
+            "!=",
+            "rnkWidth",
+            0
+          ],
+          [
             "any",
             [
               "==",
@@ -1124,6 +1129,116 @@
       }
     },
     {
+      "id": "highway-high-primary",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "==",
+            "rnkWidth",
+            4
+          ],
+          [
+            "any",
+            [
+              "==",
+              "ftCode",
+              2701
+            ],
+            [
+              "==",
+              "ftCode",
+              2702
+            ],
+            [
+              "==",
+              "ftCode",
+              2703
+            ]
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
+            "any",
+            [
+              "==",
+              "rdCtg",
+              0
+            ],
+            [
+              "==",
+              "rdCtg",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              2
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FDD8AE",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              24,
+              40
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "highway-motorway",
       "type": "line",
       "source": "gsi-japan",
@@ -1186,11 +1301,11 @@
             ],
             [
               17,
-              6
+              9
             ],
             [
               24,
-              30
+              40
             ]
           ]
         }
