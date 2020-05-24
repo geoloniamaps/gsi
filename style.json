@@ -1304,6 +1304,19 @@
       }
     },
     {
+      "id": "railway-base",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "filter": [
+        "all"
+      ],
+      "paint": {
+        "line-color": "#FF0000",
+        "line-width": 2
+      }
+    },
+    {
       "id": "railway",
       "type": "line",
       "source": "gsi-japan",
