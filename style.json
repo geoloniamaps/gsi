@@ -717,147 +717,6 @@
       }
     },
     {
-      "id": "highway-primary-tunnel-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            "==",
-            "ftCode",
-            2704
-          ],
-          [
-            "!=",
-            "motorway",
-            1
-          ],
-          [
-            "any",
-            [
-              ">=",
-              "rnkWidth",
-              2
-            ],
-            [
-              "<=",
-              "rdCtg",
-              1
-            ]
-          ]
-        ],
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            52700
-          ],
-          [
-            "<",
-            "ftCode",
-            52800
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#666666",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              2
-            ],
-            [
-              15,
-              6
-            ],
-            [
-              17,
-              11
-            ],
-            [
-              20,
-              31
-            ],
-            [
-              24,
-              301
-            ]
-          ]
-        },
-        "line-dasharray": [
-          0.1,
-          0.5
-        ]
-      }
-    },
-    {
-      "id": "highway-motorway-tunnel-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        [
-          "==",
-          "ftCode",
-          2704
-        ],
-        [
-          "==",
-          "motorway",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#666666",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              4
-            ],
-            [
-              15,
-              6
-            ],
-            [
-              17,
-              14
-            ],
-            [
-              20,
-              41
-            ],
-            [
-              24,
-              401
-            ]
-          ]
-        },
-        "line-dasharray": [
-          0.1,
-          0.5
-        ]
-      }
-    },
-    {
       "id": "highway-secondary-casing",
       "type": "line",
       "source": "gsi-japan",
@@ -932,292 +791,6 @@
             [
               24,
               151
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-primary-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            2700
-          ],
-          [
-            "<",
-            "ftCode",
-            2800
-          ],
-          [
-            "!=",
-            "ftCode",
-            2704
-          ],
-          [
-            "!=",
-            "motorway",
-            1
-          ],
-          [
-            "any",
-            [
-              ">=",
-              "rnkWidth",
-              2
-            ],
-            [
-              "<=",
-              "rdCtg",
-              1
-            ]
-          ]
-        ],
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            52700
-          ],
-          [
-            "<",
-            "ftCode",
-            52800
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#999999",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              2
-            ],
-            [
-              15,
-              6
-            ],
-            [
-              17,
-              11
-            ],
-            [
-              20,
-              31
-            ],
-            [
-              24,
-              301
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-motorway-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        [
-          ">=",
-          "ftCode",
-          2700
-        ],
-        [
-          "<",
-          "ftCode",
-          2800
-        ],
-        [
-          "!=",
-          "ftCode",
-          2704
-        ],
-        [
-          "==",
-          "motorway",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#999999",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              4
-            ],
-            [
-              15,
-              6
-            ],
-            [
-              17,
-              14
-            ],
-            [
-              20,
-              41
-            ],
-            [
-              24,
-              401
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-motorway-tunnel",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        [
-          "==",
-          "ftCode",
-          2704
-        ],
-        [
-          "==",
-          "motorway",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#EEEEEE",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              3
-            ],
-            [
-              15,
-              5
-            ],
-            [
-              17,
-              12
-            ],
-            [
-              20,
-              40
-            ],
-            [
-              24,
-              400
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "highway-primary-tunnel",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            "==",
-            "ftCode",
-            2704
-          ],
-          [
-            "!=",
-            "motorway",
-            1
-          ],
-          [
-            "any",
-            [
-              ">=",
-              "rnkWidth",
-              2
-            ],
-            [
-              "<=",
-              "rdCtg",
-              1
-            ]
-          ]
-        ],
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            52700
-          ],
-          [
-            "<",
-            "ftCode",
-            52800
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#EEEEEE",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              1
-            ],
-            [
-              15,
-              5
-            ],
-            [
-              17,
-              10
-            ],
-            [
-              20,
-              30
-            ],
-            [
-              24,
-              300
             ]
           ]
         }
@@ -1358,6 +931,11 @@
             "<",
             "ftCode",
             52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
           ]
         ]
       ],
@@ -1367,7 +945,88 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#FFFFFF",
+        "line-color": "#FC9F37",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              24,
+              300
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-primary-tunnel",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "==",
+            "ftCode",
+            2704
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "any",
+            [
+              ">=",
+              "rnkWidth",
+              2
+            ],
+            [
+              "<=",
+              "rdCtg",
+              1
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#FDC57E",
         "line-width": {
           "stops": [
             [
@@ -1401,19 +1060,79 @@
       "source-layer": "road",
       "minzoom": 4,
       "filter": [
+        "any",
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            2700
+          ],
+          [
+            "<",
+            "ftCode",
+            2800
+          ],
+          [
+            "!=",
+            "ftCode",
+            2704
+          ],
+          [
+            "==",
+            "motorway",
+            1
+          ]
+        ],
+        [
+          "==",
+          "ftCode",
+          52703
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#2AA988",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              3
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              17,
+              12
+            ],
+            [
+              20,
+              40
+            ],
+            [
+              24,
+              400
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway-motorway-tunnel",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
         "all",
         [
-          ">=",
-          "ftCode",
-          2700
-        ],
-        [
-          "<",
-          "ftCode",
-          2800
-        ],
-        [
-          "!=",
+          "==",
           "ftCode",
           2704
         ],
@@ -1429,7 +1148,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#FFFFFF",
+        "line-color": "#83CCB9",
         "line-width": {
           "stops": [
             [
@@ -1970,25 +1689,6 @@
       }
     },
     {
-      "id": "building-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "building",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ]
-      ],
-      "paint": {
-        "line-color": "#eeeeee",
-        "line-width": 3
-      }
-    },
-    {
       "id": "building",
       "type": "fill",
       "source": "gsi-japan",
@@ -2006,8 +1706,8 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#f7f7f7",
-        "fill-outline-color": "transparent",
+        "fill-color": "rgba(200, 200, 200, 0.2)",
+        "fill-outline-color": "#CCCCCC",
         "fill-antialias": true
       }
     },
