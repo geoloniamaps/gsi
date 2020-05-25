@@ -3108,50 +3108,49 @@
       }
     },
     {
-      "id": "road_shield",
+      "id": "road-name-label",
       "type": "symbol",
-      "metadata": {},
-      "source": "geolonia",
-      "source-layer": "transportation_name",
-      "minzoom": 7,
+      "source": "gsi-japan",
+      "source-layer": "transp",
+      "minzoom": 6,
       "filter": [
         "all",
         [
-          "<=",
-          "ref_length",
-          6
+          "in",
+          "ftCode",
+          2901,
+          2903,
+          2904
         ]
       ],
       "layout": {
-        "icon-image": "default_{ref_length}",
-        "icon-rotation-alignment": "viewport",
-        "symbol-placement": {
-          "base": 1,
-          "stops": [
-            [
-              10,
-              "point"
-            ],
-            [
-              11,
-              "line"
-            ]
-          ]
-        },
-        "symbol-spacing": 500,
-        "text-field": "{ref}",
+        "icon-image": "default_3",
+        "text-field": [
+          "case",
+          [
+            "has",
+            "uRNo"
+          ],
+          [
+            "get",
+            "uRNo"
+          ],
+          [
+            "has",
+            "nRNo"
+          ],
+          [
+            "get",
+            "nRNo"
+          ],
+          ""
+        ],
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-rotation-alignment": "viewport",
         "text-size": 10,
         "icon-size": 1
-      },
-      "paint": {}
+      }
     },
     {
       "id": "poi",
