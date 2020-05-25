@@ -1687,6 +1687,7 @@
       ],
       "paint": {
         "line-color": "#908150",
+        "line-opacity": 0.6,
         "line-width": {
           "stops": [
             [
