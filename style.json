@@ -701,6 +701,19 @@
       }
     },
     {
+      "id": "railway-base",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "filter": [
+        "all"
+      ],
+      "paint": {
+        "line-color": "#FF00FF",
+        "line-width": 1
+      }
+    },
+    {
       "id": "highway-motorway-tunnel",
       "type": "line",
       "source": "gsi-japan",
@@ -859,321 +872,6 @@
           2,
           0.5
         ]
-      }
-    },
-    {
-      "id": "railway-base",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "filter": [
-        "all"
-      ],
-      "paint": {
-        "line-color": "#FF00FF",
-        "line-width": 1
-      }
-    },
-    {
-      "id": "railway",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "minzoom": 6,
-      "maxzoom": 10,
-      "paint": {
-        "line-color": "#999999",
-        "line-width": {
-          "stops": [
-            [
-              6,
-              2
-            ],
-            [
-              10,
-              3
-            ],
-            [
-              18,
-              4
-            ],
-            [
-              22,
-              20
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "railway-hatching",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "minzoom": 6,
-      "maxzoom": 10,
-      "paint": {
-        "line-color": "#FFFFFF",
-        "line-dasharray": [
-          3,
-          4
-        ],
-        "line-width": {
-          "stops": [
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              2
-            ],
-            [
-              18,
-              3
-            ],
-            [
-              22,
-              19
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "railway-jr",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "in",
-          "railState",
-          0,
-          200,
-          400,
-          4,
-          5,
-          6,
-          7
-        ],
-        [
-          "any",
-          [
-            "==",
-            "rtCode10",
-            "0"
-          ],
-          [
-            "==",
-            "rtCode10",
-            "1"
-          ],
-          [
-            "!has",
-            "rtCode10"
-          ]
-        ],
-        [
-          "any",
-          [
-            "all",
-            [
-              ">=",
-              "rtCode",
-              "40201000000"
-            ],
-            [
-              "<",
-              "rtCode",
-              "40202000000"
-            ]
-          ],
-          [
-            "all",
-            [
-              ">=",
-              "rtCode1",
-              "40201000000"
-            ],
-            [
-              "<",
-              "rtCode1",
-              "40202000000"
-            ]
-          ],
-          [
-            "all",
-            [
-              ">=",
-              "rtCode",
-              "40216000000"
-            ],
-            [
-              "<",
-              "rtCode",
-              "40217000000"
-            ]
-          ],
-          [
-            "all",
-            [
-              ">=",
-              "rtCode1",
-              "40216000000"
-            ],
-            [
-              "<",
-              "rtCode1",
-              "40217000000"
-            ]
-          ]
-        ]
-      ],
-      "paint": {
-        "line-color": "#999999",
-        "line-width": {
-          "stops": [
-            [
-              6,
-              2
-            ],
-            [
-              10,
-              3
-            ],
-            [
-              18,
-              4
-            ],
-            [
-              22,
-              20
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "railway-jr-hatching",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "in",
-          "railState",
-          0,
-          200,
-          400,
-          4,
-          5,
-          6,
-          7
-        ],
-        [
-          "any",
-          [
-            "==",
-            "rtCode10",
-            "0"
-          ],
-          [
-            "==",
-            "rtCode10",
-            "1"
-          ],
-          [
-            "!has",
-            "rtCode10"
-          ]
-        ],
-        [
-          "any",
-          [
-            "all",
-            [
-              ">=",
-              "rtCode",
-              "40201000000"
-            ],
-            [
-              "<",
-              "rtCode",
-              "40202000000"
-            ]
-          ],
-          [
-            "all",
-            [
-              ">=",
-              "rtCode1",
-              "40201000000"
-            ],
-            [
-              "<",
-              "rtCode1",
-              "40202000000"
-            ]
-          ],
-          [
-            "all",
-            [
-              ">=",
-              "rtCode",
-              "40216000000"
-            ],
-            [
-              "<",
-              "rtCode",
-              "40217000000"
-            ]
-          ],
-          [
-            "all",
-            [
-              ">=",
-              "rtCode1",
-              "40216000000"
-            ],
-            [
-              "<",
-              "rtCode1",
-              "40217000000"
-            ]
-          ]
-        ]
-      ],
-      "paint": {
-        "line-color": "#FFFFFF",
-        "line-dasharray": [
-          3,
-          4
-        ],
-        "line-width": {
-          "stops": [
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              2
-            ],
-            [
-              18,
-              3
-            ],
-            [
-              22,
-              19
-            ]
-          ]
-        }
       }
     },
     {
@@ -1512,6 +1210,354 @@
             [
               24,
               40
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-tunnel",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "in",
+          "railState",
+          100,
+          200,
+          300,
+          2,
+          3
+        ]
+      ],
+      "paint": {
+        "line-color": "#908150",
+        "line-width": {
+          "stops": [
+            [
+              6,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1.5,
+          1
+        ]
+      }
+    },
+    {
+      "id": "railway",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 6,
+      "maxzoom": 10,
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              6,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-hatching",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 6,
+      "maxzoom": 10,
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-dasharray": [
+          3,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              6,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              18,
+              3
+            ],
+            [
+              22,
+              19
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-jr",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "in",
+          "railState",
+          0,
+          200,
+          400,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          "any",
+          [
+            "==",
+            "rtCode10",
+            "0"
+          ],
+          [
+            "==",
+            "rtCode10",
+            "1"
+          ],
+          [
+            "!has",
+            "rtCode10"
+          ]
+        ],
+        [
+          "any",
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40217000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40217000000"
+            ]
+          ]
+        ]
+      ],
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              6,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-jr-hatching",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "in",
+          "railState",
+          0,
+          200,
+          400,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          "any",
+          [
+            "==",
+            "rtCode10",
+            "0"
+          ],
+          [
+            "==",
+            "rtCode10",
+            "1"
+          ],
+          [
+            "!has",
+            "rtCode10"
+          ]
+        ],
+        [
+          "any",
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40217000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40217000000"
+            ]
+          ]
+        ]
+      ],
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-dasharray": [
+          3,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              6,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              18,
+              3
+            ],
+            [
+              22,
+              19
             ]
           ]
         }
@@ -1860,6 +1906,196 @@
             [
               24,
               30
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-jr-bridge",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "==",
+          "railState",
+          1
+        ],
+        [
+          "any",
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40217000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40217000000"
+            ]
+          ]
+        ]
+      ],
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              6,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-jr-bridge-hatching",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "==",
+          "railState",
+          1
+        ],
+        [
+          "any",
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40201000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40202000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode",
+              "40217000000"
+            ]
+          ],
+          [
+            "all",
+            [
+              ">=",
+              "rtCode1",
+              "40216000000"
+            ],
+            [
+              "<",
+              "rtCode1",
+              "40217000000"
+            ]
+          ]
+        ]
+      ],
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-dasharray": [
+          3,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              6,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              18,
+              3
+            ],
+            [
+              22,
+              19
             ]
           ]
         }
