@@ -8,7 +8,7 @@
       "tiles": [
         "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
       ],
-      "attribution": "<a href=\"https://www.gsi.go.jp/\">© GSI</a>",
+      "attribution": "<a href=\"https://www.gsi.go.jp/\">© GSI Japan</a>",
       "minzoom": 6,
       "maxzoom": 16
     },
