@@ -701,19 +701,6 @@
       }
     },
     {
-      "id": "railway-base",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "railway",
-      "filter": [
-        "all"
-      ],
-      "paint": {
-        "line-color": "#FF00FF",
-        "line-width": 1
-      }
-    },
-    {
       "id": "highway-motorway-tunnel",
       "type": "line",
       "source": "gsi-japan",
