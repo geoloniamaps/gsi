@@ -3066,7 +3066,7 @@
       "type": "fill-extrusion",
       "source": "gsi-japan",
       "source-layer": "building",
-      "minzoom": 15,
+      "minzoom": 16,
       "layout": {
         "visibility": "none"
       },
