@@ -3148,8 +3148,8 @@
           0
         ],
         "text-rotation-alignment": "viewport",
-        "text-size": 8,
-        "icon-size": 0.8
+        "text-size": 10,
+        "icon-size": 1
       },
       "paint": {}
     },
