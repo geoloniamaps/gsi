@@ -227,6 +227,14 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "river",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "ftCode",
+          5322
+        ]
+      ],
       "layout": {
         "line-cap": "round"
       },
@@ -2670,6 +2678,11 @@
         [
           "has",
           "name"
+        ],
+        [
+          "!=",
+          "brunnel",
+          "tunnel"
         ]
       ],
       "layout": {
@@ -2682,7 +2695,8 @@
         "text-rotation-alignment": "map",
         "symbol-placement": "line",
         "text-letter-spacing": 0.2,
-        "symbol-spacing": 350
+        "symbol-spacing": 350,
+        "visibility": "visible"
       },
       "paint": {
         "text-color": "#74aee9",
