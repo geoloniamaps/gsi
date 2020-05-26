@@ -905,7 +905,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#CCCCCC",
+        "line-color": "#EEEEEE",
         "line-width": 3
       }
     },
@@ -927,7 +927,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#F7F7F7"
+        "fill-color": "#FAFAFA"
       }
     },
     {
