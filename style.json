@@ -601,7 +601,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#CCCCCC",
+        "line-color": "#FEE2BF",
         "line-width": {
           "stops": [
             [
@@ -614,7 +614,7 @@
             ],
             [
               24,
-              15
+              10
             ]
           ]
         }
@@ -1638,7 +1638,7 @@
       }
     },
     {
-      "id": "railway-sedondary",
+      "id": "railway-secondary",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "railway",
@@ -2255,7 +2255,7 @@
       }
     },
     {
-      "id": "railway-sedondary-bridge",
+      "id": "railway-secondary-bridge",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "railway",
