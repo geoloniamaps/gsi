@@ -3199,7 +3199,7 @@
       "type": "symbol",
       "source": "gsi-japan",
       "source-layer": "label",
-      "minzoom": 8,
+      "minzoom": 9,
       "maxzoom": 15,
       "filter": [
         "all",
@@ -3496,6 +3496,44 @@
       }
     },
     {
+      "id": "label-gsi",
+      "type": "symbol",
+      "source": "gsi-japan",
+      "source-layer": "label",
+      "minzoom": 8,
+      "maxzoom": 15,
+      "filter": [
+        "all",
+        [
+          "in",
+          "ftCode",
+          100,
+          50100
+        ],
+        [
+          "in",
+          "annoCtg",
+          314,
+          315
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-keep-upright": true,
+        "text-field": "{knj}",
+        "text-size": 14,
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
       "id": "airport-label-major",
       "type": "symbol",
       "source": "geolonia",
@@ -3656,7 +3694,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
+        "text-color": "#333",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
