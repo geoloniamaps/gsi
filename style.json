@@ -898,6 +898,60 @@
       }
     },
     {
+      "id": "structurea-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "structurea",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#DEDEDE",
+        "line-width": {
+          "stops": [
+            [
+              15,
+              1
+            ],
+            [
+              18,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "structurea",
+      "type": "fill",
+      "source": "gsi-japan",
+      "source-layer": "structurea",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#FAFAFA"
+      }
+    },
+    {
       "id": "highway-motorway-tunnel",
       "type": "line",
       "source": "gsi-japan",
@@ -2631,74 +2685,6 @@
       }
     },
     {
-      "id": "cablecar",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 13,
-      "filter": [
-        "==",
-        "class",
-        "cable_car"
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round"
-      },
-      "paint": {
-        "line-color": "hsl(0, 0%, 70%)",
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [
-              11,
-              1
-            ],
-            [
-              19,
-              2.5
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "cablecar-dash",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 13,
-      "filter": [
-        "==",
-        "class",
-        "cable_car"
-      ],
-      "layout": {
-        "visibility": "visible",
-        "line-cap": "round"
-      },
-      "paint": {
-        "line-color": "hsl(0, 0%, 70%)",
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [
-              11,
-              3
-            ],
-            [
-              19,
-              5.5
-            ]
-          ]
-        },
-        "line-dasharray": [
-          2,
-          3
-        ]
-      }
-    },
-    {
       "id": "boundary",
       "type": "line",
       "source": "gsi-japan",
@@ -2881,29 +2867,6 @@
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "structurea",
-      "type": "fill",
-      "source": "gsi-japan",
-      "source-layer": "structurea",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(238, 238, 238, 0.4)",
-        "fill-outline-color": "#CCCCCC",
-        "fill-antialias": true
       }
     },
     {
