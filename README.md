@@ -1,4 +1,4 @@
-# Default style with building layer from GSI Japan for Geolonia Map
+# A style based on GSI Japan and OpenStreetMap for Geolonia Map
 
 This is a Mapbox GL JS based style for [Geolonia](https://geolonia.com/).
 
