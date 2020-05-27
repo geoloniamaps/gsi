@@ -861,8 +861,19 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#EEEEEE",
-        "line-width": 3
+        "line-color": "#DEDEDE",
+        "line-width": {
+          "stops": [
+            [
+              15,
+              1
+            ],
+            [
+              18,
+              3
+            ]
+          ]
+        }
       }
     },
     {
