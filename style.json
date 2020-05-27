@@ -2963,7 +2963,6 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-anchor": "top",
         "icon-image": [
           "coalesce",
           [
@@ -2983,12 +2982,17 @@
           ]
         ],
         "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
         "text-size": 12,
-        "text-max-width": 9
+        "text-max-width": 9,
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "text-radial-offset": 0.7,
+        "text-justify": "center",
+        "text-anchor": "center"
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -3025,7 +3029,6 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-anchor": "top",
         "icon-image": [
           "coalesce",
           [
@@ -3045,15 +3048,20 @@
           ]
         ],
         "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
         "text-size": 12,
-        "text-max-width": 9
+        "text-max-width": 9,
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "text-radial-offset": 0.7,
+        "text-justify": "center",
+        "text-anchor": "center"
       },
       "paint": {
-        "text-halo-blur": 0.5,
+        "text-halo-blur": 1,
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "#ffffff"
