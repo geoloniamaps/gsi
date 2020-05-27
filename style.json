@@ -3504,13 +3504,20 @@
         ]
       ],
       "layout": {
+        "text-padding": 2,
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-keep-upright": true,
+        "icon-image": "mountain-11",
         "text-field": "{knj}",
         "text-size": 14,
-        "text-allow-overlap": false
+        "text-max-width": 9,
+        "text-anchor": "top",
+        "text-justify": "center",
+        "text-offset": [
+          0,
+          0.4
+        ]
       },
       "paint": {
         "text-halo-blur": 0.5,
