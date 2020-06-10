@@ -2876,35 +2876,27 @@
       "source-layer": "building",
       "minzoom": 16,
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "fill-extrusion-color": "#EEEEEE",
         "fill-extrusion-height": [
-          "interpolate",
+          "match",
           [
-            "linear"
+            "get",
+            "ftCode"
           ],
-          [
-            "zoom"
-          ],
+          3101,
+          3,
+          3102,
           15,
-          0,
-          15.05,
+          3013,
+          50,
+          3111,
+          3,
+          3112,
+          10,
           5
-        ],
-        "fill-extrusion-base": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          15,
-          0,
-          15.05,
-          1
         ],
         "fill-extrusion-opacity": 0.4
       }
