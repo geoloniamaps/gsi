@@ -2872,6 +2872,9 @@
     {
       "id": "building-3d",
       "type": "fill-extrusion",
+      "metadata": {
+        "visible-on-3d": true
+      },
       "source": "gsi-japan",
       "source-layer": "building",
       "minzoom": 16,
