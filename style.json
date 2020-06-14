@@ -1,8 +1,12 @@
 {
   "version": 8,
-  "name": "Geolonia Basic with buildings from GSI Japan",
+  "name": "GSI Japan + OpenStreetMap based style for Geolonia",
   "metadata": {},
   "sources": {
+    "natural-earth": {
+      "type": "vector",
+      "url": "https://cdn.geolonia.com/tiles/tiles.json"
+    },
     "gsi-japan": {
       "type": "vector",
       "tiles": [
@@ -14,6 +18,7 @@
     },
     "geolonia": {
       "type": "vector",
+      "minzoom": 8,
       "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
     }
   },
@@ -25,36 +30,6 @@
       "type": "background",
       "paint": {
         "background-color": "rgba(254, 254, 254, 1)"
-      }
-    },
-    {
-      "id": "landcover-glacier",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "subclass",
-        "glacier"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#fff",
-        "fill-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.9
-            ],
-            [
-              10,
-              0.3
-            ]
-          ]
-        }
       }
     },
     {
@@ -214,7 +189,7 @@
     {
       "id": "water-offset",
       "type": "fill",
-      "source": "geolonia",
+      "source": "natural-earth",
       "source-layer": "water",
       "maxzoom": 8,
       "filter": [
@@ -239,36 +214,6 @@
       },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
-      }
-    },
-    {
-      "id": "landcover-ice-shelf",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "subclass",
-        "ice_shelf"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#fff",
-        "fill-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.9
-            ],
-            [
-              10,
-              0.3
-            ]
-          ]
-        }
       }
     },
     {
@@ -2682,6 +2627,23 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "boundary-natural-earth",
+      "type": "line",
+      "source": "natural-earth",
+      "source-layer": "admin",
+      "maxzoom": 6,
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#999999",
+        "line-width": 1,
+        "line-blur": 0.4
       }
     },
     {
