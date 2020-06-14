@@ -5,16 +5,11 @@
   "sources": {
     "natural-earth": {
       "type": "vector",
-      "url": "https://cdn.geolonia.com/tiles/tiles.json"
+      "url": "https://cdn.geolonia.com/tiles/natural-earth.json"
     },
-    "gsi-japan": {
+    "natural-earth": {
       "type": "vector",
-      "tiles": [
-        "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
-      ],
-      "attribution": "<a href=\"https://www.gsi.go.jp/\">© GSI Japan</a>",
-      "minzoom": 6,
-      "maxzoom": 16
+      "url": "https://cdn.geolonia.com/tiles/gsi.json"
     },
     "geolonia": {
       "type": "vector",
