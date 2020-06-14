@@ -7,7 +7,7 @@
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/natural-earth.json"
     },
-    "natural-earth": {
+    "gsi-japan": {
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/gsi.json"
     },
