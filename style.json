@@ -2630,6 +2630,15 @@
       "source": "natural-earth",
       "source-layer": "admin",
       "maxzoom": 6,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "class",
+          "dispute"
+        ]
+      ],
+      "layo
       "layout": {
         "line-cap": "round",
         "line-join": "round",
