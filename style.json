@@ -13,8 +13,9 @@
     },
     "geolonia": {
       "type": "vector",
-      "minzoom": 8,
-      "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
+      "minzoom": 14,
+      "maxzoom": 15,
+      "url": "https://api.geolonia.com/v1/sources_v2?key=YOUR-API-KEY&ver=japan-poi-only"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
