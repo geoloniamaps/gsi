@@ -13,9 +13,7 @@
     },
     "geolonia": {
       "type": "vector",
-      "minzoom": 5,
-      "maxzoom": 15,
-      "url": "https://api.geolonia.com/v1/sources_v2?key=YOUR-API-KEY&ver=japan-poi-only-01"
+      "url": "https://tileserver.geolonia.com/japan-poi-only/tiles.json?key=YOUR-API-KEY"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
