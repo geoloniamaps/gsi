@@ -241,6 +241,11 @@
         [
           "has",
           "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -267,9 +272,17 @@
       "source": "geolonia-water-ja",
       "source-layer": "water_name",
       "filter": [
-        "==",
-        "$type",
-        "LineString"
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
       ],
       "layout": {
         "text-font": [
@@ -4123,6 +4136,11 @@
         [
           "has",
           "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -4189,6 +4207,11 @@
         [
           "has",
           "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -4305,6 +4328,11 @@
           "==",
           "subclass",
           "station"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -4693,6 +4721,11 @@
         [
           "has",
           "iata"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -4727,13 +4760,21 @@
       "source-layer": "place",
       "minzoom": 14,
       "filter": [
-        "!in",
-        "class",
-        "city",
-        "town",
-        "village",
-        "country",
-        "continent"
+        "all",
+        [
+          "!in",
+          "class",
+          "city",
+          "town",
+          "village",
+          "country",
+          "continent"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
       ],
       "layout": {
         "text-letter-spacing": 0.1,
@@ -4758,9 +4799,17 @@
       "source": "geolonia",
       "source-layer": "place",
       "filter": [
-        "==",
-        "class",
-        "village"
+        "all",
+        [
+          "==",
+          "class",
+          "village"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
       ],
       "layout": {
         "text-font": [
@@ -4795,9 +4844,17 @@
       "source": "geolonia",
       "source-layer": "place",
       "filter": [
-        "==",
-        "class",
-        "town"
+        "all",
+        [
+          "==",
+          "class",
+          "town"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
       ],
       "layout": {
         "text-font": [
@@ -4831,6 +4888,11 @@
           "==",
           "class",
           "city"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -4864,6 +4926,11 @@
           "==",
           "class",
           "city"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
