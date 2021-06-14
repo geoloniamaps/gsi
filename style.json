@@ -3,10 +3,6 @@
   "name": "GSI Japan + OpenStreetMap based style for Geolonia",
   "metadata": {},
   "sources": {
-    "natural-earth": {
-      "type": "vector",
-      "url": "https://cdn.geolonia.com/tiles/natural-earth.json"
-    },
     "gsi-japan": {
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/gsi.json"
@@ -57,24 +53,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "water-offset",
-      "type": "fill",
-      "source": "natural-earth",
-      "source-layer": "water",
-      "maxzoom": 8,
-      "filter": [
-        "==",
-        "$type",
-        "Polygon"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(152, 209, 252, 1)"
       }
     },
     {
@@ -2278,31 +2256,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "boundary-natural-earth",
-      "type": "line",
-      "source": "natural-earth",
-      "source-layer": "admin",
-      "maxzoom": 6,
-      "filter": [
-        "all",
-        [
-          "!=",
-          "class",
-          "dispute"
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#999999",
-        "line-width": 1,
-        "line-blur": 0.4
       }
     },
     {
