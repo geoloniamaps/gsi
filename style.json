@@ -7,16 +7,16 @@
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/oceanus.json"
     },
-    "geolonia-water": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
-    },
     "gsi-japan": {
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/gsi.json",
       "minzoom": 8
     },
-    "geolonia": {
+    "geolonia-water": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
+    },
+    "geolonia-poi": {
       "type": "vector",
       "url": "https://tileserver.geolonia.com/japan-poi-only/tiles.json?key=YOUR-API-KEY"
     }
@@ -3904,7 +3904,7 @@
     {
       "id": "poi",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -3975,7 +3975,7 @@
     {
       "id": "poi-primary",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "poi",
       "minzoom": 14,
       "filter": [
@@ -4091,7 +4091,7 @@
     {
       "id": "poi-railway",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "poi",
       "minzoom": 13,
       "filter": [
@@ -4499,7 +4499,7 @@
     {
       "id": "airport-label-major",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "aerodrome_label",
       "minzoom": 10,
       "filter": [
@@ -4542,7 +4542,7 @@
     {
       "id": "place-other",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "place",
       "minzoom": 14,
       "filter": [
@@ -4582,7 +4582,7 @@
     {
       "id": "place-village",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "place",
       "filter": [
         "all",
@@ -4627,7 +4627,7 @@
     {
       "id": "place-town",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "place",
       "filter": [
         "all",
@@ -4660,7 +4660,7 @@
     {
       "id": "place-city",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "place",
       "minzoom": 8,
       "filter": [
@@ -4699,7 +4699,7 @@
     {
       "id": "place-city-capital",
       "type": "symbol",
-      "source": "geolonia",
+      "source": "geolonia-poi",
       "source-layer": "place",
       "filter": [
         "all",
