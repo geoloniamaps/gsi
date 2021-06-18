@@ -16,9 +16,9 @@
       "type": "vector",
       "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
     },
-    "geolonia-poi": {
+    "geolonia-gsi-custom": {
       "type": "vector",
-      "url": "https://tileserver.geolonia.com/japan-poi-only/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver-dev.geolonia.com/shikoku-gsi-2021-06-18/tiles.json?key=YOUR-API-KEY"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
@@ -1640,6 +1640,72 @@
       }
     },
     {
+      "id": "landuse-commercial",
+      "type": "fill",
+      "source": "geolonia-gsi-custom",
+      "source-layer": "landuse",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ],
+        [
+          "==",
+          "class",
+          "commercial"
+        ]
+      ],
+      "paint": {
+        "fill-color": "hsla(0, 60%, 87%, 0.23)"
+      }
+    },
+    {
+      "id": "landcover-wood",
+      "type": "fill",
+      "source": "geolonia-gsi-custom",
+      "source-layer": "landcover",
+      "filter": [
+        "==",
+        "class",
+        "wood"
+      ],
+      "paint": {
+        "fill-color": "#6a4",
+        "fill-opacity": 0.2,
+        "fill-outline-color": "hsla(0, 0%, 0%, 0.03)",
+        "fill-antialias": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              false
+            ],
+            [
+              9,
+              true
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landcover-grass",
+      "type": "fill",
+      "source": "geolonia-gsi-custom",
+      "source-layer": "landcover",
+      "filter": [
+        "==",
+        "class",
+        "grass"
+      ],
+      "paint": {
+        "fill-color": "#d8e8c8",
+        "fill-opacity": 1
+      }
+    },
+    {
       "id": "road-outline",
       "type": "line",
       "source": "gsi-japan",
@@ -1987,6 +2053,83 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "waterway-name",
+      "type": "symbol",
+      "source": "geolonia-gsi-custom",
+      "source-layer": "waterway",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "text-letter-spacing": 0.2,
+        "symbol-spacing": 350
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "water-name-lakeline",
+      "type": "symbol",
+      "source": "geolonia-gsi-custom",
+      "source-layer": "water_name",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-letter-spacing": 0.2
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
       }
     },
     {
@@ -3917,7 +4060,7 @@
     {
       "id": "poi",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -3988,7 +4131,7 @@
     {
       "id": "poi-primary",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "poi",
       "minzoom": 14,
       "filter": [
@@ -4104,7 +4247,7 @@
     {
       "id": "poi-railway",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "poi",
       "minzoom": 13,
       "filter": [
@@ -4512,7 +4655,7 @@
     {
       "id": "airport-label-major",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "aerodrome_label",
       "minzoom": 10,
       "filter": [
@@ -4555,7 +4698,7 @@
     {
       "id": "place-other",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "place",
       "minzoom": 14,
       "filter": [
@@ -4595,7 +4738,7 @@
     {
       "id": "place-village",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "place",
       "filter": [
         "all",
@@ -4640,7 +4783,7 @@
     {
       "id": "place-town",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "place",
       "filter": [
         "all",
@@ -4673,7 +4816,7 @@
     {
       "id": "place-city",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "place",
       "minzoom": 8,
       "filter": [
@@ -4712,7 +4855,7 @@
     {
       "id": "place-city-capital",
       "type": "symbol",
-      "source": "geolonia-poi",
+      "source": "geolonia-gsi-custom",
       "source-layer": "place",
       "filter": [
         "all",
