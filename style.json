@@ -1255,7 +1255,14 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
         "icon-image": "circle-11",
+        "icon-allow-overlap": true,
         "text-field": [
           "to-string",
           [
@@ -1264,7 +1271,7 @@
           ]
         ],
         "text-offset": [
-          0,
+          0.6,
           0.6
         ],
         "text-size": 12,
