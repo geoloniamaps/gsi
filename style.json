@@ -18,7 +18,7 @@
     },
     "geolonia-gsi-custom": {
       "type": "vector",
-      "url": "https://tileserver-dev.geolonia.com/japan-latest-gsi-2021-06-18/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
