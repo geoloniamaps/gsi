@@ -81,6 +81,9 @@
       "type": "fill",
       "source": "gsi-japan",
       "source-layer": "waterarea",
+      "filter": [
+        "all"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -824,6 +827,8 @@
       "type": "line",
       "source": "oceanus",
       "source-layer": "oc-boundary",
+      "minzoom": 0,
+      "maxzoom": 6,
       "filter": [
         "==",
         [
@@ -3362,7 +3367,7 @@
       "source": "gsi-japan",
       "source-layer": "boundary",
       "minzoom": 6,
-      "maxzoom": 14,
+      "maxzoom": 8,
       "filter": [
         "all",
         [
