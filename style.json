@@ -10,7 +10,7 @@
     "gsi-japan": {
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/gsi.json",
-      "minzoom": 8
+      "minzoom": 5
     },
     "geolonia-water": {
       "type": "vector",
@@ -711,35 +711,6 @@
       }
     },
     {
-      "id": "oc-lake-ja",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "minzoom": 4,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "lakes"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(152, 209, 252, 1)"
-      }
-    },
-    {
       "id": "oc-lake",
       "type": "fill",
       "source": "oceanus",
@@ -777,7 +748,7 @@
       "source": "oceanus",
       "source-layer": "oc-boundary",
       "minzoom": 5,
-      "maxzoom": 8,
+      "maxzoom": 6,
       "filter": [
         "all",
         [
@@ -794,7 +765,8 @@
         ]
       ],
       "layout": {
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "#9e9cab",
@@ -804,7 +776,7 @@
           1,
           1
         ],
-        "line-width": 2
+        "line-width": 1.5
       }
     },
     {
@@ -861,7 +833,8 @@
         0
       ],
       "layout": {
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "#9e9cab",
@@ -1047,294 +1020,6 @@
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "oc-label-country",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "maxzoom": 8,
-      "filter": [
-        "==",
-        [
-          "get",
-          "class"
-        ],
-        "country"
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "oc-label-pref-ja",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "pref"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "oc-label-pref",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "pref"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "oc-label-town-ja",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "minzoom": 7,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "town"
-        ],
-        [
-          "has",
-          "jflag"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "pref-capital"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "oc-label-pref-capital-ja",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "minzoom": 6,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "has",
-          "jflag"
-        ],
-        [
-          "has",
-          "pref-capital"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "text-variable-anchor": [
-          "top",
-          "bottom",
-          "left",
-          "right"
-        ],
-        "icon-image": "circle-11",
-        "icon-allow-overlap": true,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-offset": [
-          0.6,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "oc-label-town",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "town"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
       }
     },
     {
@@ -1580,7 +1265,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "any",
         [
@@ -1668,7 +1353,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "any",
         [
@@ -1943,7 +1628,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 6,
       "filter": [
         "all",
         [
@@ -2003,7 +1688,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 6,
       "filter": [
         "any",
         [
@@ -2085,11 +1770,78 @@
       }
     },
     {
+      "id": "highway-motorway-bridge",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 6,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "in",
+            "ftCode",
+            2702,
+            2703
+          ],
+          [
+            "any",
+            [
+              "==",
+              "motorway",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              3
+            ]
+          ]
+        ],
+        [
+          "==",
+          "ftCode",
+          52703
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "visibility": "visible",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#7FCBB7",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              24,
+              40
+            ]
+          ]
+        },
+        "line-blur": 0,
+        "line-translate-anchor": "map"
+      }
+    },
+    {
       "id": "highway-minor-bridge-casing",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "all",
         [
@@ -2158,7 +1910,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "all",
         [
@@ -2227,7 +1979,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "any",
         [
@@ -2310,7 +2062,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 4,
+      "minzoom": 7,
       "filter": [
         "any",
         [
@@ -2385,73 +2137,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "highway-motorway-bridge",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            "in",
-            "ftCode",
-            2702,
-            2703
-          ],
-          [
-            "any",
-            [
-              "==",
-              "motorway",
-              1
-            ],
-            [
-              "==",
-              "rdCtg",
-              3
-            ]
-          ]
-        ],
-        [
-          "==",
-          "ftCode",
-          52703
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "visibility": "visible",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#7FCBB7",
-        "line-width": {
-          "stops": [
-            [
-              4,
-              1
-            ],
-            [
-              15,
-              4
-            ],
-            [
-              17,
-              9
-            ],
-            [
-              24,
-              40
-            ]
-          ]
-        },
-        "line-blur": 0,
-        "line-translate-anchor": "map"
       }
     },
     {
@@ -3672,10 +3357,41 @@
       }
     },
     {
+      "id": "boundary-sea",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "boundary",
+      "minzoom": 6,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "in",
+          "ftCode",
+          51221
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#9e9cab",
+        "line-dasharray": [
+          4,
+          1,
+          1,
+          1
+        ],
+        "line-width": 2
+      }
+    },
+    {
       "id": "boundary",
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "boundary",
+      "minzoom": 6,
       "maxzoom": 14,
       "filter": [
         "all",
@@ -3684,12 +3400,12 @@
           "ftCode",
           1211,
           1212,
-          51212,
-          51221
+          51212
         ]
       ],
       "layout": {
-        "line-join": "round"
+        "line-join": "round",
+        "visibility": "visible"
       },
       "paint": {
         "line-color": "#9e9cab",
@@ -3818,6 +3534,294 @@
         "text-radial-offset": 0.7,
         "text-justify": "center",
         "text-anchor": "center"
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "oc-label-country",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "oc-label",
+      "maxzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "country"
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "oc-label-pref-capital-ja",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "oc-label",
+      "minzoom": 6,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "has",
+          "jflag"
+        ],
+        [
+          "has",
+          "pref-capital"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "text-variable-anchor": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "icon-image": "circle-11",
+        "icon-allow-overlap": true,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-offset": [
+          0.6,
+          0.6
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "oc-label-pref-ja",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "oc-label",
+      "minzoom": 5.5,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "pref"
+        ],
+        [
+          "has",
+          "jflag"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "oc-label-pref",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "oc-label",
+      "minzoom": 5,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "pref"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "oc-label-town-ja",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "oc-label",
+      "minzoom": 7,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "town"
+        ],
+        [
+          "has",
+          "jflag"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "pref-capital"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-image": "circle-11",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "oc-label-town",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "oc-label",
+      "minzoom": 6,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "town"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-image": "circle-11",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-size": 12,
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
