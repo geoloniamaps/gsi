@@ -1,0 +1,25 @@
+id: road-outline
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 16
+filter:
+  - all
+  - - '>='
+    - ftCode
+    - 2200
+  - - <
+    - ftCode
+    - 2700
+layout:
+  line-cap: round
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#EEEEEE'
+  line-width: 3
+  line-dasharray:
+    - 3
+    - 2
+    - 0.5
+    - 2

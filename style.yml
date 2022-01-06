@@ -1,0 +1,104 @@
+version: 8
+name: GSI Japan + OpenStreetMap based style for Geolonia
+sources:
+  oceanus:
+    type: vector
+    url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
+  gsi-japan:
+    type: vector
+    url: https://cdn.geolonia.com/tiles/gsi.json
+    minzoom: 5
+  geolonia-water:
+    type: vector
+    url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
+  geolonia-gsi-custom:
+    type: vector
+    url: https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY
+sprite: https://sprites.geolonia.com/basic
+glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+layers:
+  - !!inc/file layers/background.yml
+  - !!inc/file layers/geolonia-water-ocean.yml
+  - !!inc/file layers/waterway-river.yml
+  - !!inc/file layers/water.yml
+  - !!inc/file layers/oc-ocean200.yml
+  - !!inc/file layers/oc-ocean1000.yml
+  - !!inc/file layers/oc-ocean2000.yml
+  - !!inc/file layers/oc-ocean3000.yml
+  - !!inc/file layers/oc-ocean4000.yml
+  - !!inc/file layers/oc-ocean5000.yml
+  - !!inc/file layers/oc-ocean6000.yml
+  - !!inc/file layers/oc-ocean7000.yml
+  - !!inc/file layers/oc-ocean8000.yml
+  - !!inc/file layers/oc-ocean9000.yml
+  - !!inc/file layers/oc-ocean10000.yml
+  - !!inc/file layers/oc-glacier.yml
+  - !!inc/file layers/oc-landuse-commercial-ja.yml
+  - !!inc/file layers/oc-landuse-commercial.yml
+  - !!inc/file layers/oc-forest.yml
+  - !!inc/file layers/oc-waterway-river-ja.yml
+  - !!inc/file layers/oc-waterway-river.yml
+  - !!inc/file layers/oc-waterway-name-ja.yml
+  - !!inc/file layers/oc-waterway-name.yml
+  - !!inc/file layers/oc-lake.yml
+  - !!inc/file layers/oc-boundary-land-level-1-ja.yml
+  - !!inc/file layers/oc-boundary-land-level-1.yml
+  - !!inc/file layers/oc-boundary-land-level-0.yml
+  - !!inc/file layers/oc-water-name-ocean.yml
+  - !!inc/file layers/oc-water-name-other.yml
+  - !!inc/file layers/nt-water-name-ocean.yml
+  - !!inc/file layers/nt-water-name-river.yml
+  - !!inc/file layers/landuse-commercial.yml
+  - !!inc/file layers/landcover-wood.yml
+  - !!inc/file layers/landcover-grass.yml
+  - !!inc/file layers/road-outline.yml
+  - !!inc/file layers/highway-minor.yml
+  - !!inc/file layers/highway-secondary-tunnel.yml
+  - !!inc/file layers/highway-secondary.yml
+  - !!inc/file layers/highway-primary.yml
+  - !!inc/file layers/waterway-name.yml
+  - !!inc/file layers/water-name-lakeline.yml
+  - !!inc/file layers/building-casing.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/structurea-casing.yml
+  - !!inc/file layers/structurea.yml
+  - !!inc/file layers/highway-motorway-tunnel.yml
+  - !!inc/file layers/highway-motorway.yml
+  - !!inc/file layers/highway-motorway-bridge.yml
+  - !!inc/file layers/highway-minor-bridge-casing.yml
+  - !!inc/file layers/highway-minor-bridge.yml
+  - !!inc/file layers/highway-secondary-bridge.yml
+  - !!inc/file layers/highway-primary-bridge.yml
+  - !!inc/file layers/railway-tunnel.yml
+  - !!inc/file layers/railway-minor.yml
+  - !!inc/file layers/railway-minor-hatching.yml
+  - !!inc/file layers/railway-secondary.yml
+  - !!inc/file layers/railway-secondary-hatching.yml
+  - !!inc/file layers/railway-jr.yml
+  - !!inc/file layers/railway-jr-hatching.yml
+  - !!inc/file layers/railway-jr-bridge.yml
+  - !!inc/file layers/railway-secondary-bridge.yml
+  - !!inc/file layers/railway-secondary-bridge-hatching.yml
+  - !!inc/file layers/railway-jr-bridge-hatching.yml
+  - !!inc/file layers/boundary-sea.yml
+  - !!inc/file layers/boundary.yml
+  - !!inc/file layers/building-3d.yml
+  - !!inc/file layers/structurea-3d.yml
+  - !!inc/file layers/poi.yml
+  - !!inc/file layers/oc-label-country.yml
+  - !!inc/file layers/oc-label-pref-capital-ja.yml
+  - !!inc/file layers/oc-label-pref-ja.yml
+  - !!inc/file layers/oc-label-pref.yml
+  - !!inc/file layers/oc-label-town-ja.yml
+  - !!inc/file layers/oc-label-town.yml
+  - !!inc/file layers/poi-primary.yml
+  - !!inc/file layers/road-name-label.yml
+  - !!inc/file layers/poi-railway.yml
+  - !!inc/file layers/railway-label.yml
+  - !!inc/file layers/label-gsi.yml
+  - !!inc/file layers/airport-label-major.yml
+  - !!inc/file layers/place-other.yml
+  - !!inc/file layers/place-village.yml
+  - !!inc/file layers/place-town.yml
+  - !!inc/file layers/place-city.yml
+  - !!inc/file layers/place-city-capital.yml

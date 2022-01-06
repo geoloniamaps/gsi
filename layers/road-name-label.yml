@@ -1,0 +1,29 @@
+id: road-name-label
+type: symbol
+source: gsi-japan
+source-layer: transp
+minzoom: 6
+filter:
+  - all
+  - - in
+    - ftCode
+    - 2901
+    - 2903
+    - 2904
+layout:
+  icon-image: default_3
+  text-field:
+    - case
+    - - has
+      - uRNo
+    - - get
+      - uRNo
+    - - has
+      - nRNo
+    - - get
+      - nRNo
+    - ''
+  text-font:
+    - Noto Sans Regular
+  text-size: 10
+  icon-size: 1

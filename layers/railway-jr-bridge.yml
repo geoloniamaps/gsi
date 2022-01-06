@@ -1,0 +1,51 @@
+id: railway-jr-bridge
+type: line
+source: gsi-japan
+source-layer: railway
+minzoom: 10
+filter:
+  - all
+  - - '=='
+    - railState
+    - 1
+  - - any
+    - - all
+      - - '>='
+        - rtCode
+        - '40201000000'
+      - - <
+        - rtCode
+        - '40202000000'
+    - - all
+      - - '>='
+        - rtCode1
+        - '40201000000'
+      - - <
+        - rtCode1
+        - '40202000000'
+    - - all
+      - - '>='
+        - rtCode
+        - '40216000000'
+      - - <
+        - rtCode
+        - '40217000000'
+    - - all
+      - - '>='
+        - rtCode1
+        - '40216000000'
+      - - <
+        - rtCode1
+        - '40217000000'
+paint:
+  line-color: '#999999'
+  line-width:
+    stops:
+      - - 6
+        - 2
+      - - 10
+        - 3
+      - - 18
+        - 4
+      - - 22
+        - 20
