@@ -1,0 +1,29 @@
+id: highway-minor
+type: line
+source: gsi-japan
+source-layer: road
+filter:
+  - all
+  - - '>='
+    - ftCode
+    - 2700
+  - - <
+    - ftCode
+    - 2800
+  - - '!='
+    - ftCode
+    - 2704
+layout:
+  line-cap: round
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#FEE2BF'
+  line-width:
+    stops:
+      - - 4
+        - 1
+      - - 17
+        - 3
+      - - 24
+        - 10

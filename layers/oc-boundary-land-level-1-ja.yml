@@ -1,0 +1,25 @@
+id: oc-boundary-land-level-1-ja
+type: line
+source: oceanus
+source-layer: oc-boundary
+minzoom: 5
+maxzoom: 6
+filter:
+  - all
+  - - '=='
+    - - get
+      - admin_level
+    - 1
+  - - has
+    - jflag
+layout:
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#9e9cab'
+  line-dasharray:
+    - 4
+    - 1
+    - 1
+    - 1
+  line-width: 1.5

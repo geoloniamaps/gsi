@@ -1,0 +1,18 @@
+id: oc-ocean2000
+type: fill
+source: oceanus
+source-layer: oc-water
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - ocean
+  - - '=='
+    - - get
+      - depth
+    - 2000
+layout:
+  visibility: visible
+paint:
+  fill-color: rgba(3, 147, 212, 1)

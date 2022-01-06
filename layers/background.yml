@@ -1,0 +1,4 @@
+id: background
+type: background
+paint:
+  background-color: rgba(254, 254, 254, 1)
