@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - 'main' 
-    
-  pull_request:
-    branches:
-      - '*' 
 
 jobs:
   build:
@@ -16,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
           
-      - name: Convert the YAML to GeoJSON
+      - name: Convert the YAML to style.json
         run: |
           cd $GITHUB_WORKSPACE
           npm install
@@ -27,7 +23,7 @@ jobs:
           cd $GITHUB_WORKSPACE
           mv .github/workflows/index.html ./index.html
 
-      - name: Deploy the GeoJSON to `gh-pages`
+      - name: Deploy the style.json to `gh-pages`
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
