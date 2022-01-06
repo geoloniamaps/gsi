@@ -1,0 +1,13 @@
+id: structurea-3d
+type: fill-extrusion
+metadata:
+  visible-on-3d: true
+source: gsi-japan
+source-layer: structurea
+minzoom: 16
+layout:
+  visibility: visible
+paint:
+  fill-extrusion-color: '#EEEEEE'
+  fill-extrusion-height: 30
+  fill-extrusion-opacity: 0.4

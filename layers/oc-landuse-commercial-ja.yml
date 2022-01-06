@@ -1,0 +1,19 @@
+id: oc-landuse-commercial-ja
+type: fill
+source: oceanus
+source-layer: oc-landuse
+minzoom: 5
+maxzoom: 8
+filter:
+  - all
+  - - '=='
+    - - geometry-type
+    - Polygon
+  - - '=='
+    - - get
+      - class
+    - commercial
+  - - has
+    - jflag
+paint:
+  fill-color: hsla(0, 60%, 87%, 0.23)

@@ -1,0 +1,40 @@
+id: railway-tunnel
+type: line
+source: gsi-japan
+source-layer: railway
+minzoom: 10
+filter:
+  - any
+  - - in
+    - railState
+    - 100
+    - 200
+    - 300
+    - 2
+    - 3
+  - - all
+    - - '>='
+      - rtCode
+      - '40203000000'
+    - - <
+      - rtCode
+      - '40204000000'
+  - - all
+    - - '>='
+      - rtCode1
+      - '40203000000'
+    - - <
+      - rtCode1
+      - '40204000000'
+paint:
+  line-color: '#908150'
+  line-opacity: 0.6
+  line-width:
+    stops:
+      - - 10
+        - 1
+      - - 22
+        - 3
+  line-dasharray:
+    - 3
+    - 2

@@ -1,0 +1,35 @@
+id: label-gsi
+type: symbol
+source: gsi-japan
+source-layer: label
+minzoom: 8
+maxzoom: 15
+filter:
+  - all
+  - - in
+    - ftCode
+    - 100
+    - 50100
+  - - in
+    - annoCtg
+    - 311
+    - 314
+    - 315
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  icon-image: mountain-11
+  text-field: '{knj}'
+  text-size: 14
+  text-max-width: 9
+  text-anchor: top
+  text-justify: center
+  text-offset:
+    - 0
+    - 0.4
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'

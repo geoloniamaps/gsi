@@ -1,0 +1,22 @@
+id: boundary-sea
+type: line
+source: gsi-japan
+source-layer: boundary
+minzoom: 6
+maxzoom: 8
+filter:
+  - all
+  - - in
+    - ftCode
+    - 51221
+layout:
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#9e9cab'
+  line-dasharray:
+    - 4
+    - 1
+    - 1
+    - 1
+  line-width: 2

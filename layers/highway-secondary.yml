@@ -1,0 +1,51 @@
+id: highway-secondary
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 7
+filter:
+  - any
+  - - all
+    - - any
+      - - '=='
+        - ftCode
+        - 2701
+    - - '!='
+      - motorway
+      - 1
+    - - '!='
+      - rdCtg
+      - 3
+    - - any
+      - - in
+        - rdCtg
+        - 0
+        - 1
+        - 2
+      - - '=='
+        - rnkWidth
+        - 4
+  - - all
+    - - '>='
+      - ftCode
+      - 52700
+    - - <
+      - ftCode
+      - 52800
+    - - '!='
+      - ftCode
+      - 52703
+layout:
+  line-cap: round
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#FDD8AE'
+  line-width:
+    stops:
+      - - 6
+        - 0.5
+      - - 17
+        - 2
+      - - 24
+        - 30

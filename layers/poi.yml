@@ -1,0 +1,47 @@
+id: poi
+type: symbol
+source: geolonia-gsi-custom
+source-layer: poi
+minzoom: 16
+filter:
+  - all
+  - - '=='
+    - $type
+    - Point
+  - - '>'
+    - rank
+    - 25
+  - - has
+    - name
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  icon-image:
+    - coalesce
+    - - image
+      - - concat
+        - - get
+          - class
+        - '-11'
+    - - image
+      - circle-11
+  text-field: '{name}'
+  text-size: 12
+  text-max-width: 9
+  text-variable-anchor:
+    - top
+    - bottom
+    - left
+    - right
+  text-radial-offset: 0.7
+  text-justify: center
+  text-anchor: center
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'

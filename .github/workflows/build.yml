@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - 'main' 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+          
+      - name: Convert the YAML to style.json
+        run: |
+          cd $GITHUB_WORKSPACE
+          npm install
+          npm run build
+
+      - name: Set index.html for preview
+        run: |
+          cd $GITHUB_WORKSPACE
+          mv .github/workflows/index.html ./index.html
+
+      - name: Deploy the style.json to `gh-pages`
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          force_orphan: true
