@@ -1,6 +1,5 @@
 version: 8
 name: GSI Japan + OpenStreetMap based style for Geolonia
-metadata: {}
 sources:
   oceanus:
     type: vector
@@ -103,4 +102,3 @@ layers:
   - !!inc/file layers/place-town.yml
   - !!inc/file layers/place-city.yml
   - !!inc/file layers/place-city-capital.yml
-id: geolonia-gsi
