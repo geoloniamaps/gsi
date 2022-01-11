@@ -18,8 +18,6 @@
 <div data-style="https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/style.json"></div>
 ```
 
-例: https://codepen.io/naogify/pen/ZEJOErQ
-
 
 ## GitHub Pages の設定方法
 
