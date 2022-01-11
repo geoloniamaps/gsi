@@ -1,6 +1,8 @@
 # GSI
 
-A style based on GSI Japan and OpenStreetMap for Geolonia Map
+このリポジトリは、Geolonia の [GSI スタイル](https://geoloniamaps.github.io/gsi) （国土地理院と OpenStreetMap ベース）をカスタマイズし公開するためのテンプレートリポジトリです。
+
+以下のような簡単な手順でお好みのスタイルにカスタマイズし、地図として表示できます。
 
 * [DEMO](https://geoloniamaps.github.io/gsi)
 * [DEMO on editor](https://editor.geolonia.com/?style=https://geoloniamaps.github.io/gsi/style.json)
@@ -8,6 +10,7 @@ A style based on GSI Japan and OpenStreetMap for Geolonia Map
 ## ユーザーがカスタマイズする際の手順
 
 * [Use this template](https://github.com/geoloniamaps/gsi/generate) ボタンでこのリポジトリをコピー。
+* GitHub Pages を 設定。
 * `style.yml` を編集。
 * しばらくすると `gh-pages` ブランチに `style.json` がコミットされるので、Geolonia Maps で表示する場合は、その URL を以下のように指定してください。
 
@@ -16,6 +19,14 @@ A style based on GSI Japan and OpenStreetMap for Geolonia Map
 ```
 
 例: https://codepen.io/naogify/pen/ZEJOErQ
+
+
+## GitHub Pages の設定方法
+
+* GitHub のリポジトリのメニューの中にある [Settings] をクリックしてください。
+* 移動先のページの下の方にある [GitHub Pages] のところで、以下のように設定してください。
+
+![](https://www.evernote.com/l/ABXqA26fEitDNZG6KDxX-Os6Qb8gciGRKSYB/image.png)
 
 
 ## 色のカスタマイズ
