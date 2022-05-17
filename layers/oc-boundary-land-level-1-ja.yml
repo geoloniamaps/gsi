@@ -2,7 +2,7 @@ id: oc-boundary-land-level-1-ja
 type: line
 source: oceanus
 source-layer: oc-boundary
-minzoom: 5
+minzoom: 4
 maxzoom: 6
 filter:
   - all
