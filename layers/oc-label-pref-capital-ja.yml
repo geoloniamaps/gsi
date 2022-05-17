@@ -20,7 +20,7 @@ layout:
     - bottom
     - left
     - right
-  icon-image: circle-11
+  icon-image: circle
   icon-allow-overlap: true
   text-field: '{name}'
   text-offset:
