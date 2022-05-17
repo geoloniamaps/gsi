@@ -92,4 +92,3 @@ layers:
   - !!inc/file layers/place-town.yml
   - !!inc/file layers/place-city.yml
   - !!inc/file layers/place-city-capital.yml
-
