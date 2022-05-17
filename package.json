@@ -5,8 +5,7 @@
   "main": "style.json",
   "scripts": {
     "start": "charites serve style.yml --provider geolonia",
-    "start:maputnik": "/usr/local/bin/maputnik --watch --file ./style.json",
-    "build": "charites build style.yml style.json"
+    "build": "charites build style.yml ./docs/style.json --sprite-input ./icons --sprite-output ./docs"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,6 @@
   },
   "homepage": "https://github.com/geoloniamaps/gsi#readme",
   "devDependencies": {
-    "@unvt/charites": "^0.1.2"
+    "@unvt/charites": "^0.1.4"
   }
 }

@@ -14,24 +14,14 @@ sources:
   geolonia-gsi-custom:
     type: vector
     url: https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY
-sprite: https://sprites.geolonia.com/basic
+sprite: https://geoloniamaps.github.io/gsi/gsi
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/geolonia-water-ocean.yml
   - !!inc/file layers/waterway-river.yml
   - !!inc/file layers/water.yml
-  - !!inc/file layers/oc-ocean200.yml
-  - !!inc/file layers/oc-ocean1000.yml
-  - !!inc/file layers/oc-ocean2000.yml
-  - !!inc/file layers/oc-ocean3000.yml
-  - !!inc/file layers/oc-ocean4000.yml
-  - !!inc/file layers/oc-ocean5000.yml
-  - !!inc/file layers/oc-ocean6000.yml
-  - !!inc/file layers/oc-ocean7000.yml
-  - !!inc/file layers/oc-ocean8000.yml
-  - !!inc/file layers/oc-ocean9000.yml
-  - !!inc/file layers/oc-ocean10000.yml
+  - !!inc/file layers/oc-ocean.yml
   - !!inc/file layers/oc-glacier.yml
   - !!inc/file layers/oc-landuse-commercial-ja.yml
   - !!inc/file layers/oc-landuse-commercial.yml
