@@ -6,28 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deploy Preview - Geolonia Map</title>
   <style>
-    html, body {
+    html,
+    body,
+    .left {
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
       background-color: #555555;
     }
-    .left {
-          margin-right: 400px;
-          height: 100%;
-          background-color: #FFFFFF;
-        }
-    .right
-    {
-      margin-left: calc(100% - 400px);
-      position: absolute;
-      top: 0;
-      padding: 8px 16px;
-      height: calc(100% - 48px);
-      width: calc(400px - 32px);
-      overflow: scroll;
-      color: #FFFFFF;
+
+    @media screen and (min-width: 1024px) {
+      .left {
+        width: auto;
+        margin-right: 400px;
+        height: 100%;
+        background-color: #FFFFFF;
+      }
+
+      .right {
+        margin-left: calc(100% - 400px);
+        position: absolute;
+        top: 0;
+        padding: 8px 16px;
+        height: calc(100% - 48px);
+        width: calc(400px - 32px);
+        overflow: scroll;
+        color: #FFFFFF;
+      }
     }
   </style>
 </head>
@@ -36,9 +42,9 @@
   <div
     id="map"
     class="left"
-    data-lng="139.7673068"
-    data-lat="35.6809591"
-    data-zoom="14"
+    data-zoom="16"
+    data-lat="35.6798619"
+    data-lng="139.7648345"
     data-hash="on"
     data-marker="off"
   ></div>
@@ -67,7 +73,7 @@
         map.getCanvas().style.cursor = ''
       }
 
-      map.getStyle().layers.forEach( (item) => {
+      map.getStyle().layers.forEach((item) => {
         map.on('click', item.id, dumpFeature)
         map.on('mouseenter', item.id, mouseEnter)
         map.on('mouseleave', item.id, mouseLeave)
@@ -75,4 +81,5 @@
     })
   </script>
 </body>
+
 </html>

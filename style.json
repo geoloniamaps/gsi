@@ -20,7 +20,7 @@
       "url": "https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY"
     }
   },
-  "sprite": "https://sprites.geolonia.com/basic",
+  "sprite": "https://geoloniamaps.github.io/gsi/gsi",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -91,10 +91,11 @@
       }
     },
     {
-      "id": "oc-ocean200",
+      "id": "oc-ocean",
       "type": "fill",
       "source": "oceanus",
       "source-layer": "oc-water",
+      "maxzoom": 10,
       "filter": [
         "all",
         [
@@ -104,331 +105,54 @@
             "class"
           ],
           "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          200
         ]
       ],
       "layout": {
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(2, 183, 237, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean1000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
+        "fill-opacity": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
+        "fill-color": [
+          "match",
           [
             "get",
             "depth"
           ],
-          1000
+          200,
+          "#5bc2f8",
+          1000,
+          "#52baf7",
+          2000,
+          "#4ab2f7",
+          3000,
+          "#40a8f6",
+          4000,
+          "#36a0f5",
+          5000,
+          "#319bf6",
+          6000,
+          "#2a94f5",
+          7000,
+          "#238df4",
+          8000,
+          "#1c88f4",
+          9000,
+          "#147ff3",
+          10000,
+          "#0e7af2",
+          "#0673f2"
         ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(2, 170, 228, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean2000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          2000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(3, 147, 212, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean3000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          3000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(3, 136, 205, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean4000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          4000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(4, 121, 195, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean5000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          5000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(5, 99, 181, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean6000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          6000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(6, 69, 161, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean7000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          7000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(7, 45, 145, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean8000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          8000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(8, 26, 132, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean9000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          9000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(9, 9, 121, 1)"
-      }
-    },
-    {
-      "id": "oc-ocean10000",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "ocean"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "depth"
-          ],
-          10000
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(17, 17, 136, 1)"
       }
     },
     {
