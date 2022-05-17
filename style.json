@@ -3213,17 +3213,13 @@
           [
             "image",
             [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              "-11"
+              "get",
+              "class"
             ]
           ],
           [
             "image",
-            "circle-11"
+            "circle"
           ]
         ],
         "text-field": "{name}",
@@ -3305,7 +3301,7 @@
           "left",
           "right"
         ],
-        "icon-image": "circle-11",
+        "icon-image": "circle",
         "icon-allow-overlap": true,
         "text-field": "{name}",
         "text-offset": [
@@ -3435,7 +3431,7 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "circle-11",
+        "icon-image": "circle",
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -3482,7 +3478,7 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "circle-11",
+        "icon-image": "circle",
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -3536,17 +3532,13 @@
           [
             "image",
             [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              "-11"
+              "get",
+              "class"
             ]
           ],
           [
             "image",
-            "circle-11"
+            "circle"
           ]
         ],
         "text-field": "{name}",
@@ -3653,7 +3645,7 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "{class}-11",
+        "icon-image": "{class}",
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -4004,7 +3996,7 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "icon-image": "mountain-11",
+        "icon-image": "mountain",
         "text-field": "{knj}",
         "text-size": 14,
         "text-max-width": 9,
@@ -4046,7 +4038,7 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "airport-11",
+        "icon-image": "airport",
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -4252,7 +4244,7 @@
         "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "icon-image": "star-11",
+        "icon-image": "star",
         "text-offset": [
           0.4,
           0
