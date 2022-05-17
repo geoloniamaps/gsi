@@ -19,7 +19,7 @@ layout:
   text-padding: 2
   text-font:
     - Noto Sans Regular
-  icon-image: mountain-11
+  icon-image: mountain
   text-field: '{knj}'
   text-size: 14
   text-max-width: 9

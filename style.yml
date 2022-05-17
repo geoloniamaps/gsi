@@ -14,7 +14,7 @@ sources:
   geolonia-gsi-custom:
     type: vector
     url: https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY
-sprite: https://geoloniamaps.github.io/gsi/gsi
+sprite: https://geoloniamaps.github.io/basic/basic
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml

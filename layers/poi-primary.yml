@@ -26,9 +26,8 @@ layout:
       - - concat
         - - get
           - class
-        - '-11'
     - - image
-      - circle-11
+      - circle
   text-field: '{name}'
   text-size: 12
   text-max-width: 9

@@ -18,7 +18,7 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: circle-11
+  icon-image: circle
   text-field: '{name}'
   text-offset:
     - 0

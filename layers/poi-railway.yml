@@ -24,7 +24,7 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: '{class}-11'
+  icon-image: '{class}'
   text-field: '{name}'
   text-offset:
     - 0
