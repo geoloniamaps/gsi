@@ -45,6 +45,7 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
 
   # Shadow effects
+  - !!inc/file layers/highway-minor-bridge-casing-blur.yml
   - !!inc/file layers/highway-secondary-bridge-casing-blur.yml
   - !!inc/file layers/highway-primary-bridge-casing-blur.yml
   - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
@@ -58,6 +59,7 @@ layers:
   - !!inc/file layers/highway-motorway-tunnel.yml
 
   # Road casings
+  # - !!inc/file layers/highway-minor-casing.yml
   # - !!inc/file layers/highway-secondary-casing.yml
   # - !!inc/file layers/highway-primary-casing.yml
   - !!inc/file layers/highway-motorway-casing.yml
