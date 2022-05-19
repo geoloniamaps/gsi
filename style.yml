@@ -43,17 +43,14 @@ layers:
   - !!inc/file layers/landcover-grass.yml
   - !!inc/file layers/waterway-name.yml
   - !!inc/file layers/water-name-lakeline.yml
-  - !!inc/file layers/building-casing.yml
-  - !!inc/file layers/building.yml
-  - !!inc/file layers/structurea-casing.yml
-  - !!inc/file layers/structurea.yml
-  - !!inc/file layers/road-outline.yml
 
   # Shadow effects
+  - !!inc/file layers/highway-secondary-bridge-casing-blur.yml
   - !!inc/file layers/highway-primary-bridge-casing-blur.yml
   - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
 
   # Tunnels
+  - !!inc/file layers/highway-secondary-tunnel-casing.yml
   - !!inc/file layers/highway-secondary-tunnel.yml
   - !!inc/file layers/highway-primary-tunnel-casing.yml
   - !!inc/file layers/highway-primary-tunnel.yml
@@ -61,7 +58,8 @@ layers:
   - !!inc/file layers/highway-motorway-tunnel.yml
 
   # Road casings
-  - !!inc/file layers/highway-primary-casing.yml
+  # - !!inc/file layers/highway-secondary-casing.yml
+  # - !!inc/file layers/highway-primary-casing.yml
   - !!inc/file layers/highway-motorway-casing.yml
 
   # Roads
@@ -70,9 +68,16 @@ layers:
   - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-motorway.yml
 
+  - !!inc/file layers/road-outline.yml
+  - !!inc/file layers/building-casing.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/structurea-casing.yml
+  - !!inc/file layers/structurea.yml
+
   # Bridges
   - !!inc/file layers/highway-minor-bridge-casing.yml
   - !!inc/file layers/highway-minor-bridge.yml
+  - !!inc/file layers/highway-secondary-bridge-casing.yml
   - !!inc/file layers/highway-secondary-bridge.yml
   - !!inc/file layers/highway-primary-bridge-casing.yml
   - !!inc/file layers/highway-primary-bridge.yml

@@ -1,4 +1,4 @@
-id: highway-secondary-bridge
+id: highway-secondary-bridge-casing
 type: line
 source: gsi-japan
 source-layer: road
@@ -37,5 +37,6 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: rgba(255, 255, 255, 1)
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-color: rgba(222, 222, 222, 1)
+  line-opacity: 1
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
