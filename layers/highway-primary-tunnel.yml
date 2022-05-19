@@ -1,4 +1,4 @@
-id: highway-primary-bridge
+id: highway-primary-tunnel
 type: line
 source: gsi-japan
 source-layer: road
@@ -11,8 +11,7 @@ filter:
       - 4
     - - in
       - ftCode
-      - 2702
-      - 2703
+      - 2704
     - - '!='
       - motorway
       - 1
@@ -33,6 +32,7 @@ filter:
       - 52703
 layout:
   line-join: round
+  visibility: visible
 paint:
-  line-color: "rgba(255, 255, 255, 1)"
+  line-color: '#ffdaa6'
   line-width: !!inc/file layers/components/broad-road-width.yml

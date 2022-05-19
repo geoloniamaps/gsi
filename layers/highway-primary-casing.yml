@@ -1,4 +1,4 @@
-id: highway-primary-bridge
+id: highway-primary-casing
 type: line
 source: gsi-japan
 source-layer: road
@@ -9,18 +9,22 @@ filter:
     - - '=='
       - rnkWidth
       - 4
-    - - in
-      - ftCode
-      - 2702
-      - 2703
+    - - any
+      - - '=='
+        - ftCode
+        - 2701
     - - '!='
       - motorway
       - 1
+    - - '!='
+      - rdCtg
+      - 3
     - - in
       - rdCtg
       - 0
       - 1
       - 2
+      - 6
   - - all
     - - '>='
       - ftCode
@@ -32,7 +36,15 @@ filter:
       - ftCode
       - 52703
 layout:
+  line-cap: butt
   line-join: round
+  visibility: visible
 paint:
-  line-color: "rgba(255, 255, 255, 1)"
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-color: '#dedede'
+  line-opacity:
+    stops:
+      - - 7
+        - 0
+      - - 8
+        - 1
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

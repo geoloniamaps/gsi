@@ -41,28 +41,44 @@ layers:
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass.yml
-  - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
-  - !!inc/file layers/road-outline.yml
-  - !!inc/file layers/highway-motorway-casing.yml
-  - !!inc/file layers/highway-minor.yml
-  - !!inc/file layers/highway-secondary-tunnel.yml
-  - !!inc/file layers/highway-secondary.yml
-  - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/waterway-name.yml
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/building-casing.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/structurea-casing.yml
   - !!inc/file layers/structurea.yml
+  - !!inc/file layers/road-outline.yml
+
+  # Shadow effects
+  - !!inc/file layers/highway-primary-bridge-casing-blur.yml
+  - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
+
+  # Tunnels
+  - !!inc/file layers/highway-secondary-tunnel.yml
+  - !!inc/file layers/highway-primary-tunnel-casing.yml
+  - !!inc/file layers/highway-primary-tunnel.yml
   - !!inc/file layers/highway-motorway-tunnel-casing.yml
   - !!inc/file layers/highway-motorway-tunnel.yml
+
+  # Road casings
+  - !!inc/file layers/highway-primary-casing.yml
+  - !!inc/file layers/highway-motorway-casing.yml
+
+  # Roads
+  - !!inc/file layers/highway-minor.yml
+  - !!inc/file layers/highway-secondary.yml
+  - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-motorway.yml
-  - !!inc/file layers/highway-motorway-bridge-casing.yml
-  - !!inc/file layers/highway-motorway-bridge.yml
+
+  # Bridges
   - !!inc/file layers/highway-minor-bridge-casing.yml
   - !!inc/file layers/highway-minor-bridge.yml
   - !!inc/file layers/highway-secondary-bridge.yml
+  - !!inc/file layers/highway-primary-bridge-casing.yml
   - !!inc/file layers/highway-primary-bridge.yml
+  - !!inc/file layers/highway-motorway-bridge-casing.yml
+  - !!inc/file layers/highway-motorway-bridge.yml
+
   - !!inc/file layers/railway-tunnel.yml
   - !!inc/file layers/railway-minor.yml
   - !!inc/file layers/railway-minor-hatching.yml

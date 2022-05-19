@@ -1,4 +1,4 @@
-id: highway-primary-bridge
+id: highway-primary-tunnel-casing
 type: line
 source: gsi-japan
 source-layer: road
@@ -11,8 +11,7 @@ filter:
       - 4
     - - in
       - ftCode
-      - 2702
-      - 2703
+      - 2704
     - - '!='
       - motorway
       - 1
@@ -34,5 +33,5 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: "rgba(255, 255, 255, 1)"
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-color: '#e9ac77'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
