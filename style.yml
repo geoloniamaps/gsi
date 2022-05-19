@@ -42,6 +42,9 @@ layers:
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass.yml
   - !!inc/file layers/road-outline.yml
+
+  - !!inc/file layers/highway-motorway-casing.yml
+
   - !!inc/file layers/highway-minor.yml
   - !!inc/file layers/highway-secondary-tunnel.yml
   - !!inc/file layers/highway-secondary.yml

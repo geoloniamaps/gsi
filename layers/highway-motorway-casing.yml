@@ -1,8 +1,8 @@
-id: highway-motorway
+id: highway-motorway-casing
 type: line
 source: gsi-japan
 source-layer: road
-minzoom: 5
+minzoom: 4
 filter:
   - any
   - - all
