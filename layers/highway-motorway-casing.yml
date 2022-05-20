@@ -1,15 +1,26 @@
-id: highway-motorway-bridge
+id: highway-motorway-casing
 type: line
 source: gsi-japan
 source-layer: road
-minzoom: 6
+minzoom: 4
 filter:
   - any
   - - all
-    - - in
+    - - '>='
+      - ftCode
+      - 2700
+    - - <
+      - ftCode
+      - 2800
+    - - '!='
       - ftCode
       - 2702
+    - - '!='
+      - ftCode
       - 2703
+    - - '!='
+      - ftCode
+      - 2704
     - - any
       - - '=='
         - motorway
@@ -21,22 +32,18 @@ filter:
     - ftCode
     - 52703
 layout:
+  line-cap: butt
   line-join: round
+  visibility: visible
 paint:
-  line-color:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
+  line-color: '#4ed19e'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
   line-opacity:
     - interpolate
     - - linear
     - - zoom
     - 8
-    - 0
+    - 0.6
     - 11
     - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
+

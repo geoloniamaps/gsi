@@ -1,4 +1,4 @@
-id: highway-primary-bridge
+id: highway-primary-bridge-casing-blur
 type: line
 source: gsi-japan
 source-layer: road
@@ -33,6 +33,25 @@ filter:
       - 52703
 layout:
   line-join: round
+  line-cap: "round"
 paint:
-  line-color: "rgba(255, 255, 255, 1)"
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-color: '#000000'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [5, 2]
+  line-opacity:
+    stops:
+      - - 14
+        - 0.2
+      - - 17
+        - 0.8
+  line-blur:
+    stops:
+      - - 14
+        - 20
+      - - 17
+        - 25

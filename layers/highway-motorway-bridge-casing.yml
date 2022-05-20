@@ -1,4 +1,4 @@
-id: highway-motorway-bridge
+id: highway-motorway-bridge-casing
 type: line
 source: gsi-japan
 source-layer: road
@@ -23,14 +23,7 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
+  line-color: '#4ed19e'
   line-opacity:
     - interpolate
     - - linear
@@ -39,4 +32,4 @@ paint:
     - 0
     - 11
     - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
