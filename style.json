@@ -4019,7 +4019,7 @@
       "type": "symbol",
       "source": "geolonia-gsi-custom",
       "source-layer": "aerodrome_label",
-      "minzoom": 10,
+      "minzoom": 5,
       "filter": [
         "all",
         [
@@ -4045,10 +4045,7 @@
           0.6
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible",
-        "icon-size": 1,
-        "text-optional": true
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
