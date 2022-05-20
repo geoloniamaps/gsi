@@ -46,5 +46,3 @@ paint:
     - 0.6
     - 11
     - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
-
