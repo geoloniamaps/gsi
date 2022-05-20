@@ -1,29 +1,30 @@
-id: highway-secondary-tunnel
+id: highway-primary-casing
 type: line
 source: gsi-japan
 source-layer: road
-minzoom: 4
+minzoom: 7
 filter:
   - any
   - - all
     - - '=='
-      - ftCode
-      - 2704
+      - rnkWidth
+      - 4
+    - - any
+      - - '=='
+        - ftCode
+        - 2701
     - - '!='
       - motorway
       - 1
     - - '!='
       - rdCtg
       - 3
-    - - any
-      - - in
-        - rdCtg
-        - 0
-        - 1
-        - 2
-      - - '=='
-        - rnkWidth
-        - 4
+    - - in
+      - rdCtg
+      - 0
+      - 1
+      - 2
+      - 6
   - - all
     - - '>='
       - ftCode
@@ -35,13 +36,15 @@ filter:
       - ftCode
       - 52703
 layout:
+  line-cap: butt
   line-join: round
+  visibility: visible
 paint:
-  line-color: '#fff4c6'
+  line-color: '#dedede'
   line-opacity:
     stops:
-      - - 12
+      - - 7
         - 0
-      - - 13
+      - - 8
         - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

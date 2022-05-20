@@ -20,7 +20,8 @@ layout:
     - bottom
     - left
     - right
-  icon-image: circle
+  icon-image: circle-stroked
+  icon-size: 0.8
   icon-allow-overlap: true
   text-field: '{name}'
   text-offset:
@@ -30,6 +31,6 @@ layout:
   text-max-width: 9
 paint:
   text-halo-blur: 0.5
-  text-color: '#666'
+  text-color: 'rgba(71, 71, 71, 1)'
   text-halo-width: 1
   text-halo-color: '#ffffff'

@@ -40,12 +40,5 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#FDD8AE'
-  line-width:
-    stops:
-      - - 6
-        - 0.5
-      - - 17
-        - 2
-      - - 24
-        - 30
+  line-color: '#fff'
+  line-width: !!inc/file layers/components/broad-road-width.yml

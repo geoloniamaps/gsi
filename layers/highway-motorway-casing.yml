@@ -32,17 +32,12 @@ filter:
     - ftCode
     - 52703
 layout:
-  line-cap: round
+  line-cap: butt
   line-join: round
+  visibility: visible
 paint:
-  line-color:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
+  line-color: '#4ed19e'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
   line-opacity:
     - interpolate
     - - linear
