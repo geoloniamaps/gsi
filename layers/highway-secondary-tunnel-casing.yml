@@ -1,4 +1,4 @@
-id: highway-secondary-tunnel
+id: highway-secondary-tunnel-casing
 type: line
 source: gsi-japan
 source-layer: road
@@ -37,11 +37,11 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#fff4c6'
+  line-color: '#e9ac77'
   line-opacity:
     stops:
       - - 12
         - 0
       - - 13
         - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
