@@ -30,6 +30,8 @@ layers:
   - !!inc/file layers/oc-waterway-river.yml
   - !!inc/file layers/oc-waterway-name-ja.yml
   - !!inc/file layers/oc-waterway-name.yml
+  - !!inc/file layers/oc-lake-blur.yml
+  - !!inc/file layers/oc-lake-ja.yml
   - !!inc/file layers/oc-lake.yml
   - !!inc/file layers/oc-boundary-land-level-1-ja.yml
   - !!inc/file layers/oc-boundary-land-level-1.yml
