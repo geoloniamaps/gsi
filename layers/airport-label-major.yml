@@ -2,7 +2,7 @@ id: airport-label-major
 type: symbol
 source: geolonia-gsi-custom
 source-layer: aerodrome_label
-minzoom: 10
+minzoom: 5
 filter:
   - all
   - - has
@@ -22,9 +22,6 @@ layout:
     - 0.6
   text-size: 12
   text-max-width: 9
-  visibility: visible
-  icon-size: 1
-  text-optional: true
 paint:
   text-halo-blur: 0.5
   text-color: '#666'
