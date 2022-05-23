@@ -16,8 +16,8 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#EEEEEE'
-  line-width: 3
+  line-color: '#DDDDDD'
+  line-width: 2
   line-dasharray:
     - 3
     - 2
