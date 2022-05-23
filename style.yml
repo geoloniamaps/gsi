@@ -75,7 +75,6 @@ layers:
   - !!inc/file layers/highway-motorway.yml
 
   - !!inc/file layers/road-outline.yml
-  - !!inc/file layers/building-casing.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/structurea-casing.yml
   - !!inc/file layers/structurea.yml
