@@ -8,7 +8,7 @@ minzoom: 16
 layout:
   visibility: visible
 paint:
-  fill-extrusion-color: '#EEEEEE'
+  fill-extrusion-color: '#D7D4D1'
   fill-extrusion-height:
     - match
     - - get
@@ -24,4 +24,4 @@ paint:
     - 3112
     - 10
     - 10
-  fill-extrusion-opacity: 0.4
+  fill-extrusion-opacity: 0.5
