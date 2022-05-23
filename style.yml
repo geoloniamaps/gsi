@@ -22,6 +22,10 @@ sprite: https://geoloniamaps.github.io/gsi/gsi
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
+  - !!inc/file layers/landcover-grass.yml
+  - !!inc/file layers/landcover-wood-blur.yml
+  - !!inc/file layers/landcover-wood.yml
+  - !!inc/file layers/landcover-grass-park.yml
   - !!inc/file layers/geolonia-water-ocean.yml
   - !!inc/file layers/waterway-river.yml
   - !!inc/file layers/water.yml
@@ -46,8 +50,6 @@ layers:
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/landuse-commercial.yml
-  - !!inc/file layers/landcover-wood.yml
-  - !!inc/file layers/landcover-grass.yml
   - !!inc/file layers/waterway-name.yml
   - !!inc/file layers/water-name-lakeline.yml
 
