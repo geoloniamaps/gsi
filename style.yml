@@ -90,6 +90,8 @@ layers:
   - !!inc/file layers/highway-motorway-bridge-casing.yml
   - !!inc/file layers/highway-motorway-bridge.yml
 
+  # Railways
+  - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/railway-tunnel.yml
   - !!inc/file layers/railway-minor.yml
   - !!inc/file layers/railway-minor-hatching.yml
@@ -101,6 +103,7 @@ layers:
   - !!inc/file layers/railway-secondary-bridge.yml
   - !!inc/file layers/railway-secondary-bridge-hatching.yml
   - !!inc/file layers/railway-jr-bridge-hatching.yml
+
   - !!inc/file layers/boundary-sea.yml
   - !!inc/file layers/boundary.yml
   - !!inc/file layers/building-3d.yml
