@@ -14,6 +14,10 @@ sources:
   geolonia-gsi-custom:
     type: vector
     url: https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY
+  dem:
+    type: raster-dem
+    url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
+    attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
 sprite: https://geoloniamaps.github.io/gsi/gsi
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
@@ -26,6 +30,7 @@ layers:
   - !!inc/file layers/oc-landuse-commercial-ja.yml
   - !!inc/file layers/oc-landuse-commercial.yml
   - !!inc/file layers/oc-forest.yml
+  - !!inc/file layers/hillshading.yml
   - !!inc/file layers/oc-waterway-river-ja.yml
   - !!inc/file layers/oc-waterway-river.yml
   - !!inc/file layers/oc-waterway-name-ja.yml
