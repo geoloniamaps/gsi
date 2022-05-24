@@ -1,29 +1,39 @@
-id: waterway-name
+
+id: water-name-other
 type: symbol
 source: geolonia-gsi-custom
-source-layer: waterway
-minzoom: 13
+source-layer: water_name
 filter:
   - all
   - - '=='
     - $type
-    - LineString
-  - - has
-    - name
+    - Point
+  - - '!in'
+    - class
+    - ocean
   - - '!='
     - disputed
     - japan_northern_territories
+  - - '!='
+    - subclass
+    - moat
 layout:
   text-font:
     - Noto Sans Regular
-  text-size: 14
+  text-size:
+    stops:
+      - - 0
+        - 10
+      - - 6
+        - 14
   text-field: '{name}'
   text-max-width: 5
   text-rotation-alignment: map
-  symbol-placement: line
-  text-letter-spacing: 0.2
+  symbol-placement: point
   symbol-spacing: 350
+  text-letter-spacing: 0.2
+  visibility: visible
 paint:
-  text-color: '#65cbf9'
+  text-color: '#74aee9'
   text-halo-width: 1.5
   text-halo-color: rgba(255,255,255,0.7)
