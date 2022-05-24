@@ -1,15 +1,15 @@
-id: waterway-name
+id: water-name-ocean
 type: symbol
 source: geolonia-gsi-custom
-source-layer: waterway
-minzoom: 13
+source-layer: water_name
 filter:
   - all
   - - '=='
     - $type
-    - LineString
-  - - has
-    - name
+    - Point
+  - - '=='
+    - class
+    - ocean
   - - '!='
     - disputed
     - japan_northern_territories
@@ -20,10 +20,10 @@ layout:
   text-field: '{name}'
   text-max-width: 5
   text-rotation-alignment: map
-  symbol-placement: line
-  text-letter-spacing: 0.2
+  symbol-placement: point
   symbol-spacing: 350
+  text-letter-spacing: 0.2
 paint:
-  text-color: '#65cbf9'
+  text-color: '#74aee9'
   text-halo-width: 1.5
   text-halo-color: rgba(255,255,255,0.7)

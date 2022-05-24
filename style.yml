@@ -27,8 +27,10 @@ layers:
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass-park.yml
   - !!inc/file layers/geolonia-water-ocean.yml
-  - !!inc/file layers/waterway-river.yml
+  - !!inc/file layers/water-blur.yml
+  - !!inc/file layers/water-river-lake-ja-blur.yml
   - !!inc/file layers/water.yml
+  - !!inc/file layers/water-river-lake-ja.yml
   - !!inc/file layers/oc-ocean.yml
   - !!inc/file layers/oc-glacier.yml
   - !!inc/file layers/oc-landuse-commercial-ja.yml
@@ -56,8 +58,14 @@ layers:
   - !!inc/file layers/landuse-hospital.yml
   - !!inc/file layers/landuse-school.yml
   - !!inc/file layers/landuse-railway.yml
+  - !!inc/file layers/waterway_tunnel.yml
+  - !!inc/file layers/waterway-other.yml
+  - !!inc/file layers/waterway-stream-canal.yml
+  - !!inc/file layers/waterway-river.yml
   - !!inc/file layers/waterway-name.yml
   - !!inc/file layers/water-name-lakeline.yml
+  - !!inc/file layers/water-name-ocean.yml
+  - !!inc/file layers/water-name-other.yml
 
   # Shadow effects
 
