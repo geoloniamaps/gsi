@@ -135,9 +135,19 @@ layers:
   - !!inc/file layers/oc-label-pref.yml
   - !!inc/file layers/oc-label-town-ja.yml
   - !!inc/file layers/oc-label-town.yml
-  - !!inc/file layers/poi-primary.yml
-  - !!inc/file layers/road-name-label.yml
+  - !!inc/file layers/poi-z16.yml
+  - !!inc/file layers/poi-z16-primary.yml
+  - !!inc/file layers/poi-z15.yml
+  - !!inc/file layers/poi-z14.yml
+  - !!inc/file layers/poi-z11.yml
+  - !!inc/file layers/poi-worship.yml
+  - !!inc/file layers/poi-worship-primary.yml
+  - !!inc/file layers/poi-park.yml
+  - !!inc/file layers/poi-park-primary.yml
   - !!inc/file layers/poi-railway.yml
+  - !!inc/file layers/poi-airport-primary.yml
+  - !!inc/file layers/poi-mountain.yml
+  - !!inc/file layers/road-name-label.yml
   - !!inc/file layers/railway-label.yml
   - !!inc/file layers/label-gsi.yml
   - !!inc/file layers/airport-label-major.yml
