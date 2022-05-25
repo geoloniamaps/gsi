@@ -156,7 +156,6 @@ layout:
         - 0
   visibility: visible
 paint:
-  text-halo-blur: 0.5
-  text-color: '#993333'
-  text-halo-width: 1
-  text-halo-color: '#ffffff'
+  text-color: rgba(102, 102, 102, 1)
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)
