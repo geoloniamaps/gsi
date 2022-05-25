@@ -12,7 +12,7 @@ filter:
     - name
   - - '=='
     - class
-    - railway
+    - station
   - - '=='
     - subclass
     - station
@@ -28,8 +28,7 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - get
-        - class
+      - railway
     - - image
       - circle-stroked
   icon-padding:
