@@ -1,0 +1,7 @@
+  - interpolate
+  - - linear
+  - - zoom
+  - 15
+  - 1
+  - 16
+  - 0.3
