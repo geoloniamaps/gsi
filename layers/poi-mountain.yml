@@ -2,7 +2,7 @@ id: label-gsi
 type: symbol
 source: gsi-japan
 source-layer: label
-minzoom: 8
+minzoom: 10
 maxzoom: 15
 filter:
   - all
