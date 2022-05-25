@@ -2,6 +2,7 @@ id: railway-subway
 type: line
 source: gsi-japan
 source-layer: railway
+minzoom: 13
 filter:
   - any
   - - '=='
