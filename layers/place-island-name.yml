@@ -1,32 +1,33 @@
-id: place-city-capital
+id: place-island-name
 type: symbol
 source: geolonia-gsi-custom
 source-layer: place
 filter:
   - all
   - - '=='
-    - capital
-    - 2
-  - - '=='
-    - class
-    - city
+    - - get
+      - class
+    - island
   - - '!='
-    - disputed
+    - - get
+      - disputed
     - japan_northern_territories
+  - - any
+    - - '!='
+      - - get
+        - subclass
+      - islet
+    - - '>='
+      - - zoom
+      - 16
 layout:
   text-font:
-    - Noto Sans CJK JP Bold
-  text-size: 18
+    - Noto Sans Regular
+  text-size: 11
   text-field: '{name}'
   text-max-width: 8
-  icon-image: star
-  text-offset:
-    - 0.4
-    - -0.1
-  icon-size: 1
-  text-anchor: left
   visibility: visible
 paint:
-  text-color: '#333'
+  text-color: rgba(102, 102, 102, 1)
   text-halo-width: 1.2
   text-halo-color: rgba(255,255,255,0.8)

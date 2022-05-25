@@ -141,8 +141,16 @@ layers:
   - !!inc/file layers/railway-label.yml
   - !!inc/file layers/label-gsi.yml
   - !!inc/file layers/airport-label-major.yml
-  - !!inc/file layers/place-other.yml
   - !!inc/file layers/place-village.yml
   - !!inc/file layers/place-town.yml
-  - !!inc/file layers/place-city.yml
+  - !!inc/file layers/place-island-name.yml
+  - !!inc/file layers/place-city-rank10.yml
+  - !!inc/file layers/place-city-rank9.yml
+  - !!inc/file layers/place-city-rank8.yml
+  - !!inc/file layers/place-city-rank7.yml
+  - !!inc/file layers/place-city-rank6.yml
+  - !!inc/file layers/place-city-rank5.yml
+  - !!inc/file layers/place-city-rank4.yml
+  - !!inc/file layers/place-city-rank3.yml
+  - !!inc/file layers/place-city-rank2.yml
   - !!inc/file layers/place-city-capital.yml
