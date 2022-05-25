@@ -1,18 +1,20 @@
-id: poi-mountain
+id: label-gsi
 type: symbol
-source: geolonia-gsi-custom
-source-layer: mountain_peak
+source: gsi-japan
+source-layer: label
 minzoom: 8
+maxzoom: 15
 filter:
   - all
-  - - '=='
-    - $type
-    - Point
-  - - has
-    - name
-  - - '!='
-    - disputed
-    - japan_northern_territories
+  - - in
+    - ftCode
+    - 100
+    - 50100
+  - - in
+    - annoCtg
+    - 311
+    - 314
+    - 315
 layout:
   text-padding: 2
   text-font:
@@ -35,7 +37,7 @@ layout:
     - 100
     - 20
     - 2
-  text-field: '{name}'
+  text-field: '{knj}'
   text-offset:
     - 0
     - 0.3
