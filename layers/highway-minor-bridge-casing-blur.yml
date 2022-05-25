@@ -39,12 +39,7 @@ paint:
         - [0, 0]
       - - 17
         - [5, 2]
-  line-opacity:
-    stops:
-      - - 14
-        - 0.2
-      - - 17
-        - 0.8
+  line-opacity: !!inc/file layers/components/road-blur-opacity.yml
   line-blur:
     stops:
       - - 14

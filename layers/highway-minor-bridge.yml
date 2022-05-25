@@ -25,7 +25,7 @@ filter:
     - rdCtg
     - 3
 paint:
-  line-color: '#cba'
+  line-color: !!inc/file layers/components/road-color.yml
   line-width:
     base: 1.2
     stops:
