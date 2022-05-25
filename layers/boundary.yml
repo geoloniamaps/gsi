@@ -27,3 +27,11 @@ paint:
         - 1.2
       - - 12
         - 2
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 1
+    - 14
+    - 0.1
