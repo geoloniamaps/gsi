@@ -2,7 +2,7 @@ id: road_shield_highway
 type: symbol
 source: gsi-japan
 source-layer: transp
-minzoom: 7
+minzoom: 12
 filter:
   - all
   - - in
