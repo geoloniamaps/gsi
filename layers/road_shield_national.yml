@@ -2,16 +2,15 @@ id: road-name-label
 type: symbol
 source: gsi-japan
 source-layer: transp
-minzoom: 6
+minzoom: 7
 filter:
   - all
   - - in
     - ftCode
-    - 2901
-    - 2903
-    - 2904
+    - 2901 # 国道番号
 layout:
-  icon-image: default_3
+  icon-image: national-JP_3
+  icon-rotation-alignment: viewport
   text-field:
     - case
     - - has
@@ -24,6 +23,12 @@ layout:
       - nRNo
     - ''
   text-font:
-    - Noto Sans Regular
+    - Noto Sans CJK JP Bold
+  text-offset:
+    - 0
+    - -0.1
+  text-rotation-alignment: viewport
   text-size: 10
   icon-size: 1
+paint:
+  text-color: '#ffffff'
