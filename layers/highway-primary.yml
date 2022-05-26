@@ -39,6 +39,5 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-opacity: !!inc/file layers/components/road-opacity.yml
   line-color: !!inc/file layers/components/road-color.yml
   line-width: !!inc/file layers/components/broad-road-width.yml
