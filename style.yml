@@ -74,14 +74,6 @@ layers:
   - !!inc/file layers/highway-primary-bridge-casing-blur.yml
   - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
 
-  # Tunnels
-  - !!inc/file layers/highway-secondary-tunnel-casing.yml
-  - !!inc/file layers/highway-secondary-tunnel.yml
-  - !!inc/file layers/highway-primary-tunnel-casing.yml
-  - !!inc/file layers/highway-primary-tunnel.yml
-  - !!inc/file layers/highway-motorway-tunnel-casing.yml
-  - !!inc/file layers/highway-motorway-tunnel.yml
-
   # Road casings
 
   # - !!inc/file layers/highway-minor-casing.yml
@@ -99,6 +91,14 @@ layers:
   - !!inc/file layers/building.yml
   - !!inc/file layers/structurea-casing.yml
   - !!inc/file layers/structurea.yml
+
+  # Tunnels
+  - !!inc/file layers/highway-secondary-tunnel-casing.yml
+  - !!inc/file layers/highway-secondary-tunnel.yml
+  - !!inc/file layers/highway-primary-tunnel-casing.yml
+  - !!inc/file layers/highway-primary-tunnel.yml
+  - !!inc/file layers/highway-motorway-tunnel-casing.yml
+  - !!inc/file layers/highway-motorway-tunnel.yml
 
   # Bridges
   - !!inc/file layers/highway-minor-bridge-casing.yml
