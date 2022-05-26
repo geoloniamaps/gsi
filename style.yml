@@ -13,7 +13,7 @@ sources:
     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
   geolonia-gsi-custom:
     type: vector
-    url: https://tileserver.geolonia.com/gsi-extra-2022-05-25/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/gsi-extra-v2/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
