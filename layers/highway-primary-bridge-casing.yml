@@ -1,0 +1,38 @@
+id: highway-primary-bridge-casing
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 7
+filter:
+  - any
+  - - all
+    - - '=='
+      - rnkWidth
+      - 4
+    - - in
+      - ftCode
+      - 2702
+      - 2703
+    - - '!='
+      - motorway
+      - 1
+    - - in
+      - rdCtg
+      - 0
+      - 1
+      - 2
+  - - all
+    - - '>='
+      - ftCode
+      - 52700
+    - - <
+      - ftCode
+      - 52800
+    - - '!='
+      - ftCode
+      - 52703
+layout:
+  line-join: round
+paint:
+  line-color: rgba(222, 222, 222, 1)
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

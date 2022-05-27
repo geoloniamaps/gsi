@@ -1,0 +1,48 @@
+id: highway-motorway-casing
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 4
+filter:
+  - any
+  - - all
+    - - '>='
+      - ftCode
+      - 2700
+    - - <
+      - ftCode
+      - 2800
+    - - '!='
+      - ftCode
+      - 2702
+    - - '!='
+      - ftCode
+      - 2703
+    - - '!='
+      - ftCode
+      - 2704
+    - - any
+      - - '=='
+        - motorway
+        - 1
+      - - '=='
+        - rdCtg
+        - 3
+  - - '=='
+    - ftCode
+    - 52703
+layout:
+  line-cap: butt
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#4ed19e'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0.6
+    - 11
+    - 1

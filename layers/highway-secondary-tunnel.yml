@@ -35,19 +35,13 @@ filter:
       - ftCode
       - 52703
 layout:
-  line-cap: butt
   line-join: round
-  visibility: visible
 paint:
-  line-color: '#FEE2BF'
-  line-width:
+  line-color: '#fff4c6'
+  line-opacity:
     stops:
-      - - 6
-        - 0.5
-      - - 17
-        - 2
-      - - 24
-        - 30
-  line-dasharray:
-    - 2
-    - 0.5
+      - - 12
+        - 0
+      - - 13
+        - 1
+  line-width: !!inc/file layers/components/broad-road-width.yml

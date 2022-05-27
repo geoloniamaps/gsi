@@ -16,14 +16,18 @@ filter:
 layout:
   line-cap: round
   line-join: round
-  visibility: visible
 paint:
-  line-color: '#FEE2BF'
+  line-color: !!inc/file layers/components/road-color.yml
   line-width:
-    stops:
-      - - 4
-        - 1
-      - - 17
-        - 3
-      - - 24
-        - 10
+    - interpolate
+    - - exponential
+      - 0.9 # カーブが大きい
+    - - zoom
+    - 13.5 # zl 8
+    - 0    # 0 から始めて
+    - 14    # zl 9 から本格的に描画
+    - 1.2
+    - 16   # zl 16 で building の表示が始まり、太さコントロールが必要になる
+    - 2.2
+    - 20   # 最大zl, つまり20で
+    - 16   # 太さ20 ならはみ出さない

@@ -16,21 +16,8 @@ filter:
       - rdCtg
       - 3
 layout:
-  line-cap: butt
   line-join: round
   visibility: visible
 paint:
-  line-color: '#B2DFD3'
-  line-width:
-    stops:
-      - - 4
-        - 1
-      - - 15
-        - 4
-      - - 17
-        - 6
-      - - 24
-        - 30
-  line-dasharray:
-    - 2
-    - 0.5
+  line-color: '#ffdaa6'
+  line-width: !!inc/file layers/components/broad-road-width.yml

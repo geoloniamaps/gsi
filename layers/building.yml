@@ -8,7 +8,7 @@ filter:
   - - '=='
     - $type
     - Polygon
-layout:
-  visibility: visible
 paint:
-  fill-color: '#FAFAFA'
+  fill-color: 'rgba(236, 236, 236, 0.9)'
+  fill-outline-color: '#ccc'
+  fill-antialias: true

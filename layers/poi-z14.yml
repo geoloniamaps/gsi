@@ -1,4 +1,4 @@
-id: poi-primary
+id: poi-z14
 type: symbol
 source: geolonia-gsi-custom
 source-layer: poi
@@ -8,11 +8,18 @@ filter:
   - - '=='
     - $type
     - Point
-  - - <=
-    - rank
-    - 25
   - - has
     - name
+  - - 'in'
+    - class
+    - college
+    - castle
+    - aquarium
+    - cinema
+    - theatre
+    - zoo
+    - convenience
+    - lodging
   - - '!='
     - disputed
     - japan_northern_territories
@@ -20,26 +27,23 @@ layout:
   text-padding: 2
   text-font:
     - Noto Sans Regular
+  text-anchor: top
+  icon-anchor: bottom
   icon-image:
     - coalesce
     - - image
       - - get
         - class
     - - image
-      - circle
+      - circle-stroked
   text-field: '{name}'
+  text-offset:
+    - 0
+    - 0.3
   text-size: 12
   text-max-width: 9
-  text-variable-anchor:
-    - top
-    - bottom
-    - left
-    - right
-  text-radial-offset: 0.7
-  text-justify: center
-  text-anchor: center
 paint:
-  text-halo-blur: 1
+  text-halo-blur: 0.5
   text-color: '#666'
   text-halo-width: 1
   text-halo-color: '#ffffff'

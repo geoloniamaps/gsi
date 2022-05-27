@@ -1,0 +1,35 @@
+id: road_shield_highway
+type: symbol
+source: gsi-japan
+source-layer: transp
+minzoom: 12
+filter:
+  - all
+  - - in
+    - ftCode
+    - 2903 # 都市高速道路番号
+    - 2904 # 高速道路番号
+layout:
+  icon-image: highway-JP_3
+  icon-rotation-alignment: viewport
+  text-field:
+    - case
+    - - has
+      - uRNo
+    - - get
+      - uRNo
+    - - has
+      - nRNo
+    - - get
+      - nRNo
+    - ''
+  text-font:
+    - Noto Sans CJK JP Bold
+  text-offset:
+    - 0
+    - -0.1
+  text-rotation-alignment: viewport
+  text-size: 10
+  icon-size: 1
+paint:
+  text-color: '#ffffff'

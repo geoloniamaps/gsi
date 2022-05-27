@@ -2,7 +2,7 @@ id: label-gsi
 type: symbol
 source: gsi-japan
 source-layer: label
-minzoom: 8
+minzoom: 10
 maxzoom: 15
 filter:
   - all
@@ -19,15 +19,31 @@ layout:
   text-padding: 2
   text-font:
     - Noto Sans Regular
-  icon-image: mountain
-  text-field: '{knj}'
-  text-size: 14
-  text-max-width: 9
   text-anchor: top
-  text-justify: center
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - 'mountain'
+    - - image
+      - circle-stroked
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 50
+    - 11
+    - 100
+    - 20
+    - 2
+  text-field: '{knj}'
   text-offset:
     - 0
-    - 0.4
+    - 0.3
+  text-size: 12
+  text-max-width: 9
+  visibility: visible
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

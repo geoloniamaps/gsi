@@ -1,0 +1,28 @@
+id: railway-subway
+type: line
+source: gsi-japan
+source-layer: railway
+minzoom: 13
+filter:
+  - any
+  - - '=='
+    - rtCode10
+    - '2'
+  - - all
+    - - '>='
+      - rtCode
+      - '40203000000'
+    - - <
+      - rtCode
+      - '40204000000'
+  - - all
+    - - '>='
+      - rtCode1
+      - '40203000000'
+    - - <
+      - rtCode1
+      - '40204000000'
+paint:
+  line-color: '#9dabdd'
+  line-opacity: 1
+  line-width: 1.5

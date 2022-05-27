@@ -2,7 +2,7 @@ id: highway-motorway
 type: line
 source: gsi-japan
 source-layer: road
-minzoom: 6
+minzoom: 5
 filter:
   - any
   - - all
@@ -33,19 +33,23 @@ filter:
     - 52703
 layout:
   line-cap: round
-  visibility: visible
   line-join: round
 paint:
-  line-color: '#7FCBB7'
-  line-width:
-    stops:
-      - - 4
-        - 1
-      - - 15
-        - 4
-      - - 17
-        - 9
-      - - 24
-        - 40
-  line-blur: 0
-  line-translate-anchor: map
+  line-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - '#4ed19e'
+    - 11
+    - '#9be0c5'
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0.6
+    - 11
+    - 1
+  line-width: !!inc/file layers/components/broad-road-width.yml
+

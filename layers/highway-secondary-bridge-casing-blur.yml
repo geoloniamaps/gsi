@@ -1,0 +1,55 @@
+id: highway-secondary-bridge-casing-blur
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 7
+filter:
+  - any
+  - - all
+    - - '!='
+      - rnkWidth
+      - 0
+    - - '!='
+      - rnkWidth
+      - 4
+    - - in
+      - ftCode
+      - 2702
+      - 2703
+    - - '!='
+      - motorway
+      - 1
+    - - in
+      - rdCtg
+      - 0
+      - 1
+      - 2
+  - - all
+    - - '>='
+      - ftCode
+      - 52700
+    - - <
+      - ftCode
+      - 52800
+    - - '!='
+      - ftCode
+      - 52703
+layout:
+  line-join: round
+  line-cap: "round"
+paint:
+  line-color: '#000000'
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [5, 2]
+  line-opacity: !!inc/file layers/components/road-blur-opacity.yml
+  line-blur:
+    stops:
+      - - 14
+        - 20
+      - - 17
+        - 25
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

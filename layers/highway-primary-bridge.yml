@@ -32,18 +32,7 @@ filter:
       - ftCode
       - 52703
 layout:
-  line-cap: round
   line-join: round
-  visibility: visible
 paint:
-  line-color: '#FDD8AE'
-  line-width:
-    stops:
-      - - 4
-        - 1
-      - - 15
-        - 4
-      - - 17
-        - 9
-      - - 24
-        - 40
+  line-color: !!inc/file layers/components/road-color.yml
+  line-width: !!inc/file layers/components/broad-road-width.yml
