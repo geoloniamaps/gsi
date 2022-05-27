@@ -1,7 +1,5 @@
-  - interpolate
-  - - linear
+  - step
   - - zoom
-  - 15
   - '#ffffff'
   - 16
   - '#f5f5f5'
