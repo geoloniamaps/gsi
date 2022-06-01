@@ -85,9 +85,9 @@ layers:
   - !!inc/file layers/highway-minor.yml
   - !!inc/file layers/highway-secondary.yml
   - !!inc/file layers/highway-primary.yml
+  - !!inc/file layers/road-outline.yml
   - !!inc/file layers/highway-motorway.yml
 
-  - !!inc/file layers/road-outline.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/structurea-casing.yml
   - !!inc/file layers/structurea.yml
