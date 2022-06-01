@@ -2444,6 +2444,35 @@
       }
     },
     {
+      "id": "road-outline",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2200
+        ],
+        [
+          "<",
+          "ftCode",
+          2700
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#DDDDDD",
+        "line-width": 2
+      }
+    },
+    {
       "id": "highway-motorway",
       "type": "line",
       "source": "gsi-japan",
@@ -2555,35 +2584,6 @@
           20,
           160
         ]
-      }
-    },
-    {
-      "id": "road-outline",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          ">=",
-          "ftCode",
-          2200
-        ],
-        [
-          "<",
-          "ftCode",
-          2700
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#DDDDDD",
-        "line-width": 2
       }
     },
     {
