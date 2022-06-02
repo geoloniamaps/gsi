@@ -6564,7 +6564,7 @@
       "type": "symbol",
       "source": "gsi-japan",
       "source-layer": "label",
-      "minzoom": 9,
+      "minzoom": 10,
       "maxzoom": 15,
       "filter": [
         "all",
