@@ -14,14 +14,15 @@ filter:
       - jflag
     - false
 layout:
+  text-padding: 20
   text-font:
     - Noto Sans CJK JP Bold
   text-size:
     stops:
       - - 5
-        - 10
+        - 12
       - - 8
-        - 17
+        - 9
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
