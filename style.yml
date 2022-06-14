@@ -3,7 +3,7 @@ name: GSI Japan + OpenStreetMap based style for Geolonia
 sources:
   oceanus:
     type: vector
-    url: https://tileserver.geolonia.com/oceanus-pr-31/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/oceanus-v0-1-6/tiles.json?key=YOUR-API-KEY
   gsi-japan:
     type: vector
     url: https://cdn.geolonia.com/tiles/gsi.json
