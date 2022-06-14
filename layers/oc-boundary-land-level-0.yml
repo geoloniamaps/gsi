@@ -11,5 +11,9 @@ layout:
   line-join: round
 paint:
   line-color: '#9e9cab'
-  line-width: 1
-  line-blur: 0.4
+  line-width:
+    stops:
+      - - 3
+        - 0.1
+      - - 4
+        - 1.5
