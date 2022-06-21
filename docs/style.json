@@ -8,7 +8,7 @@
     },
     "gsi-japan": {
       "type": "vector",
-      "url": "https://cdn.geolonia.com/tiles/gsi.json",
+      "url": "https://cdn-v2.geolonia.com/tiles/gsi.json",
       "minzoom": 5
     },
     "geolonia-water": {
@@ -17,7 +17,7 @@
     },
     "geolonia-gsi-custom": {
       "type": "vector",
-      "url": "https://tileserver.geolonia.com/gsi-extra/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/gsi-extra-v2/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
@@ -26,7 +26,7 @@
     }
   },
   "sprite": "https://geoloniamaps.github.io/gsi/gsi",
-  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "glyphs": "https://glyphs-v2.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -190,6 +190,61 @@
       "type": "line",
       "source": "geolonia-water",
       "source-layer": "water",
+      "layout": {
+        "line-join": "round",
+        "line-round-limit": 0.5,
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#62cffc",
+        "line-width": 10,
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                -2,
+                -2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.5
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
+      }
+    },
+    {
+      "id": "water-blur-gsi",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "river",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "ftCode",
+          5322
+        ]
+      ],
       "layout": {
         "line-join": "round",
         "line-round-limit": 0.5,
@@ -1361,39 +1416,6 @@
       }
     },
     {
-      "id": "waterway-river",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "river",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "ftCode",
-          5322
-        ]
-      ],
-      "layout": {
-        "line-cap": "round"
-      },
-      "paint": {
-        "line-color": "#a0c8f0",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              10,
-              0.8
-            ],
-            [
-              20,
-              6
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "waterway-name",
       "type": "symbol",
       "source": "geolonia-gsi-custom",
@@ -1642,18 +1664,21 @@
             ]
           ]
         },
-        "line-opacity": {
-          "stops": [
-            [
-              14,
-              0.2
-            ],
-            [
-              17,
-              0.8
-            ]
-          ]
-        },
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0.2,
+          17,
+          0.8,
+          18,
+          0
+        ],
         "line-blur": {
           "stops": [
             [
@@ -1750,18 +1775,21 @@
             ]
           ]
         },
-        "line-opacity": {
-          "stops": [
-            [
-              14,
-              0.2
-            ],
-            [
-              17,
-              0.8
-            ]
-          ]
-        },
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0.2,
+          17,
+          0.8,
+          18,
+          0
+        ],
         "line-blur": {
           "stops": [
             [
@@ -1905,18 +1933,21 @@
             ]
           ]
         },
-        "line-opacity": {
-          "stops": [
-            [
-              14,
-              0.2
-            ],
-            [
-              17,
-              0.8
-            ]
-          ]
-        },
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0.2,
+          17,
+          0.8,
+          18,
+          0
+        ],
         "line-blur": {
           "stops": [
             [
@@ -2041,6 +2072,592 @@
           20,
           166
         ]
+      }
+    },
+    {
+      "id": "highway-motorway-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 4,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            2700
+          ],
+          [
+            "<",
+            "ftCode",
+            2800
+          ],
+          [
+            "!=",
+            "ftCode",
+            2702
+          ],
+          [
+            "!=",
+            "ftCode",
+            2703
+          ],
+          [
+            "!=",
+            "ftCode",
+            2704
+          ],
+          [
+            "any",
+            [
+              "==",
+              "motorway",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              3
+            ]
+          ]
+        ],
+        [
+          "==",
+          "ftCode",
+          52703
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#4ed19e",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0.6,
+          11,
+          1
+        ]
+      }
+    },
+    {
+      "id": "highway-minor",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2700
+        ],
+        [
+          "<",
+          "ftCode",
+          2800
+        ],
+        [
+          "!=",
+          "ftCode",
+          2704
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "#ffffff",
+          16,
+          "#f5f5f5"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          13.5,
+          0,
+          14,
+          1.2,
+          16,
+          2.2,
+          20,
+          16
+        ]
+      }
+    },
+    {
+      "id": "highway-secondary",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 7,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "any",
+            [
+              "==",
+              "ftCode",
+              2701
+            ]
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
+            "any",
+            [
+              "in",
+              "rdCtg",
+              0,
+              1,
+              2
+            ],
+            [
+              "==",
+              "rnkWidth",
+              4
+            ]
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "#ffffff",
+          16,
+          "#f5f5f5"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
+      }
+    },
+    {
+      "id": "highway-primary",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 7,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "==",
+            "rnkWidth",
+            4
+          ],
+          [
+            "any",
+            [
+              "==",
+              "ftCode",
+              2701
+            ]
+          ],
+          [
+            "!=",
+            "motorway",
+            1
+          ],
+          [
+            "!=",
+            "rdCtg",
+            3
+          ],
+          [
+            "in",
+            "rdCtg",
+            0,
+            1,
+            2,
+            6
+          ]
+        ],
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            52700
+          ],
+          [
+            "<",
+            "ftCode",
+            52800
+          ],
+          [
+            "!=",
+            "ftCode",
+            52703
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "#ffffff",
+          16,
+          "#f5f5f5"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
+      }
+    },
+    {
+      "id": "road-outline",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "ftCode",
+          2200
+        ],
+        [
+          "<",
+          "ftCode",
+          2700
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#DDDDDD",
+        "line-width": 2
+      }
+    },
+    {
+      "id": "highway-motorway",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "road",
+      "minzoom": 5,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            ">=",
+            "ftCode",
+            2700
+          ],
+          [
+            "<",
+            "ftCode",
+            2800
+          ],
+          [
+            "!=",
+            "ftCode",
+            2702
+          ],
+          [
+            "!=",
+            "ftCode",
+            2703
+          ],
+          [
+            "!=",
+            "ftCode",
+            2704
+          ],
+          [
+            "any",
+            [
+              "==",
+              "motorway",
+              1
+            ],
+            [
+              "==",
+              "rdCtg",
+              3
+            ]
+          ]
+        ],
+        [
+          "==",
+          "ftCode",
+          52703
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          "#4ed19e",
+          11,
+          "#9be0c5"
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0.6,
+          11,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
+      }
+    },
+    {
+      "id": "building",
+      "type": "fill",
+      "source": "gsi-japan",
+      "source-layer": "building",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgba(236, 236, 236, 0.9)",
+        "fill-outline-color": "#ccc",
+        "fill-antialias": true
+      }
+    },
+    {
+      "id": "structurea-casing",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "structurea",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#DEDEDE",
+        "line-width": {
+          "stops": [
+            [
+              15,
+              1
+            ],
+            [
+              18,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "structurea",
+      "type": "fill",
+      "source": "gsi-japan",
+      "source-layer": "structurea",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#FAFAFA"
       }
     },
     {
@@ -2551,574 +3168,6 @@
       }
     },
     {
-      "id": "highway-motorway-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 4,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            2700
-          ],
-          [
-            "<",
-            "ftCode",
-            2800
-          ],
-          [
-            "!=",
-            "ftCode",
-            2702
-          ],
-          [
-            "!=",
-            "ftCode",
-            2703
-          ],
-          [
-            "!=",
-            "ftCode",
-            2704
-          ],
-          [
-            "any",
-            [
-              "==",
-              "motorway",
-              1
-            ],
-            [
-              "==",
-              "rdCtg",
-              3
-            ]
-          ]
-        ],
-        [
-          "==",
-          "ftCode",
-          52703
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#4ed19e",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            0.9
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0,
-          9,
-          0.6,
-          12,
-          0.9,
-          14,
-          4,
-          16,
-          14,
-          18,
-          24,
-          19,
-          72,
-          20,
-          166
-        ],
-        "line-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0.6,
-          11,
-          1
-        ]
-      }
-    },
-    {
-      "id": "highway-minor",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "filter": [
-        "all",
-        [
-          ">=",
-          "ftCode",
-          2700
-        ],
-        [
-          "<",
-          "ftCode",
-          2800
-        ],
-        [
-          "!=",
-          "ftCode",
-          2704
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            0.9
-          ],
-          [
-            "zoom"
-          ],
-          13.5,
-          0,
-          14,
-          1.2,
-          16,
-          2.2,
-          20,
-          16
-        ]
-      }
-    },
-    {
-      "id": "highway-secondary",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 7,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            "any",
-            [
-              "==",
-              "ftCode",
-              2701
-            ]
-          ],
-          [
-            "!=",
-            "motorway",
-            1
-          ],
-          [
-            "!=",
-            "rdCtg",
-            3
-          ],
-          [
-            "any",
-            [
-              "in",
-              "rdCtg",
-              0,
-              1,
-              2
-            ],
-            [
-              "==",
-              "rnkWidth",
-              4
-            ]
-          ]
-        ],
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            52700
-          ],
-          [
-            "<",
-            "ftCode",
-            52800
-          ],
-          [
-            "!=",
-            "ftCode",
-            52703
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#fff",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            0.9
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0,
-          9,
-          0.5,
-          12,
-          0.8,
-          14,
-          3,
-          16,
-          10,
-          18,
-          20,
-          19,
-          68,
-          20,
-          160
-        ]
-      }
-    },
-    {
-      "id": "highway-primary",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 7,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            "==",
-            "rnkWidth",
-            4
-          ],
-          [
-            "any",
-            [
-              "==",
-              "ftCode",
-              2701
-            ]
-          ],
-          [
-            "!=",
-            "motorway",
-            1
-          ],
-          [
-            "!=",
-            "rdCtg",
-            3
-          ],
-          [
-            "in",
-            "rdCtg",
-            0,
-            1,
-            2,
-            6
-          ]
-        ],
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            52700
-          ],
-          [
-            "<",
-            "ftCode",
-            52800
-          ],
-          [
-            "!=",
-            "ftCode",
-            52703
-          ]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#fff",
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            0.9
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0,
-          9,
-          0.5,
-          12,
-          0.8,
-          14,
-          3,
-          16,
-          10,
-          18,
-          20,
-          19,
-          68,
-          20,
-          160
-        ]
-      }
-    },
-    {
-      "id": "highway-motorway",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 5,
-      "filter": [
-        "any",
-        [
-          "all",
-          [
-            ">=",
-            "ftCode",
-            2700
-          ],
-          [
-            "<",
-            "ftCode",
-            2800
-          ],
-          [
-            "!=",
-            "ftCode",
-            2702
-          ],
-          [
-            "!=",
-            "ftCode",
-            2703
-          ],
-          [
-            "!=",
-            "ftCode",
-            2704
-          ],
-          [
-            "any",
-            [
-              "==",
-              "motorway",
-              1
-            ],
-            [
-              "==",
-              "rdCtg",
-              3
-            ]
-          ]
-        ],
-        [
-          "==",
-          "ftCode",
-          52703
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          "#4ed19e",
-          11,
-          "#9be0c5"
-        ],
-        "line-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0.6,
-          11,
-          1
-        ],
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            0.9
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0,
-          9,
-          0.5,
-          12,
-          0.8,
-          14,
-          3,
-          16,
-          10,
-          18,
-          20,
-          19,
-          68,
-          20,
-          160
-        ]
-      }
-    },
-    {
-      "id": "road-outline",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "road",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          ">=",
-          "ftCode",
-          2200
-        ],
-        [
-          "<",
-          "ftCode",
-          2700
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#DDDDDD",
-        "line-width": 2,
-        "line-dasharray": [
-          3,
-          2,
-          0.5,
-          2
-        ]
-      }
-    },
-    {
-      "id": "building",
-      "type": "fill",
-      "source": "gsi-japan",
-      "source-layer": "building",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ]
-      ],
-      "paint": {
-        "fill-color": "rgba(236, 236, 236, 0.9)",
-        "fill-outline-color": "#ccc",
-        "fill-antialias": true
-      }
-    },
-    {
-      "id": "structurea-casing",
-      "type": "line",
-      "source": "gsi-japan",
-      "source-layer": "structurea",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#DEDEDE",
-        "line-width": {
-          "stops": [
-            [
-              15,
-              1
-            ],
-            [
-              18,
-              3
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "structurea",
-      "type": "fill",
-      "source": "gsi-japan",
-      "source-layer": "structurea",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#FAFAFA"
-      }
-    },
-    {
       "id": "highway-minor-bridge-casing",
       "type": "line",
       "source": "gsi-japan",
@@ -3216,7 +3265,15 @@
         ]
       ],
       "paint": {
-        "line-color": "#cba",
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "#ffffff",
+          16,
+          "#f5f5f5"
+        ],
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -3390,7 +3447,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "#ffffff",
+          16,
+          "#f5f5f5"
+        ],
         "line-width": [
           "interpolate",
           [
@@ -3562,7 +3627,15 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "#ffffff",
+          16,
+          "#f5f5f5"
+        ],
         "line-width": [
           "interpolate",
           [
@@ -3772,6 +3845,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "railway",
+      "minzoom": 13,
       "filter": [
         "any",
         [
@@ -5097,7 +5171,20 @@
               2
             ]
           ]
-        }
+        },
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          14,
+          0.1
+        ]
       }
     },
     {
@@ -5794,11 +5881,11 @@
       }
     },
     {
-      "id": "poi-z11",
+      "id": "poi-z13",
       "type": "symbol",
       "source": "geolonia-gsi-custom",
       "source-layer": "poi",
-      "minzoom": 11,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -6089,7 +6176,7 @@
       "type": "symbol",
       "source": "geolonia-gsi-custom",
       "source-layer": "poi",
-      "minzoom": 11,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -6209,10 +6296,7 @@
           "coalesce",
           [
             "image",
-            [
-              "get",
-              "class"
-            ]
+            "railway"
           ],
           [
             "image",
@@ -6228,6 +6312,8 @@
             "zoom"
           ],
           11,
+          50,
+          13,
           30,
           15,
           2
@@ -6297,26 +6383,26 @@
       }
     },
     {
-      "id": "poi-mountain",
+      "id": "label-gsi",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
-      "source-layer": "mountain_peak",
-      "minzoom": 8,
+      "source": "gsi-japan",
+      "source-layer": "label",
+      "minzoom": 10,
+      "maxzoom": 15,
       "filter": [
         "all",
         [
-          "==",
-          "$type",
-          "Point"
+          "in",
+          "ftCode",
+          100,
+          50100
         ],
         [
-          "has",
-          "name"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
+          "in",
+          "annoCtg",
+          311,
+          314,
+          315
         ]
       ],
       "layout": {
@@ -6352,7 +6438,7 @@
           20,
           2
         ],
-        "text-field": "{name}",
+        "text-field": "{knj}",
         "text-offset": [
           0,
           0.3
@@ -6373,19 +6459,18 @@
       "type": "symbol",
       "source": "gsi-japan",
       "source-layer": "transp",
-      "minzoom": 6,
+      "minzoom": 12,
       "filter": [
         "all",
         [
           "in",
           "ftCode",
-          2901,
-          2903,
-          2904
+          2901
         ]
       ],
       "layout": {
-        "icon-image": "default_3",
+        "icon-image": "national-JP_3",
+        "icon-rotation-alignment": "viewport",
         "text-field": [
           "case",
           [
@@ -6407,10 +6492,71 @@
           ""
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans CJK JP Bold"
         ],
+        "text-offset": [
+          0,
+          -0.1
+        ],
+        "text-rotation-alignment": "viewport",
         "text-size": 10,
         "icon-size": 1
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "road_shield_highway",
+      "type": "symbol",
+      "source": "gsi-japan",
+      "source-layer": "transp",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        [
+          "in",
+          "ftCode",
+          2903,
+          2904
+        ]
+      ],
+      "layout": {
+        "icon-image": "highway-JP_3",
+        "icon-rotation-alignment": "viewport",
+        "text-field": [
+          "case",
+          [
+            "has",
+            "uRNo"
+          ],
+          [
+            "get",
+            "uRNo"
+          ],
+          [
+            "has",
+            "nRNo"
+          ],
+          [
+            "get",
+            "nRNo"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-offset": [
+          0,
+          -0.1
+        ],
+        "text-rotation-alignment": "viewport",
+        "text-size": 10,
+        "icon-size": 1
+      },
+      "paint": {
+        "text-color": "#ffffff"
       }
     },
     {
@@ -6418,7 +6564,7 @@
       "type": "symbol",
       "source": "gsi-japan",
       "source-layer": "label",
-      "minzoom": 9,
+      "minzoom": 10,
       "maxzoom": 15,
       "filter": [
         "all",
@@ -6708,56 +6854,9 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#993333",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "label-gsi",
-      "type": "symbol",
-      "source": "gsi-japan",
-      "source-layer": "label",
-      "minzoom": 8,
-      "maxzoom": 15,
-      "filter": [
-        "all",
-        [
-          "in",
-          "ftCode",
-          100,
-          50100
-        ],
-        [
-          "in",
-          "annoCtg",
-          311,
-          314,
-          315
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "icon-image": "mountain",
-        "text-field": "{knj}",
-        "text-size": 14,
-        "text-max-width": 9,
-        "text-anchor": "top",
-        "text-justify": "center",
-        "text-offset": [
-          0,
-          0.4
-        ]
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
       }
     },
     {
