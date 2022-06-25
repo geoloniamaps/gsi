@@ -6,7 +6,7 @@ sources:
     url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
   gsi-japan:
     type: vector
-    url: https://cdn-v2.geolonia.com/tiles/gsi.json
+    url: https://jyjfqd666c.execute-api.ap-northeast-1.amazonaws.com/gsi_experimental_bvmap/tiles.json
     minzoom: 5
   geolonia-water:
     type: vector
@@ -19,7 +19,7 @@ sources:
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
 sprite: https://geoloniamaps.github.io/gsi/gsi
-glyphs: https://glyphs-v2.geolonia.com/{fontstack}/{range}.pbf
+glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
