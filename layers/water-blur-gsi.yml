@@ -2,7 +2,7 @@ id: water-blur-gsi
 type: line
 source: gsi-japan
 source-layer: river
-minzoom: 8
+minzoom: 14
 filter:
   - all
   - - '!='
