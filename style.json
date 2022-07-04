@@ -190,6 +190,7 @@
       "type": "line",
       "source": "geolonia-water",
       "source-layer": "water",
+      "minzoom": 14,
       "layout": {
         "line-join": "round",
         "line-round-limit": 0.5,
@@ -236,7 +237,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "river",
-      "minzoom": 8,
+      "minzoom": 14,
       "filter": [
         "all",
         [
