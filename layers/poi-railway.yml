@@ -28,9 +28,9 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - railway
+      - railway-11
     - - image
-      - circle-stroked
+      - circle-stroked-11
   icon-padding:
     - interpolate
     - - linear

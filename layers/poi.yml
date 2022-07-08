@@ -23,10 +23,12 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - get
-        - class
+      - - concat
+        - - get
+          - class
+        - '-11'
     - - image
-      - circle
+      - circle-stroked-11
   text-field: '{name}'
   text-size: 12
   text-max-width: 9
