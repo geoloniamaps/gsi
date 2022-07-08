@@ -15,4 +15,4 @@
   publish = "docs/"
 
   # Default build command.
-  command = "charites build style.yml ./docs/style.json --sprite-input icons/ --sprite-output docs/ --sprite-url ${DEPLOY_PRIME_URL}/gsi"
+  command = "charites build style.yml"
