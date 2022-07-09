@@ -3,10 +3,5 @@ source: dem
 type: hillshade
 maxzoom: 12
 paint:
-  hillshade-exaggeration:
-    stops:
-      - - 4
-        - 0.15
-      - - 12
-        - 0
+  hillshade-exaggeration: 1
   hillshade-shadow-color: "#000000"
