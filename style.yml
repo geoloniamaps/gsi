@@ -68,17 +68,12 @@ layers:
   - !!inc/file layers/water-name-other.yml
 
   # Shadow effects
-
   - !!inc/file layers/highway-minor-bridge-casing-blur.yml
   - !!inc/file layers/highway-secondary-bridge-casing-blur.yml
   - !!inc/file layers/highway-primary-bridge-casing-blur.yml
   - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
 
   # Road casings
-
-  # - !!inc/file layers/highway-minor-casing.yml
-  # - !!inc/file layers/highway-secondary-casing.yml
-  # - !!inc/file layers/highway-primary-casing.yml
   - !!inc/file layers/highway-motorway-casing.yml
 
   # Roads
@@ -88,10 +83,6 @@ layers:
   - !!inc/file layers/road-outline.yml
   - !!inc/file layers/highway-motorway.yml
 
-  - !!inc/file layers/building.yml
-  - !!inc/file layers/structurea-casing.yml
-  - !!inc/file layers/structurea.yml
-
   # Tunnels
   - !!inc/file layers/highway-secondary-tunnel-casing.yml
   - !!inc/file layers/highway-secondary-tunnel.yml
@@ -99,6 +90,25 @@ layers:
   - !!inc/file layers/highway-primary-tunnel.yml
   - !!inc/file layers/highway-motorway-tunnel-casing.yml
   - !!inc/file layers/highway-motorway-tunnel.yml
+
+  - !!inc/file layers/railway-subway.yml
+  - !!inc/file layers/railway-tunnel.yml
+  - !!inc/file layers/railway-minor.yml
+  - !!inc/file layers/railway-minor-hatching.yml
+  - !!inc/file layers/railway-secondary.yml
+  - !!inc/file layers/railway-secondary-hatching.yml
+  - !!inc/file layers/railway-jr.yml
+  - !!inc/file layers/railway-jr-hatching.yml
+
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/structurea-casing.yml
+  - !!inc/file layers/structurea.yml
+
+  # Railways
+  - !!inc/file layers/railway-jr-bridge.yml
+  - !!inc/file layers/railway-secondary-bridge.yml
+  - !!inc/file layers/railway-secondary-bridge-hatching.yml
+  - !!inc/file layers/railway-jr-bridge-hatching.yml
 
   # Bridges
   - !!inc/file layers/highway-minor-bridge-casing.yml
@@ -109,20 +119,6 @@ layers:
   - !!inc/file layers/highway-primary-bridge.yml
   - !!inc/file layers/highway-motorway-bridge-casing.yml
   - !!inc/file layers/highway-motorway-bridge.yml
-
-  # Railways
-  - !!inc/file layers/railway-subway.yml
-  - !!inc/file layers/railway-tunnel.yml
-  - !!inc/file layers/railway-minor.yml
-  - !!inc/file layers/railway-minor-hatching.yml
-  - !!inc/file layers/railway-secondary.yml
-  - !!inc/file layers/railway-secondary-hatching.yml
-  - !!inc/file layers/railway-jr.yml
-  - !!inc/file layers/railway-jr-hatching.yml
-  - !!inc/file layers/railway-jr-bridge.yml
-  - !!inc/file layers/railway-secondary-bridge.yml
-  - !!inc/file layers/railway-secondary-bridge-hatching.yml
-  - !!inc/file layers/railway-jr-bridge-hatching.yml
 
   - !!inc/file layers/boundary-sea.yml
   - !!inc/file layers/boundary.yml
