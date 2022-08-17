@@ -2,7 +2,7 @@ id: water-blur-gsi
 type: line
 source: gsi-japan
 source-layer: river
-minzoom: 17
+minzoom: 18
 layout:
   line-join: "round"
   line-round-limit: 0.5
@@ -11,19 +11,20 @@ paint:
   line-color: '#62cffc'
   line-width:
     stops:
-      - - 17
+      - - 18
         - 3
-      - - 19
-        - 10
+      - - 20
+        - 4
   line-translate:
     stops:
-      - - 17
+      - - 18
         - [1, 1]
-      - - 19
+      - - 20
         - [-2, -2]
   line-opacity:
     stops:
-      - - 17
+      - - 18
         - 0.5
-      - - 19
+      - - 20
         - 0.8
+  line-blur: 2
