@@ -30,6 +30,7 @@ layers:
   - !!inc/file layers/water-blur.yml
   - !!inc/file layers/water-blur-gsi.yml
   - !!inc/file layers/water-river-lake-ja-blur.yml
+  - !!inc/file layers/water-gsi.yml
   - !!inc/file layers/water.yml
   - !!inc/file layers/water-river-lake-ja.yml
   - !!inc/file layers/oc-ocean.yml
