@@ -1,0 +1,24 @@
+id: water-gsi
+type: line
+source: gsi-japan
+source-layer: river
+minzoom: 16
+filter:
+  - all
+  - - '!='
+    - ftCode
+    - 5322
+layout:
+  line-join: "round"
+  line-round-limit: 0.5
+  visibility: visible
+paint:
+  line-color: '#65cbf9'
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 16
+    - 1
+    - 20
+    - 5
