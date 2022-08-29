@@ -2,30 +2,9 @@ id: water-blur
 type: line
 source: geolonia-water
 source-layer: water
-minzoom: 18
+minzoom: 17
 layout:
   line-join: "round"
-  line-round-limit: 0.5
   visibility: visible
-paint:
-  line-color: '#62cffc'
-  line-width:
-    stops:
-      - - 18
-        - 3
-      - - 20
-        - 4
-  line-translate:
-    stops:
-      - - 18
-        - [1, 1]
-      - - 20
-        - [-2, -2]
-  line-opacity:
-    stops:
-      - - 18
-        - 0.5
-      - - 20
-        - 0.8
-  line-blur: 2
+paint: !!inc/file layers/components/water-blur-paint.yml
 
