@@ -20,6 +20,9 @@ sources:
     attribution: <a href="https://www.gsi.go.jp/" target="_blank">&copy; GSI Japan</a>
 sprite: https://geoloniamaps.github.io/gsi/gsi
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+terrain:
+  source: 'dem'
+  exaggeration: 1.1
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
