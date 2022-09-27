@@ -6,7 +6,7 @@ source: gsi-japan
 source-layer: structurea
 minzoom: 16
 layout:
-  visibility: visible
+  visibility: none
 paint:
   fill-extrusion-color: '#EEEEEE'
   fill-extrusion-height: 30
