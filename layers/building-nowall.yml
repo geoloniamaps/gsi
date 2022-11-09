@@ -1,4 +1,4 @@
-id: building
+id: building-nowall
 type: fill
 source: gsi-japan
 source-layer: building
@@ -8,11 +8,11 @@ filter:
   - - '=='
     - $type
     - Polygon
-  - - '!in'
+  - - in
     - ftCode
     - 3111
     - 3112
 paint:
-  fill-color: 'rgba(236, 236, 236, 0.9)'
+  fill-color: '#ff0000'
   fill-outline-color: '#ccc'
   fill-antialias: true
