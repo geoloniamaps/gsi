@@ -10,7 +10,6 @@ filter:
     - Polygon
   - - in
     - ftCode
-    - 3111
     - 3112
 paint:
   fill-color: '#ff0000'
