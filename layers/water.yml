@@ -2,6 +2,7 @@ id: water
 type: fill
 source: gsi-japan
 source-layer: waterarea
+minzoom: 9
 filter:
   - all
 layout:
