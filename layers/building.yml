@@ -11,6 +11,7 @@ filter:
   - - '!in'
     - ftCode
     - 3112
+    - 3111
 paint:
   fill-color: 'rgba(236, 236, 236, 0.9)'
   fill-outline-color: '#ccc'
