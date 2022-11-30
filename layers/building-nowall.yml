@@ -10,8 +10,10 @@ filter:
     - Polygon
   - - in
     - ftCode
+    - 3111
     - 3112
 paint:
-  fill-color: '#ff0000'
-  fill-outline-color: '#ccc'
+  fill-color: '#e2dcd4'
+  fill-outline-color: '#d7cfc2'
+  fill-opacity: 0.6
   fill-antialias: true
