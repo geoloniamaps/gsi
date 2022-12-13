@@ -10,6 +10,19 @@ filter:
     - jflag
   - - has
     - pref-capital
+  - - '!in' # TODO: タイル側で対応する https://github.com/geoloniamaps/gsi/pull/112
+    - name
+    - '福岡市'
+    - '広島市'
+    - '大阪市'
+    - '神戸市'
+    - '名古屋市'
+    - '横浜市'
+    - '東京'
+    - '新潟市'
+    - '仙台市'
+    - '盛岡市'
+    - '札幌市'
 layout:
   text-padding: 2
   text-font:

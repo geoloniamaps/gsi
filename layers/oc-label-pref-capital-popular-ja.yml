@@ -10,7 +10,7 @@ filter:
     - jflag
   - - has
     - pref-capital
-  - - in # TODO: タイル側で対応する
+  - - in # TODO: タイル側で対応する https://github.com/geoloniamaps/gsi/pull/112
     - name
     - '福岡市'
     - '広島市'
