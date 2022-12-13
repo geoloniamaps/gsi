@@ -126,6 +126,7 @@ layers:
   - !!inc/file layers/poi.yml
   - !!inc/file layers/oc-label-country.yml
   - !!inc/file layers/oc-label-pref-capital-ja.yml
+  - !!inc/file layers/oc-label-pref-capital-popular-ja.yml
   - !!inc/file layers/oc-label-pref-ja.yml
   - !!inc/file layers/oc-label-pref.yml
   - !!inc/file layers/oc-label-town-ja.yml
