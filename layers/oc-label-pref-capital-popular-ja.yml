@@ -10,7 +10,7 @@ filter:
     - jflag
   - - has
     - pref-capital
-  - - in
+  - - in # TODO: タイル側で対応する
     - name
     - '福岡市'
     - '広島市'
