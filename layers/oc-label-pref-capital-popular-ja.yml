@@ -1,8 +1,8 @@
-id: oc-label-pref-capital-ja
+id: oc-label-pref-capital-popular-ja
 type: symbol
 source: oceanus
 source-layer: oc-label
-minzoom: 7
+minzoom: 5
 maxzoom: 8
 filter:
   - all
@@ -10,7 +10,7 @@ filter:
     - jflag
   - - has
     - pref-capital
-  - - '!in' # TODO: タイル側で対応する https://github.com/geoloniamaps/gsi/pull/112
+  - - in # TODO: タイル側で対応する https://github.com/geoloniamaps/gsi/pull/112
     - name
     - '福岡市'
     - '広島市'
@@ -26,7 +26,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans CJK JP Bold
   text-anchor: top
   text-variable-anchor:
     - top
@@ -40,10 +40,15 @@ layout:
   text-offset:
     - 0.6
     - 0.6
-  text-size: 12
+  text-size:
+    stops:
+      - - 5
+        - 13
+      - - 8
+        - 17
   text-max-width: 9
 paint:
   text-halo-blur: 0.5
-  text-color: 'rgba(71, 71, 71, 1)'
+  text-color: 'rgba(30, 30, 30, 1)'
   text-halo-width: 1
   text-halo-color: '#ffffff'
