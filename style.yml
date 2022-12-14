@@ -49,6 +49,7 @@ layers:
   - !!inc/file layers/oc-boundary-land-level-0.yml
   - !!inc/file layers/oc-water-name-ocean.yml
   - !!inc/file layers/oc-water-name-other.yml
+  - !!inc/file layers/oc-road.yml
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/landuse-commercial.yml
@@ -70,7 +71,6 @@ layers:
   - !!inc/file layers/highway-minor-bridge-casing-blur.yml
   - !!inc/file layers/highway-secondary-bridge-casing-blur.yml
   - !!inc/file layers/highway-primary-bridge-casing-blur.yml
-  - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
 
   # Road casings
   - !!inc/file layers/highway-motorway-casing.yml
@@ -88,11 +88,8 @@ layers:
   - !!inc/file layers/structurea.yml
 
   # Tunnels
-  - !!inc/file layers/highway-secondary-tunnel-casing.yml
   - !!inc/file layers/highway-secondary-tunnel.yml
-  - !!inc/file layers/highway-primary-tunnel-casing.yml
   - !!inc/file layers/highway-primary-tunnel.yml
-  - !!inc/file layers/highway-motorway-tunnel-casing.yml
   - !!inc/file layers/highway-motorway-tunnel.yml
 
   # Bridges
@@ -102,8 +99,6 @@ layers:
   - !!inc/file layers/highway-secondary-bridge.yml
   - !!inc/file layers/highway-primary-bridge-casing.yml
   - !!inc/file layers/highway-primary-bridge.yml
-  - !!inc/file layers/highway-motorway-bridge-casing.yml
-  - !!inc/file layers/highway-motorway-bridge.yml
 
   # Railways
   - !!inc/file layers/railway-subway.yml
