@@ -113,6 +113,7 @@ layers:
   - !!inc/file layers/railway-secondary.yml
   - !!inc/file layers/railway-secondary-hatching.yml
   - !!inc/file layers/railway-jr.yml
+  - !!inc/file layers/railway-jr-high-speed.yml
   - !!inc/file layers/railway-jr-hatching.yml
   - !!inc/file layers/railway-jr-bridge.yml
   - !!inc/file layers/railway-secondary-bridge.yml
