@@ -34,5 +34,5 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#ffdaa6'
+  line-color: !!inc/file layers/components/tunnel-color.yml
   line-width: !!inc/file layers/components/broad-road-width.yml
