@@ -1,0 +1,40 @@
+id: highway-primary-tunnel-casing
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 7
+filter:
+  - any
+  - - all
+    - - '=='
+      - rnkWidth
+      - 4
+    - - in
+      - ftCode
+      - 2704
+    - - '!='
+      - motorway
+      - 1
+    - - in
+      - rdCtg
+      - 0
+      - 1
+      - 2
+  - - all
+    - - '>='
+      - ftCode
+      - 52700
+    - - <
+      - ftCode
+      - 52800
+    - - '!='
+      - ftCode
+      - 52703
+layout:
+  line-join: round
+paint:
+  line-color: !!inc/file layers/components/tunnel-casing-color.yml
+  line-dasharray:
+    - 0.5
+    - 0.25
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

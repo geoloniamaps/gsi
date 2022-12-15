@@ -89,8 +89,11 @@ layers:
   - !!inc/file layers/structurea.yml
 
   # Tunnels
+  - !!inc/file layers/highway-secondary-tunnel-casing.yml
   - !!inc/file layers/highway-secondary-tunnel.yml
+  - !!inc/file layers/highway-primary-tunnel-casing.yml
   - !!inc/file layers/highway-primary-tunnel.yml
+  - !!inc/file layers/highway-motorway-tunnel-casing.yml
   - !!inc/file layers/highway-motorway-tunnel.yml
 
   # Bridges

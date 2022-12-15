@@ -1,0 +1,26 @@
+id: highway-motorway-tunnel-casing
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 6
+filter:
+  - all
+  - - '=='
+    - ftCode
+    - 2704
+  - - any
+    - - '=='
+      - motorway
+      - 1
+    - - '=='
+      - rdCtg
+      - 3
+layout:
+  line-join: round
+  visibility: visible
+paint:
+  line-color: !!inc/file layers/components/tunnel-casing-color.yml
+  line-dasharray:
+    - 0.5
+    - 0.25
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
