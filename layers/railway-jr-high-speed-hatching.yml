@@ -1,4 +1,4 @@
-id: railway-jr-high-speed
+id: railway-jr-high-speed-hatching
 type: line
 source: gsi-japan
 source-layer: railway
@@ -15,14 +15,17 @@ filter:
     - ftCode
     - 58204
 paint:
-  line-color: '#5747C7'
+  line-color: '#FFFFFF'
+  line-dasharray:
+    - 3
+    - 4
   line-width:
     stops:
       - - 5
-        - 2
+        - 1
       - - 10
-        - 3
+        - 2
       - - 18
-        - 4
+        - 3
       - - 22
-        - 20
+        - 19

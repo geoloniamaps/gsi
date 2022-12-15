@@ -1,8 +1,8 @@
-id: oc-road
+id: oc-motorway
 type: line
 source: oceanus
 source-layer: oc-road
-minzoom: 5
+minzoom: 6
 maxzoom: 6
 filter:
   - all
