@@ -1,0 +1,46 @@
+id: highway-motorway-bridge-casing-blur
+type: line
+source: gsi-japan
+source-layer: road
+minzoom: 6
+filter:
+  - any
+  - - all
+    - - in
+      - ftCode
+      - 2702
+      - 2703
+    - - any
+      - - '=='
+        - motorway
+        - 1
+      - - '=='
+        - rdCtg
+        - 3
+  - - '=='
+    - ftCode
+    - 52703
+layout:
+  line-join: round
+  line-cap: "round"
+paint:
+  line-color: '#000000'
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [5, 2]
+  line-opacity:
+    stops:
+      - - 14
+        - 0.2
+      - - 17
+        - 0.6
+  line-blur:
+    stops:
+      - - 14
+        - 20
+      - - 17
+        - 30
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
