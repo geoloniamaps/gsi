@@ -5568,7 +5568,7 @@
       "type": "symbol",
       "source": "oceanus",
       "source-layer": "oc-label",
-      "maxzoom": 8,
+      "maxzoom": 7,
       "filter": [
         "==",
         [
