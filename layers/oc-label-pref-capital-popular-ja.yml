@@ -13,15 +13,24 @@ filter:
   - - in # TODO: タイル側で対応する https://github.com/geoloniamaps/gsi/pull/112
     - name
     - '福岡市'
+    - '鹿児島市'
+    - '長崎市'
     - '広島市'
+    - '岡山市'
     - '大阪市'
     - '神戸市'
+    - '京都市'
     - '名古屋市'
+    - '金沢市'
+    - '静岡市'
     - '横浜市'
     - '東京'
+    - '宇都宮市'
     - '新潟市'
+    - '福島市'
     - '仙台市'
     - '盛岡市'
+    - '青森市'
     - '札幌市'
 layout:
   text-padding: 2
@@ -36,7 +45,7 @@ layout:
   icon-image: circle-stroked
   icon-size: 0.8
   icon-allow-overlap: true
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/remove-place-suffix.yml
   text-offset:
     - 0.6
     - 0.6

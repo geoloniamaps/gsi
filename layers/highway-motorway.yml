@@ -2,7 +2,7 @@ id: highway-motorway
 type: line
 source: gsi-japan
 source-layer: road
-minzoom: 5
+minzoom: 6
 filter:
   - any
   - - all
@@ -39,17 +39,9 @@ paint:
     - interpolate
     - - linear
     - - zoom
-    - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
-  line-opacity:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - 0.6
-    - 11
-    - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
+    - 6
+    - '#00A54E'
+    - 13
+    - '#3dcc80'
+  line-width: !!inc/file layers/components/motorway-road-width.yml
 

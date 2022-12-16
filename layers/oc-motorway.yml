@@ -1,0 +1,21 @@
+id: oc-motorway
+type: line
+source: oceanus
+source-layer: oc-road
+minzoom: 6
+maxzoom: 6
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - highway
+  - - '=='
+    - - has
+      - jflag
+    - true
+layout:
+  line-cap: round
+paint:
+  line-color: '#00A54E'
+  line-width: 2

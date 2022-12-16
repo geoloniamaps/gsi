@@ -49,6 +49,7 @@ layers:
   - !!inc/file layers/oc-boundary-land-level-0.yml
   - !!inc/file layers/oc-water-name-ocean.yml
   - !!inc/file layers/oc-water-name-other.yml
+  - !!inc/file layers/oc-motorway.yml
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/landuse-commercial.yml
@@ -118,6 +119,9 @@ layers:
   - !!inc/file layers/railway-secondary-bridge.yml
   - !!inc/file layers/railway-secondary-bridge-hatching.yml
   - !!inc/file layers/railway-jr-bridge-hatching.yml
+
+  - !!inc/file layers/railway-jr-high-speed.yml
+  - !!inc/file layers/railway-jr-high-speed-hatching.yml
 
   - !!inc/file layers/boundary-sea.yml
   - !!inc/file layers/boundary.yml

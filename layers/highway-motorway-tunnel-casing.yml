@@ -19,7 +19,7 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#e9ac77'
+  line-color: !!inc/file layers/components/tunnel-casing-color.yml
   line-dasharray:
     - 0.5
     - 0.25

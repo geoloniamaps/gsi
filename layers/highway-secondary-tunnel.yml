@@ -37,11 +37,5 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#fff4c6'
-  line-opacity:
-    stops:
-      - - 12
-        - 0
-      - - 13
-        - 1
+  line-color: !!inc/file layers/components/tunnel-color.yml
   line-width: !!inc/file layers/components/broad-road-width.yml
