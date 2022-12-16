@@ -1042,6 +1042,40 @@
       }
     },
     {
+      "id": "oc-motorway",
+      "type": "line",
+      "source": "oceanus",
+      "source-layer": "oc-road",
+      "minzoom": 6,
+      "maxzoom": 6,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "highway"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          true
+        ]
+      ],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#00A54E",
+        "line-width": 2
+      }
+    },
+    {
       "id": "nt-water-name-ocean",
       "type": "symbol",
       "source": "oceanus",
@@ -2420,7 +2454,7 @@
       "type": "line",
       "source": "gsi-japan",
       "source-layer": "road",
-      "minzoom": 5,
+      "minzoom": 6,
       "filter": [
         "any",
         [
@@ -2483,12 +2517,12 @@
           [
             "zoom"
           ],
-          8,
-          "#4ed19e",
-          11,
-          "#9be0c5"
+          6,
+          "#00A54E",
+          13,
+          "#3dcc80"
         ],
-        "line-opacity": [
+        "line-width": [
           "interpolate",
           [
             "linear"
@@ -2496,26 +2530,10 @@
           [
             "zoom"
           ],
+          6,
+          2,
           8,
-          0.6,
-          11,
-          1
-        ],
-        "line-width": [
-          "interpolate",
-          [
-            "exponential",
-            0.9
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0,
-          9,
-          0.5,
-          12,
-          0.8,
+          2,
           14,
           3,
           16,
@@ -2667,19 +2685,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#e9ac77",
-        "line-opacity": {
-          "stops": [
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              1
-            ]
-          ]
-        },
+        "line-color": "#9C9DA2",
+        "line-dasharray": [
+          0.5,
+          0.25
+        ],
         "line-width": [
           "interpolate",
           [
@@ -2772,19 +2782,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#fff4c6",
-        "line-opacity": {
-          "stops": [
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              1
-            ]
-          ]
-        },
+        "line-color": "#D8D8D8",
         "line-width": [
           "interpolate",
           [
@@ -2869,7 +2867,11 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#e9ac77",
+        "line-color": "#9C9DA2",
+        "line-dasharray": [
+          0.5,
+          0.25
+        ],
         "line-width": [
           "interpolate",
           [
@@ -2955,7 +2957,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#ffdaa6",
+        "line-color": "#D8D8D8",
         "line-width": [
           "interpolate",
           [
@@ -3016,7 +3018,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#e9ac77",
+        "line-color": "#9C9DA2",
         "line-dasharray": [
           0.5,
           0.25
@@ -3081,22 +3083,30 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "#ffdaa6",
+        "line-color": {
+          "stops": [
+            [
+              8,
+              "#00A54E"
+            ],
+            [
+              13,
+              "#D8D8D8"
+            ]
+          ]
+        },
         "line-width": [
           "interpolate",
           [
-            "exponential",
-            0.9
+            "linear"
           ],
           [
             "zoom"
           ],
+          6,
+          2,
           8,
-          0,
-          9,
-          0.5,
-          12,
-          0.8,
+          2,
           14,
           3,
           16,
@@ -3737,23 +3747,10 @@
           [
             "zoom"
           ],
-          8,
-          "#4ed19e",
-          11,
-          "#9be0c5"
-        ],
-        "line-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          8,
-          0,
-          11,
-          1
+          6,
+          "#00A54E",
+          13,
+          "#3dcc80"
         ],
         "line-width": [
           "interpolate",
@@ -5022,6 +5019,106 @@
       }
     },
     {
+      "id": "railway-jr-high-speed",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 5,
+      "filter": [
+        "any",
+        [
+          "==",
+          "rtCode10",
+          "1"
+        ],
+        [
+          "==",
+          "ftCode",
+          58203
+        ],
+        [
+          "==",
+          "ftCode",
+          58204
+        ]
+      ],
+      "paint": {
+        "line-color": "#5747C7",
+        "line-width": {
+          "stops": [
+            [
+              5,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-jr-high-speed-hatching",
+      "type": "line",
+      "source": "gsi-japan",
+      "source-layer": "railway",
+      "minzoom": 5,
+      "filter": [
+        "any",
+        [
+          "==",
+          "rtCode10",
+          "1"
+        ],
+        [
+          "==",
+          "ftCode",
+          58203
+        ],
+        [
+          "==",
+          "ftCode",
+          58204
+        ]
+      ],
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-dasharray": [
+          3,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              5,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              18,
+              3
+            ],
+            [
+              22,
+              19
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "boundary-sea",
       "type": "line",
       "source": "gsi-japan",
@@ -5312,7 +5409,55 @@
         "text-anchor": "top",
         "icon-image": "circle-stroked",
         "icon-size": 0.8,
-        "text-field": "{name}",
+        "text-field": [
+          "match",
+          [
+            "length",
+            [
+              "get",
+              "name"
+            ]
+          ],
+          2,
+          [
+            "get",
+            "name"
+          ],
+          3,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            2
+          ],
+          4,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            3
+          ],
+          5,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            4
+          ],
+          [
+            "get",
+            "name"
+          ]
+        ],
         "text-offset": [
           0,
           0.6
@@ -5474,7 +5619,55 @@
         "icon-image": "circle-stroked",
         "icon-size": 0.8,
         "icon-allow-overlap": true,
-        "text-field": "{name}",
+        "text-field": [
+          "match",
+          [
+            "length",
+            [
+              "get",
+              "name"
+            ]
+          ],
+          2,
+          [
+            "get",
+            "name"
+          ],
+          3,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            2
+          ],
+          4,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            3
+          ],
+          5,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            4
+          ],
+          [
+            "get",
+            "name"
+          ]
+        ],
         "text-offset": [
           0.6,
           0.6
@@ -5510,15 +5703,24 @@
           "in",
           "name",
           "福岡市",
+          "鹿児島市",
+          "長崎市",
           "広島市",
+          "岡山市",
           "大阪市",
           "神戸市",
+          "京都市",
           "名古屋市",
+          "金沢市",
+          "静岡市",
           "横浜市",
           "東京",
+          "宇都宮市",
           "新潟市",
+          "福島市",
           "仙台市",
           "盛岡市",
+          "青森市",
           "札幌市"
         ]
       ],
@@ -5537,7 +5739,55 @@
         "icon-image": "circle-stroked",
         "icon-size": 0.8,
         "icon-allow-overlap": true,
-        "text-field": "{name}",
+        "text-field": [
+          "match",
+          [
+            "length",
+            [
+              "get",
+              "name"
+            ]
+          ],
+          2,
+          [
+            "get",
+            "name"
+          ],
+          3,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            2
+          ],
+          4,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            3
+          ],
+          5,
+          [
+            "slice",
+            [
+              "get",
+              "name"
+            ],
+            0,
+            4
+          ],
+          [
+            "get",
+            "name"
+          ]
+        ],
         "text-offset": [
           0.6,
           0.6
@@ -6863,7 +7113,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
+        "text-color": "rgba(68, 68, 68, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
