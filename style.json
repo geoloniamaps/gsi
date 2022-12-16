@@ -6770,7 +6770,7 @@
       "type": "symbol",
       "source": "gsi-japan",
       "source-layer": "transp",
-      "minzoom": 12,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -6783,6 +6783,7 @@
       "layout": {
         "icon-image": "highway-JP_3",
         "icon-rotation-alignment": "viewport",
+        "icon-padding": 13,
         "text-field": [
           "case",
           [
