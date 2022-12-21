@@ -3,6 +3,7 @@ type: symbol
 source: gsi-japan
 source-layer: transp
 minzoom: 8 #データのズームレベル z8~13
+maxzoom: 10
 filter:
   - all
   - - in
