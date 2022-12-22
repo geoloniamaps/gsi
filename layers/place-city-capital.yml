@@ -2,6 +2,7 @@ id: place-city-capital
 type: symbol
 source: geolonia-gsi-custom
 source-layer: place
+maxzoom: 11
 filter:
   - all
   - - '=='

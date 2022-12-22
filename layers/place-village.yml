@@ -3,6 +3,7 @@ type: symbol
 source: geolonia-gsi-custom
 source-layer: place
 minzoom: 9
+maxzoom: 13
 filter:
   - all
   - - '=='
