@@ -2,7 +2,7 @@ id: road_shield_highway
 type: symbol
 source: gsi-japan
 source-layer: transp
-minzoom: 8
+minzoom: 8 #データのズームレベル z8~13
 filter:
   - all
   - - in
@@ -10,7 +10,22 @@ filter:
     - 2903 # 都市高速道路番号
     - 2904 # 高速道路番号
 layout:
-  icon-image: highway-JP_3
+  icon-image: [
+    "match",
+    ["length", [
+        "case",
+        ["has", "uRNo"],
+        ["get", "uRNo"],
+        ["has", "nRNo"],
+        ["get", "nRNo"],
+        "",
+      ]
+    ],
+    1, highway-JP_1, # 1桁
+    2, highway-JP_2, # 2桁
+    3, highway-JP_3, # 3桁
+    highway-JP_3 # フォールバック
+  ]
   icon-rotation-alignment: viewport
   icon-padding: 13
   text-field:

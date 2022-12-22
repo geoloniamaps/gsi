@@ -1,27 +1,24 @@
-id: road-name-label
+id: road_shield_national
 type: symbol
 source: gsi-japan
 source-layer: transp
-minzoom: 12
+minzoom: 9 #データのズームレベル z9~17
+maxzoom: 20
 filter:
   - all
   - - in
     - ftCode
     - 2901 # 国道番号
 layout:
-  icon-image: national-JP_3
-  icon-rotation-alignment: viewport
-  text-field:
-    - case
-    - - has
-      - uRNo
-    - - get
-      - uRNo
-    - - has
-      - nRNo
-    - - get
-      - nRNo
-    - ''
+  icon-image: [
+    "match",
+    ["length", ["to-string", ["get", "nRNo"]]], #z11以降の値が数字になるので、文字列に変換
+    1, national-JP_1, # 1桁
+    2, national-JP_2, # 2桁
+    3, national-JP_3, # 3桁
+    national-JP_3 # フォールバック
+  ]
+  text-field: ["get", "nRNo"]
   text-font:
     - Noto Sans CJK JP Bold
   text-offset:
