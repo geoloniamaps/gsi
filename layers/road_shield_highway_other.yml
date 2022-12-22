@@ -11,31 +11,20 @@ filter:
     - 2942 # ジャンクション
     - 2945 # スマートインターチェンジ
 layout:
-  icon-image: 'highway-JP_1'
-  # icon-image: [
-  #   "match",
-  #   ["length", ["get", "name"]],
-  #   1, highway-JP_1, # 1桁
-  #   2, highway-JP_2, # 2桁
-  #   3, highway-JP_3, # 3桁
-  #   4, highway-JP_4, # 4桁
-  #   5, highway-JP_5, # 5桁
-  #   6, highway-JP_6, # 6桁
-  #   highway-JP_6 # フォールバック
-  # ]
-  icon-rotation-alignment: viewport
+  icon-image: highway-JP_1
+  icon-size: 0.6
   icon-padding: 13
   text-field: ["get", "name"]
   text-font:
     - Noto Sans CJK JP Bold
   text-rotation-alignment: viewport
-  text-offset:
-    - 3
-    - 0
-  text-size: 11
+  text-size: 10
   text-max-width: 9
+  text-variable-anchor:
+    - left
+  text-radial-offset: 0.8
 paint:
-  text-color: rgba(68, 68, 68, 1)
+  text-color: '#2FAB68'
   text-halo-blur: 1
   text-halo-width: 2
   text-halo-color: rgba(255,255,255,1)
