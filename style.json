@@ -6714,11 +6714,12 @@
       }
     },
     {
-      "id": "road-name-label",
+      "id": "road_shield_national",
       "type": "symbol",
       "source": "gsi-japan",
       "source-layer": "transp",
-      "minzoom": 12,
+      "minzoom": 9,
+      "maxzoom": 20,
       "filter": [
         "all",
         [
@@ -6728,27 +6729,29 @@
         ]
       ],
       "layout": {
-        "icon-image": "national-JP_3",
-        "icon-rotation-alignment": "viewport",
+        "icon-image": [
+          "match",
+          [
+            "length",
+            [
+              "to-string",
+              [
+                "get",
+                "nRNo"
+              ]
+            ]
+          ],
+          1,
+          "national-JP_1",
+          2,
+          "national-JP_2",
+          3,
+          "national-JP_3",
+          "national-JP_3"
+        ],
         "text-field": [
-          "case",
-          [
-            "has",
-            "uRNo"
-          ],
-          [
-            "get",
-            "uRNo"
-          ],
-          [
-            "has",
-            "nRNo"
-          ],
-          [
-            "get",
-            "nRNo"
-          ],
-          ""
+          "get",
+          "nRNo"
         ],
         "text-font": [
           "Noto Sans CJK JP Bold"
@@ -6781,7 +6784,39 @@
         ]
       ],
       "layout": {
-        "icon-image": "highway-JP_3",
+        "icon-image": [
+          "match",
+          [
+            "length",
+            [
+              "case",
+              [
+                "has",
+                "uRNo"
+              ],
+              [
+                "get",
+                "uRNo"
+              ],
+              [
+                "has",
+                "nRNo"
+              ],
+              [
+                "get",
+                "nRNo"
+              ],
+              ""
+            ]
+          ],
+          1,
+          "highway-JP_1",
+          2,
+          "highway-JP_2",
+          3,
+          "highway-JP_3",
+          "highway-JP_3"
+        ],
         "icon-rotation-alignment": "viewport",
         "icon-padding": 13,
         "text-field": [
