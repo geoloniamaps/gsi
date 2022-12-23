@@ -6749,6 +6749,7 @@
           "national-JP_3",
           "national-JP_3"
         ],
+        "icon-padding": 13,
         "text-field": [
           "get",
           "nRNo"
