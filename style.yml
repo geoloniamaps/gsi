@@ -85,6 +85,7 @@ layers:
 
   # Buildings
   - !!inc/file layers/building.yml
+  - !!inc/file layers/building-nowall.yml
   - !!inc/file layers/structurea-casing.yml
   - !!inc/file layers/structurea.yml
 
