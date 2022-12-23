@@ -1,4 +1,4 @@
-id: building-nowall
+id: building-nowall2
 type: fill
 source: gsi-japan
 source-layer: building
@@ -10,10 +10,10 @@ filter:
     - Polygon
   - - in
     - ftCode
-    # - 3111
-    - 3112
+    - 3111
+    # - 3112
 paint:
-  fill-color: '#e2dcd4'
+  fill-color: '#ff0000'
   fill-outline-color: '#d7cfc2'
-  fill-opacity: 0.6
+  fill-opacity: 0.1
   fill-antialias: true
