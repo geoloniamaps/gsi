@@ -18,6 +18,7 @@ layout:
     3, national-JP_3, # 3桁
     national-JP_3 # フォールバック
   ]
+  icon-padding: 13
   text-field: ["get", "nRNo"]
   text-font:
     - Noto Sans CJK JP Bold
