@@ -1,6 +1,6 @@
 id: place-city-rank7
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: place
 minzoom: 8
 maxzoom: 13

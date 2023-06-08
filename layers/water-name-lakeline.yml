@@ -1,6 +1,6 @@
 id: water-name-lakeline
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: water_name
 filter:
   - all

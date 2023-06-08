@@ -1,6 +1,6 @@
 id: oc-boundary-land-level-1-ja
 type: line
-source: oceanus
+source: v3
 source-layer: oc-boundary
 minzoom: 4
 maxzoom: 6

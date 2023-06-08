@@ -1,6 +1,6 @@
 id: landcover-grass
 type: fill
-source: geolonia-gsi-custom
+source: v3
 source-layer: landcover
 filter:
   - '=='

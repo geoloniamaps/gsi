@@ -1,6 +1,6 @@
 id: poi-worship-primary
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: poi
 minzoom: 14
 filter:

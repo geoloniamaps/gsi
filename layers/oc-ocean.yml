@@ -1,6 +1,6 @@
 id: oc-ocean
 type: fill
-source: oceanus
+source: v3
 source-layer: oc-water
 maxzoom: 10
 filter:

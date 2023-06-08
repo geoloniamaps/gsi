@@ -1,6 +1,6 @@
 id: oc-label-town-ja
 type: symbol
-source: oceanus
+source: v3
 source-layer: oc-label
 minzoom: 7
 maxzoom: 8

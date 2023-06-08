@@ -1,6 +1,6 @@
 id: oc-landuse-commercial-ja
 type: fill
-source: oceanus
+source: v3
 source-layer: oc-landuse
 minzoom: 5
 maxzoom: 8
