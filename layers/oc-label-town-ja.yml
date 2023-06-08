@@ -1,21 +1,36 @@
 id: oc-label-town-ja
 type: symbol
 source: v3
-source-layer: oc-label
+source-layer: place
 minzoom: 7
 maxzoom: 8
 filter:
   - all
+  - - '!='
+    - capital
+    - 2
   - - '=='
-    - - get
-      - class
-    - town
-  - - has
-    - jflag
-  - - '=='
-    - - has
-      - pref-capital
-    - false
+    - class
+    - city
+  - - any
+    - - '=='
+      - rank
+      - 2
+    - - '=='
+      - rank
+      - 3
+    - - '=='
+      - rank
+      - 4
+    - - '=='
+      - rank
+      - 5
+    - - '=='
+      - rank
+      - 6
+  - - '!='
+    - disputed
+    - japan_northern_territories
 layout:
   text-padding: 2
   text-font:

@@ -1,9 +1,9 @@
 id: oc-label-pref-ja
 type: symbol
 source: v3
-source-layer: oc-label
-minzoom: 6
-maxzoom: 8
+source-layer: place
+minzoom: 5
+maxzoom: 6
 filter:
   - all
   - - '=='

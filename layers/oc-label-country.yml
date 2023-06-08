@@ -1,13 +1,19 @@
 id: oc-label-country
 type: symbol
 source: v3
-source-layer: oc-label
-maxzoom: 7
+source-layer: place
+minzoom: 0
+maxzoom: 6
 filter:
-  - '=='
-  - - get
-    - class
-  - country
+  - all
+  - - '=='
+    - - 'get'
+      - 'class'
+    - 'country'
+  - - '=='
+    - - 'has'
+      - osm_id
+    - false
 layout:
   text-font:
     - Noto Sans CJK JP Bold

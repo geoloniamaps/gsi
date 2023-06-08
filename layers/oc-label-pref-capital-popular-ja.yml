@@ -1,15 +1,17 @@
 id: oc-label-pref-capital-popular-ja
 type: symbol
 source: v3
-source-layer: oc-label
+source-layer: place
 minzoom: 5
 maxzoom: 8
 filter:
   - all
-  - - has
-    - jflag
-  - - has
-    - pref-capital
+  - - '!='
+    - capital
+    - 2
+  - - '=='
+    - class
+    - city
   - - in # TODO: タイル側で対応する https://github.com/geoloniamaps/gsi/pull/112
     - name
     - '福岡市'
