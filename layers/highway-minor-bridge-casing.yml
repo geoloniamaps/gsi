@@ -1,29 +1,29 @@
 id: highway-minor-bridge-casing
 type: line
 source: gsi-japan
-source-layer: road
+source-layer: RdCL
 minzoom: 7
 filter:
   - all
   - - in
-    - ftCode
-    - 2702
-    - 2703
+    - - get
+      - vt_code
+    - - literal
+      - - 2702
+        - 2703
   - - '!='
-    - motorway
+    - - get
+      - vt_motorway
     - 1
-  - - '!='
-    - rdCtg
-    - 0
-  - - '!='
-    - rdCtg
-    - 1
-  - - '!='
-    - rdCtg
-    - 2
-  - - '!='
-    - rdCtg
-    - 3
+  - - '!'
+    - - in
+      - - get
+        - vt_rdctg
+      - - literal
+        - - '国道'
+          - '都道府県道'
+          - '市区町村道等'
+          - '高速自動車国道等'
 paint:
   line-color: '#f8f4f0'
   line-width:

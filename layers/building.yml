@@ -1,17 +1,20 @@
 id: building
 type: fill
 source: gsi-japan
-source-layer: building
+source-layer: BldA
 minzoom: 15
 filter:
   - all
   - - '=='
-    - $type
+    - - geometry-type
     - Polygon
-  - - '!in'
-    - ftCode
-    - 3112
-    - 3111
+  - - '!'
+    - - 'in'
+      - - get
+        - vt_code
+      - - literal
+        - - 3112
+          - 3111
 paint:
   fill-color: 'rgba(236, 236, 236, 0.9)'
   fill-outline-color: '#ccc'
