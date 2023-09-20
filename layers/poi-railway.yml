@@ -1,6 +1,6 @@
 id: poi-railway
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: poi
 minzoom: 11
 filter:

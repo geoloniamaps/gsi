@@ -1,6 +1,6 @@
 id: landuse-industrial
 type: fill
-source: geolonia-gsi-custom
+source: v3
 source-layer: landuse
 filter:
   - all

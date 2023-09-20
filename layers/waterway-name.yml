@@ -1,6 +1,6 @@
 id: waterway-name
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: waterway
 minzoom: 13
 filter:

@@ -1,6 +1,6 @@
 id: poi-park-primary
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: poi
 minzoom: 13
 filter:

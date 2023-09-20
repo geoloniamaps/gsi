@@ -1,6 +1,6 @@
 id: water-blur
 type: line
-source: geolonia-water
+source: v3
 source-layer: water
 minzoom: 17
 layout:

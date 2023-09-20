@@ -1,6 +1,6 @@
 id: geolonia-water-ocean
 type: fill
-source: geolonia-water
+source: v3
 source-layer: water
 layout:
   visibility: visible

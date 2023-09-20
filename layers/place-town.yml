@@ -1,6 +1,6 @@
 id: place-town
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: place
 minzoom: 8.5
 maxzoom: 13

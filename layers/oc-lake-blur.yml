@@ -1,6 +1,6 @@
 id: oc-lake-blur
 type: line
-source: oceanus
+source: v3
 source-layer: oc-water
 minzoom: 17
 filter:
