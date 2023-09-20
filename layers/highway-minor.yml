@@ -15,7 +15,6 @@ filter:
   - - '!='
     - - get
       - vt_code
-      - aoeu
     - 2704
 layout:
   line-cap: round
