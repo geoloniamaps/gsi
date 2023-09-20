@@ -1,20 +1,20 @@
 id: highway-motorway-tunnel
 type: line
 source: gsi-japan
-source-layer: road
+source-layer: RdCL
 minzoom: 6
 filter:
   - all
   - - '=='
-    - ftCode
-    - 2704
+    - vt_code
+    - 2704 # 2条道路中心線普通部 - トンネル
   - - any
     - - '=='
-      - motorway
+      - vt_motorway
       - 1
     - - '=='
-      - rdCtg
-      - 3
+      - vt_rdctg
+      - '高速自動車国道等'
 layout:
   line-join: round
   visibility: visible

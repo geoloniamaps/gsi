@@ -1,17 +1,20 @@
 id: highway-minor
 type: line
 source: gsi-japan
-source-layer: road
+source-layer: RdCL
 filter:
   - all
   - - '>='
-    - ftCode
+    - - get
+      - vt_code
     - 2700
   - - <
-    - ftCode
+    - - get
+      - vt_code
     - 2800
   - - '!='
-    - ftCode
+    - - get
+      - vt_code
     - 2704
 layout:
   line-cap: round

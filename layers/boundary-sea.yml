@@ -1,14 +1,14 @@
 id: boundary-sea
 type: line
 source: gsi-japan
-source-layer: boundary
+source-layer: AdmBdry
 minzoom: 6
 maxzoom: 8
 filter:
   - all
   - - in
-    - ftCode
-    - 51221
+    - vt_code
+    - 1221
 layout:
   line-join: round
   visibility: visible

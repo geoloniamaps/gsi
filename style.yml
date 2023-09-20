@@ -5,7 +5,7 @@ zoom: 5
 sources:
   gsi-japan:
     type: vector
-    url: https://tileserver.geolonia.com/gsi_experimental_bvmap/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver-dev.geolonia.com/gsi_optimal_bvmap-v1/tiles.json?key=YOUR-API-KEY
     minzoom: 5
   v3:
     type: vector

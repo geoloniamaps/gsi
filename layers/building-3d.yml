@@ -3,7 +3,7 @@ type: fill-extrusion
 metadata:
   visible-on-3d: true
 source: gsi-japan
-source-layer: building
+source-layer: BldA
 minzoom: 16
 layout:
   visibility: none
@@ -12,7 +12,7 @@ paint:
   fill-extrusion-height:
     - match
     - - get
-      - ftCode
+      - vt_code
     - 3101
     - 3
     - 3102

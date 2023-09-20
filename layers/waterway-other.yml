@@ -3,11 +3,14 @@ type: line
 source: v3
 source-layer: waterway
 filter:
-  - '!in'
-  - class
-  - canal
-  - river
-  - stream
+  - '!'
+  - - in
+    - - get
+      - class
+    - - literal
+      - - canal
+        - river
+        - stream
 layout:
   line-cap: round
 paint:

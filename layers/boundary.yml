@@ -1,16 +1,15 @@
 id: boundary
 type: line
 source: gsi-japan
-source-layer: boundary
+source-layer: AdmBdry
 minzoom: 6
 maxzoom: 14
 filter:
   - all
   - - in
-    - ftCode
+    - vt_code
     - 1211
     - 1212
-    - 51212
 layout:
   line-join: round
 paint:

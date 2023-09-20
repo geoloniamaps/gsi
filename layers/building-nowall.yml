@@ -1,7 +1,7 @@
 id: building-nowall
 type: fill
 source: gsi-japan
-source-layer: building
+source-layer: BldA
 minzoom: 15
 filter:
   - all
@@ -9,7 +9,7 @@ filter:
     - $type
     - Polygon
   - - in
-    - ftCode
+    - vt_code
     - 3111
     - 3112
 paint:
