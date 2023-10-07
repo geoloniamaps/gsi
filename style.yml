@@ -6,8 +6,9 @@ sources:
     url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
   gsi-japan:
     type: vector
-    url: https://tileserver.geolonia.com/gsi_experimental_bvmap/tiles.json?key=YOUR-API-KEY
-    minzoom: 5
+    tiles: [
+      "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
+    ]
   geolonia-water:
     type: vector
     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
