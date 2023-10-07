@@ -1,0 +1,30 @@
+id: road_shield_highway_other
+type: symbol
+source: gsi-japan
+source-layer: transp
+minzoom: 10 #データのズームレベル z10~13
+filter:
+  - all
+  - - in
+    - ftCode
+    - 2941 # インターチェンジ
+    - 2942 # ジャンクション
+    - 2945 # スマートインターチェンジ
+layout:
+  icon-image: highway-JP_1
+  icon-size: 0.6
+  icon-padding: 13
+  text-field: ["get", "name"]
+  text-font:
+    - Noto Sans CJK JP Bold
+  text-rotation-alignment: viewport
+  text-size: 10
+  text-max-width: 9
+  text-variable-anchor:
+    - left
+  text-radial-offset: 0.8
+paint:
+  text-color: '#2FAB68'
+  text-halo-blur: 1
+  text-halo-width: 2
+  text-halo-color: rgba(255,255,255,1)
