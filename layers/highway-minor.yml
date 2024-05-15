@@ -14,8 +14,8 @@ filter:
     - ftCode
     - 2704
 layout:
-  line-cap: round
-  line-join: round
+  line-cap: butt
+  line-join: bevel
 paint:
   line-color: !!inc/file layers/components/road-color.yml
   line-width:
