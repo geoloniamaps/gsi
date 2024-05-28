@@ -36,8 +36,8 @@ filter:
       - ftCode
       - 52703
 layout:
-  line-cap: round
-  line-join: round
+  line-cap: butt
+  line-join: bevel
   visibility: visible
 paint:
   line-color: !!inc/file layers/components/road-color.yml
