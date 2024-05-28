@@ -2178,8 +2178,8 @@
         ]
       ],
       "layout": {
-        "line-cap": "round",
-        "line-join": "round"
+        "line-cap": "butt",
+        "line-join": "bevel"
       },
       "paint": {
         "line-color": [
@@ -2275,8 +2275,8 @@
         ]
       ],
       "layout": {
-        "line-cap": "round",
-        "line-join": "round",
+        "line-cap": "butt",
+        "line-join": "bevel",
         "visibility": "visible"
       },
       "paint": {
