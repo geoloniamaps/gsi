@@ -1,6 +1,6 @@
 id: airport-label-major
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: aerodrome_label
 minzoom: 5
 filter:

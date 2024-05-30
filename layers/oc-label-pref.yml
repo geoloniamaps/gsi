@@ -1,6 +1,6 @@
 id: oc-label-pref
 type: symbol
-source: oceanus
+source: v3
 source-layer: oc-label
 minzoom: 5
 filter:
