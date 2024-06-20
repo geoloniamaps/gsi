@@ -150,6 +150,7 @@ layers:
   - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
+  - !!inc/file layers/road_shield_highway_other.yml
   - !!inc/file layers/railway-label.yml
   - !!inc/file layers/airport-label-major.yml
   - !!inc/file layers/place-village.yml
