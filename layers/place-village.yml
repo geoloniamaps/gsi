@@ -1,6 +1,6 @@
 id: place-village
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: place
 minzoom: 9
 maxzoom: 13

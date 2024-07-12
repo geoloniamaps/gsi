@@ -1,6 +1,6 @@
 id: oc-motorway
 type: line
-source: oceanus
+source: v3
 source-layer: oc-road
 minzoom: 6
 maxzoom: 6

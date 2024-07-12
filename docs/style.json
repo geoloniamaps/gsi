@@ -1,23 +1,20 @@
 {
   "version": 8,
   "name": "GSI Japan + OpenStreetMap based style for Geolonia",
+  "center": [
+    135.39,
+    37.46
+  ],
+  "zoom": 5,
   "sources": {
-    "oceanus": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY"
-    },
     "gsi-japan": {
       "type": "vector",
       "url": "https://tileserver.geolonia.com/gsi_experimental_bvmap/tiles.json?key=YOUR-API-KEY",
       "minzoom": 5
     },
-    "geolonia-water": {
+    "v3": {
       "type": "vector",
-      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
-    },
-    "geolonia-gsi-custom": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/gsi-extra-v2/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v3/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
@@ -61,7 +58,7 @@
     {
       "id": "landcover-grass",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -79,7 +76,7 @@
     {
       "id": "landcover-wood-blur",
       "type": "line",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -128,7 +125,7 @@
     {
       "id": "landcover-wood",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -139,7 +136,18 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#bce398",
+        "fill-color": {
+          "stops": [
+            [
+              5,
+              "#a5d47b"
+            ],
+            [
+              8,
+              "#bce398"
+            ]
+          ]
+        },
         "fill-antialias": {
           "base": 1,
           "stops": [
@@ -158,7 +166,7 @@
     {
       "id": "landcover-grass-park",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "park",
       "filter": [
         "==",
@@ -176,7 +184,7 @@
     {
       "id": "geolonia-water-ocean",
       "type": "fill",
-      "source": "geolonia-water",
+      "source": "v3",
       "source-layer": "water",
       "layout": {
         "visibility": "visible"
@@ -188,7 +196,7 @@
     {
       "id": "water-blur",
       "type": "line",
-      "source": "geolonia-water",
+      "source": "v3",
       "source-layer": "water",
       "minzoom": 17,
       "layout": {
@@ -329,7 +337,7 @@
     {
       "id": "oc-ocean",
       "type": "fill",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-water",
       "maxzoom": 10,
       "filter": [
@@ -394,7 +402,7 @@
     {
       "id": "oc-glacier",
       "type": "fill",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-glacier",
       "maxzoom": 8,
       "layout": {
@@ -407,7 +415,7 @@
     {
       "id": "oc-landuse-commercial-ja",
       "type": "fill",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-landuse",
       "minzoom": 5,
       "maxzoom": 8,
@@ -440,7 +448,7 @@
     {
       "id": "oc-landuse-commercial",
       "type": "fill",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-landuse",
       "minzoom": 5,
       "filter": [
@@ -474,31 +482,6 @@
       }
     },
     {
-      "id": "oc-forest",
-      "type": "fill",
-      "source": "oceanus",
-      "source-layer": "oc-forest",
-      "minzoom": 0,
-      "maxzoom": 9,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": {
-          "stops": [
-            [
-              5,
-              "#a5d47b"
-            ],
-            [
-              8,
-              "#bce398"
-            ]
-          ]
-        }
-      }
-    },
-    {
       "id": "hillshading",
       "source": "dem",
       "type": "hillshade",
@@ -522,7 +505,7 @@
     {
       "id": "oc-waterway-river-ja",
       "type": "line",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-waterway",
       "minzoom": 4,
       "maxzoom": 8,
@@ -573,7 +556,7 @@
     {
       "id": "oc-waterway-river",
       "type": "line",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-waterway",
       "minzoom": 4,
       "filter": [
@@ -627,7 +610,7 @@
     {
       "id": "oc-waterway-name-ja",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-waterway",
       "minzoom": 6,
       "maxzoom": 8,
@@ -668,7 +651,7 @@
     {
       "id": "oc-waterway-name",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-waterway",
       "minzoom": 6,
       "filter": [
@@ -707,7 +690,7 @@
     {
       "id": "oc-lake-blur",
       "type": "line",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-water",
       "minzoom": 17,
       "filter": [
@@ -771,7 +754,7 @@
     {
       "id": "oc-lake-ja",
       "type": "fill",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-water",
       "minzoom": 4,
       "maxzoom": 8,
@@ -800,7 +783,7 @@
     {
       "id": "oc-lake",
       "type": "fill",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-water",
       "minzoom": 4,
       "filter": [
@@ -832,8 +815,8 @@
     {
       "id": "oc-boundary-land-level-1-ja",
       "type": "line",
-      "source": "oceanus",
-      "source-layer": "oc-boundary",
+      "source": "v3",
+      "source-layer": "boundary",
       "minzoom": 4,
       "maxzoom": 6,
       "filter": [
@@ -844,7 +827,7 @@
             "get",
             "admin_level"
           ],
-          1
+          4
         ],
         [
           "has",
@@ -888,71 +871,9 @@
       }
     },
     {
-      "id": "oc-boundary-land-level-1",
-      "type": "line",
-      "source": "oceanus",
-      "source-layer": "oc-boundary",
-      "minzoom": 4,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "admin_level"
-          ],
-          1
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#9e9cab",
-        "line-dasharray": [
-          3,
-          1,
-          1,
-          1
-        ],
-        "line-width": 1
-      }
-    },
-    {
-      "id": "oc-boundary-land-level-0",
-      "type": "line",
-      "source": "oceanus",
-      "source-layer": "oc-boundary",
-      "filter": [
-        "==",
-        [
-          "get",
-          "admin_level"
-        ],
-        0
-      ],
-      "layout": {
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#9e9cab",
-        "line-width": 1,
-        "line-blur": 0.4
-      }
-    },
-    {
       "id": "oc-water-name-ocean",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-water_name",
       "filter": [
         "all",
@@ -993,7 +914,7 @@
     {
       "id": "oc-water-name-other",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-water",
       "minzoom": 6,
       "filter": [
@@ -1044,7 +965,7 @@
     {
       "id": "oc-motorway",
       "type": "line",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-road",
       "minzoom": 6,
       "maxzoom": 6,
@@ -1078,7 +999,7 @@
     {
       "id": "nt-water-name-ocean",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "nt-water-name",
       "minzoom": 8,
       "filter": [
@@ -1110,7 +1031,7 @@
     {
       "id": "nt-water-name-river",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "nt-water-name",
       "minzoom": 13,
       "filter": [
@@ -1142,7 +1063,7 @@
     {
       "id": "landuse-commercial",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landuse",
       "filter": [
         "all",
@@ -1164,7 +1085,7 @@
     {
       "id": "landuse-industrial",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landuse",
       "filter": [
         "all",
@@ -1186,7 +1107,7 @@
     {
       "id": "park",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "park",
       "filter": [
         "all",
@@ -1223,7 +1144,7 @@
     {
       "id": "landuse-cemetery",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -1237,7 +1158,7 @@
     {
       "id": "landuse-hospital",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -1251,7 +1172,7 @@
     {
       "id": "landuse-school",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -1265,7 +1186,7 @@
     {
       "id": "landuse-railway",
       "type": "fill",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -1279,7 +1200,7 @@
     {
       "id": "waterway_tunnel",
       "type": "line",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "waterway",
       "minzoom": 14,
       "filter": [
@@ -1324,7 +1245,7 @@
     {
       "id": "waterway-other",
       "type": "line",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "waterway",
       "filter": [
         "!in",
@@ -1356,7 +1277,7 @@
     {
       "id": "waterway-stream-canal",
       "type": "line",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "waterway",
       "filter": [
         "all",
@@ -1395,7 +1316,7 @@
     {
       "id": "waterway-name",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "waterway",
       "minzoom": 13,
       "filter": [
@@ -1436,7 +1357,7 @@
     {
       "id": "water-name-lakeline",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "water_name",
       "filter": [
         "all",
@@ -1472,7 +1393,7 @@
     {
       "id": "water-name-ocean",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "water_name",
       "filter": [
         "all",
@@ -1513,7 +1434,7 @@
     {
       "id": "water-name-other",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "water_name",
       "filter": [
         "all",
@@ -5293,7 +5214,7 @@
     {
       "id": "poi",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -5360,7 +5281,7 @@
     {
       "id": "oc-label-town",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-label",
       "minzoom": 6,
       "filter": [
@@ -5407,31 +5328,54 @@
     {
       "id": "oc-label-town-ja",
       "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
+      "source": "v3",
+      "source-layer": "place",
       "minzoom": 7,
       "maxzoom": 8,
       "filter": [
         "all",
         [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "town"
-        ],
-        [
-          "has",
-          "jflag"
+          "!=",
+          "capital",
+          2
         ],
         [
           "==",
+          "class",
+          "city"
+        ],
+        [
+          "any",
           [
-            "has",
-            "pref-capital"
+            "==",
+            "rank",
+            2
           ],
-          false
+          [
+            "==",
+            "rank",
+            3
+          ],
+          [
+            "==",
+            "rank",
+            4
+          ],
+          [
+            "==",
+            "rank",
+            5
+          ],
+          [
+            "==",
+            "rank",
+            6
+          ]
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
         ]
       ],
       "layout": {
@@ -5508,7 +5452,7 @@
     {
       "id": "oc-label-pref",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-label",
       "minzoom": 5,
       "filter": [
@@ -5559,10 +5503,10 @@
     {
       "id": "oc-label-pref-ja",
       "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "minzoom": 6,
-      "maxzoom": 8,
+      "source": "v3",
+      "source-layer": "place",
+      "minzoom": 5,
+      "maxzoom": 6,
       "filter": [
         "all",
         [
@@ -5607,7 +5551,7 @@
     {
       "id": "oc-label-pref-capital-ja",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "v3",
       "source-layer": "oc-label",
       "minzoom": 7,
       "maxzoom": 8,
@@ -5718,19 +5662,21 @@
     {
       "id": "oc-label-pref-capital-popular-ja",
       "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
+      "source": "v3",
+      "source-layer": "place",
       "minzoom": 5,
       "maxzoom": 8,
       "filter": [
         "all",
         [
-          "has",
-          "jflag"
+          "!=",
+          "capital",
+          2
         ],
         [
-          "has",
-          "pref-capital"
+          "==",
+          "class",
+          "city"
         ],
         [
           "in",
@@ -5849,16 +5795,28 @@
     {
       "id": "oc-label-country",
       "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-label",
-      "maxzoom": 7,
+      "source": "v3",
+      "source-layer": "place",
+      "minzoom": 0,
+      "maxzoom": 6,
       "filter": [
-        "==",
+        "all",
         [
-          "get",
-          "class"
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "country"
         ],
-        "country"
+        [
+          "==",
+          [
+            "has",
+            "osm_id"
+          ],
+          false
+        ]
       ],
       "layout": {
         "text-font": [
@@ -5889,7 +5847,7 @@
     {
       "id": "poi-z16",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -5936,7 +5894,7 @@
     {
       "id": "poi-z16-primary",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -6035,7 +5993,7 @@
     {
       "id": "poi-z15",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 15,
       "filter": [
@@ -6104,7 +6062,7 @@
     {
       "id": "poi-z14",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 14,
       "filter": [
@@ -6175,7 +6133,7 @@
     {
       "id": "poi-z13",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 13,
       "filter": [
@@ -6249,7 +6207,7 @@
     {
       "id": "poi-worship",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -6317,7 +6275,7 @@
     {
       "id": "poi-worship-primary",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 14,
       "filter": [
@@ -6398,7 +6356,7 @@
     {
       "id": "poi-park",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -6466,7 +6424,7 @@
     {
       "id": "poi-park-primary",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 13,
       "filter": [
@@ -6547,7 +6505,7 @@
     {
       "id": "poi-railway",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "poi",
       "minzoom": 11,
       "filter": [
@@ -6634,7 +6592,7 @@
     {
       "id": "poi-airport-primary",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "aerodrome_label",
       "minzoom": 10,
       "filter": [
@@ -7191,7 +7149,7 @@
     {
       "id": "airport-label-major",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "aerodrome_label",
       "minzoom": 5,
       "filter": [
@@ -7231,7 +7189,7 @@
     {
       "id": "place-village",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 9,
       "maxzoom": 13,
@@ -7298,7 +7256,7 @@
     {
       "id": "place-town",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8.5,
       "maxzoom": 13,
@@ -7353,7 +7311,7 @@
     {
       "id": "place-island-name",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "filter": [
         "all",
@@ -7410,7 +7368,7 @@
     {
       "id": "place-city-rank10",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8,
       "maxzoom": 13,
@@ -7475,7 +7433,7 @@
     {
       "id": "place-city-rank9",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8,
       "maxzoom": 13,
@@ -7540,7 +7498,7 @@
     {
       "id": "place-city-rank8",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8,
       "maxzoom": 13,
@@ -7605,7 +7563,7 @@
     {
       "id": "place-city-rank7",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8,
       "maxzoom": 13,
@@ -7670,7 +7628,7 @@
     {
       "id": "place-city-rank6",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 11,
       "maxzoom": 13,
@@ -7735,7 +7693,7 @@
     {
       "id": "place-city-rank5",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 10,
       "maxzoom": 13,
@@ -7800,7 +7758,7 @@
     {
       "id": "place-city-rank4",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 9,
       "maxzoom": 13,
@@ -7865,7 +7823,7 @@
     {
       "id": "place-city-rank3",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8,
       "maxzoom": 13,
@@ -7930,7 +7888,7 @@
     {
       "id": "place-city-rank2",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "minzoom": 8,
       "maxzoom": 13,
@@ -7995,7 +7953,7 @@
     {
       "id": "place-city-capital",
       "type": "symbol",
-      "source": "geolonia-gsi-custom",
+      "source": "v3",
       "source-layer": "place",
       "maxzoom": 11,
       "filter": [

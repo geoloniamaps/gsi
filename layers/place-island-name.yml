@@ -1,6 +1,6 @@
 id: place-island-name
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: place
 filter:
   - all

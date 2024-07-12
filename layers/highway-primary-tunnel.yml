@@ -34,5 +34,25 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: !!inc/file layers/components/tunnel-color.yml
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-color: '#D8D8D8'
+  line-width:
+    - interpolate
+    - - exponential
+      - 0.9
+    - - zoom
+    - 8
+    - 0
+    - 9
+    - 0.5
+    - 12
+    - 0.8
+    - 14
+    - 3
+    - 16
+    - 10
+    - 18
+    - 20
+    - 19
+    - 68
+    - 20
+    - 160

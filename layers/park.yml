@@ -1,6 +1,6 @@
 id: park
 type: fill
-source: geolonia-gsi-custom
+source: v3
 source-layer: park
 filter:
   - all

@@ -1,0 +1,45 @@
+id: symbol-gsi
+type: symbol
+source: gsi-japan
+source-layer: symbol
+minzoom: 10
+maxzoom: 15
+filter:
+  - all
+  - - in
+    - ftCode
+    - 1401
+    - 1402
+    - 1403
+    - 3205
+    - 3206
+    - 3212
+    - 3218
+    - 3221
+    - 3241
+    - 3243
+    - 3261
+    - 3221
+    - 6367
+    - 6368
+    - 6375
+    - 6376
+layout:
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - mountain
+    - - image
+      - circle-stroked
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 50
+    - 11
+    - 100
+    - 20
+    - 2
+  visibility: visible

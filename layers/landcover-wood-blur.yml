@@ -1,6 +1,6 @@
 id: landcover-wood-blur
 type: line
-source: geolonia-gsi-custom
+source: v3
 source-layer: landcover
 filter:
   - '=='

@@ -1,6 +1,6 @@
 id: poi-airport-primary
 type: symbol
-source: geolonia-gsi-custom
+source: v3
 source-layer: aerodrome_label
 minzoom: 10
 filter:

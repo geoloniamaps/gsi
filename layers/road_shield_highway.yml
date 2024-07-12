@@ -2,30 +2,34 @@ id: road_shield_highway
 type: symbol
 source: gsi-japan
 source-layer: transp
-minzoom: 8 #データのズームレベル z8~13
+minzoom: 8
 filter:
   - all
   - - in
     - ftCode
-    - 2903 # 都市高速道路番号
-    - 2904 # 高速道路番号
+    - 2903
+    - 2904
 layout:
-  icon-image: [
-    "match",
-    ["length", [
-        "case",
-        ["has", "uRNo"],
-        ["get", "uRNo"],
-        ["has", "nRNo"],
-        ["get", "nRNo"],
-        "",
-      ]
-    ],
-    1, highway-JP_1, # 1桁
-    2, highway-JP_2, # 2桁
-    3, highway-JP_3, # 3桁
-    highway-JP_3 # フォールバック
-  ]
+  icon-image:
+    - match
+    - - length
+      - - case
+        - - has
+          - uRNo
+        - - get
+          - uRNo
+        - - has
+          - nRNo
+        - - get
+          - nRNo
+        - ''
+    - 1
+    - highway-JP_1
+    - 2
+    - highway-JP_2
+    - 3
+    - highway-JP_3
+    - highway-JP_3
   icon-rotation-alignment: viewport
   icon-padding: 13
   text-field:

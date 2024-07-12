@@ -1,6 +1,6 @@
 id: waterway-other
 type: line
-source: geolonia-gsi-custom
+source: v3
 source-layer: waterway
 filter:
   - '!in'

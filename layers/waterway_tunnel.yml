@@ -1,6 +1,6 @@
 id: waterway_tunnel
 type: line
-source: geolonia-gsi-custom
+source: v3
 source-layer: waterway
 minzoom: 14
 filter:

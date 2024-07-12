@@ -1,6 +1,6 @@
 id: landuse-cemetery
 type: fill
-source: geolonia-gsi-custom
+source: v3
 source-layer: landuse
 filter:
   - '=='

@@ -17,17 +17,22 @@ layout:
   line-cap: butt
   line-join: bevel
 paint:
-  line-color: !!inc/file layers/components/road-color.yml
+  line-color:
+    - step
+    - - zoom
+    - '#ffffff'
+    - 16
+    - '#f5f5f5'
   line-width:
     - interpolate
     - - exponential
-      - 0.9 # カーブが大きい
+      - 0.9
     - - zoom
-    - 13.5 # zl 8
-    - 0    # 0 から始めて
-    - 14    # zl 9 から本格的に描画
+    - 13.5
+    - 0
+    - 14
     - 1.2
-    - 16   # zl 16 で building の表示が始まり、太さコントロールが必要になる
+    - 16
     - 2.2
-    - 20   # 最大zl, つまり20で
-    - 16   # 太さ20 ならはみ出さない
+    - 20
+    - 16
