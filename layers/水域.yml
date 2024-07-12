@@ -9,7 +9,7 @@ paint:
     - - linear
     - - zoom
     - 8
-    - rgba(190,210,255,1)
+    - rgba(100,203,249,1)
   fill-opacity:
     - interpolate
     - - linear
