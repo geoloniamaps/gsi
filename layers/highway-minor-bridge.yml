@@ -25,7 +25,12 @@ filter:
     - rdCtg
     - 3
 paint:
-  line-color: !!inc/file layers/components/road-color.yml
+  line-color:
+    - step
+    - - zoom
+    - '#ffffff'
+    - 16
+    - '#f5f5f5'
   line-width:
     base: 1.2
     stops:

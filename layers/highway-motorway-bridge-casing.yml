@@ -32,4 +32,24 @@ paint:
     - 0
     - 11
     - 1
-  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+  line-width:
+    - interpolate
+    - - exponential
+      - 0.9
+    - - zoom
+    - 8
+    - 0
+    - 9
+    - 0.6
+    - 12
+    - 0.9
+    - 14
+    - 4
+    - 16
+    - 14
+    - 18
+    - 24
+    - 19
+    - 72
+    - 20
+    - 166

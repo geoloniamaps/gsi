@@ -14,7 +14,7 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: 'rgba(68,68,68,0.7)'
+  line-color: rgba(68,68,68,0.7)
   line-dasharray:
     - 3
     - 1
