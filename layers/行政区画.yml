@@ -1,0 +1,6 @@
+id: 行政区画
+type: fill
+source: v
+source-layer: AdmArea
+paint:
+  fill-color: rgba(255,255,255,1)

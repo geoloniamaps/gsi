@@ -1,8 +1,0 @@
-id: geolonia-water-ocean
-type: fill
-source: v3
-source-layer: water
-layout:
-  visibility: visible
-paint:
-  fill-color: '#65cbf9'

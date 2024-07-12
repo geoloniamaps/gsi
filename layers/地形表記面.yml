@@ -1,0 +1,44 @@
+id: 地形表記面
+type: fill
+source: v
+source-layer: TpgphArea
+filter:
+  - step
+  - - zoom
+  - - any
+    - - '!'
+      - - has
+        - vt_flag17
+    - - in
+      - - get
+        - vt_flag17
+      - - literal
+        - - 0
+          - 1
+  - 17
+  - - in
+    - - get
+      - vt_flag17
+    - - literal
+      - - 1
+        - 2
+paint:
+  fill-color:
+    - match
+    - - get
+      - vt_code
+    - 7401
+    - rgba(200,250,230,1)
+    - 7402
+    - rgba(217,217,217,1)
+    - 7403
+    - rgba(235,242,235,1)
+    - rgba(0,0,0,0)
+  fill-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 10
+    - 0
+    - 11
+    - 1

@@ -2,14 +2,10 @@ id: background
 type: background
 paint:
   background-color:
-    stops:
-    - - 1
-      - '#f2f5d6'
-    - - 5
-      - '#dae2c1'
-    - - 8
-      - '#EDE6DD'
-    - - 10
-      - '#e6e5e3'
-    - - 16
-      - '#f5f5f5'
+    - step
+    - - zoom
+    - rgba(255,255,255,1)
+    - 4
+    - rgba(190,210,255,1)
+    - 8
+    - rgba(255,255,255,1)

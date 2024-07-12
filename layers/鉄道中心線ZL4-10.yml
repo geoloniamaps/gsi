@@ -1,0 +1,45 @@
+id: 鉄道中心線ZL4-10
+maxzoom: 11
+type: line
+source: v
+source-layer: RailCL
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_rtcode
+    - 地下鉄
+    - rgba(200,160,60,1)
+    - rgb(100,100,100)
+  line-opacity:
+    - match
+    - - get
+      - vt_railstate
+    - - トンネル
+      - 地下
+    - 0.5
+    - 1
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 4
+    - 2
+    - 8
+    - 2
+    - 10
+    - - '*'
+      - - case
+        - - '=='
+          - - get
+            - vt_rtcode
+          - JR
+        - 2
+        - 1.25
+      - - case
+        - - '=='
+          - - get
+            - vt_sngldbl
+          - 複線以上
+        - 2
+        - 1

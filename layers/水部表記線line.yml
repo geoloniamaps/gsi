@@ -1,0 +1,11 @@
+id: 水部表記線line
+type: line
+source: v
+source-layer: WRltLine
+filter:
+  - '=='
+  - - geometry-type
+  - LineString
+paint:
+  line-color: rgba(186,108,44,1)
+  line-width: 1

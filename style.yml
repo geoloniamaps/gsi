@@ -1,163 +1,143 @@
 version: 8
-name: GSI Japan + OpenStreetMap based style for Geolonia
-center: [135.39, 37.46]
-zoom: 5
+name: geoloniamaps/smartcity-base
+glyphs: https://gsi-cyberjapan.github.io/optimal_bvmap/glyphs/{fontstack}/{range}.pbf
+sprite: https://gsi-cyberjapan.github.io/optimal_bvmap/sprite/std
+zoom: 4
+center: [137.94, 34.55]
 sources:
-  gsi-japan:
+  v:
     type: vector
-    url: https://tileserver.geolonia.com/gsi_experimental_bvmap/tiles.json?key=YOUR-API-KEY
-    minzoom: 5
-  v3:
-    type: vector
-    url: https://tileserver.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
-  dem:
-    type: raster-dem
-    url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
-    attribution: <a href="https://www.gsi.go.jp/" target="_blank">&copy; GSI Japan</a>
-sprite: https://geoloniamaps.github.io/gsi/gsi
-glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+    minzoom: 4
+    maxzoom: 16
+    tiles:
+      - >-
+        pmtiles://https://cyberjapandata.gsi.go.jp/xyz/optimal_bvmap-v1/optimal_bvmap-v1.pmtiles/{z}/{x}/{y}
+    attribution: 国土地理院最適化ベクトルタイル(標準地図風スタイル)
+metadata:
+  geolonia:minzoom: 4
+  geolonia:maxzoom: 20
 layers:
   - !!inc/file layers/background.yml
-  - !!inc/file layers/landcover-grass.yml
-  - !!inc/file layers/landcover-wood-blur.yml
-  - !!inc/file layers/landcover-wood.yml
-  - !!inc/file layers/landcover-grass-park.yml
-  - !!inc/file layers/geolonia-water-ocean.yml
-  - !!inc/file layers/water-blur.yml
-  - !!inc/file layers/water-blur-gsi.yml
-  - !!inc/file layers/water-gsi.yml
-  - !!inc/file layers/water.yml
-  - !!inc/file layers/oc-ocean.yml
-  - !!inc/file layers/oc-glacier.yml
-  - !!inc/file layers/oc-landuse-commercial-ja.yml
-  - !!inc/file layers/oc-landuse-commercial.yml
-  - !!inc/file layers/hillshading.yml
-  - !!inc/file layers/oc-waterway-river-ja.yml
-  - !!inc/file layers/oc-waterway-river.yml
-  - !!inc/file layers/oc-waterway-name-ja.yml
-  - !!inc/file layers/oc-waterway-name.yml
-  - !!inc/file layers/oc-lake-blur.yml
-  - !!inc/file layers/oc-lake-ja.yml
-  - !!inc/file layers/oc-lake.yml
-
-  # 都道府県堺（GSIが低ズームで表示していないため）
-  - !!inc/file layers/oc-boundary-land-level-4-ja.yml
-
-  - !!inc/file layers/oc-water-name-ocean.yml
-  - !!inc/file layers/oc-water-name-other.yml
-  - !!inc/file layers/oc-motorway.yml
-  - !!inc/file layers/nt-water-name-ocean.yml
-  - !!inc/file layers/nt-water-name-river.yml
-  - !!inc/file layers/landuse-commercial.yml
-  - !!inc/file layers/landuse-industrial.yml
-  - !!inc/file layers/park.yml
-  - !!inc/file layers/landuse-cemetery.yml
-  - !!inc/file layers/landuse-hospital.yml
-  - !!inc/file layers/landuse-school.yml
-  - !!inc/file layers/landuse-railway.yml
-  - !!inc/file layers/waterway_tunnel.yml
-  - !!inc/file layers/waterway-other.yml
-  - !!inc/file layers/waterway-stream-canal.yml
-  - !!inc/file layers/waterway-name.yml
-  - !!inc/file layers/water-name-lakeline.yml
-  - !!inc/file layers/water-name-ocean.yml
-  - !!inc/file layers/water-name-other.yml
-
-  # Shadow effects
-  - !!inc/file layers/highway-minor-bridge-casing-blur.yml
-  - !!inc/file layers/highway-secondary-bridge-casing-blur.yml
-  - !!inc/file layers/highway-primary-bridge-casing-blur.yml
-  - !!inc/file layers/highway-motorway-bridge-casing-blur.yml
-
-  # Road casings
-  - !!inc/file layers/highway-motorway-casing.yml
-
-  # Roads
-  - !!inc/file layers/highway-minor.yml
-  - !!inc/file layers/highway-secondary.yml
-  - !!inc/file layers/highway-primary.yml
-  - !!inc/file layers/road-outline.yml
-  - !!inc/file layers/highway-motorway.yml
-
-  # Buildings
-  - !!inc/file layers/building.yml
-  - !!inc/file layers/building-nowall.yml
-  - !!inc/file layers/structurea-casing.yml
-  - !!inc/file layers/structurea.yml
-
-  # Tunnels
-  - !!inc/file layers/highway-secondary-tunnel-casing.yml
-  - !!inc/file layers/highway-secondary-tunnel.yml
-  - !!inc/file layers/highway-primary-tunnel-casing.yml
-  - !!inc/file layers/highway-primary-tunnel.yml
-  - !!inc/file layers/highway-motorway-tunnel-casing.yml
-  - !!inc/file layers/highway-motorway-tunnel.yml
-
-  # Bridges
-  - !!inc/file layers/highway-minor-bridge-casing.yml
-  - !!inc/file layers/highway-minor-bridge.yml
-  - !!inc/file layers/highway-secondary-bridge-casing.yml
-  - !!inc/file layers/highway-secondary-bridge.yml
-  - !!inc/file layers/highway-primary-bridge-casing.yml
-  - !!inc/file layers/highway-primary-bridge.yml
-  - !!inc/file layers/highway-motorway-bridge-casing.yml
-  - !!inc/file layers/highway-motorway-bridge.yml
-
-  # Railways
-  - !!inc/file layers/railway-subway.yml
-  - !!inc/file layers/railway-tunnel.yml
-  - !!inc/file layers/railway-minor.yml
-  - !!inc/file layers/railway-minor-hatching.yml
-  - !!inc/file layers/railway-secondary.yml
-  - !!inc/file layers/railway-secondary-hatching.yml
-  - !!inc/file layers/railway-jr.yml
-  - !!inc/file layers/railway-jr-hatching.yml
-  - !!inc/file layers/railway-jr-bridge.yml
-  - !!inc/file layers/railway-secondary-bridge.yml
-  - !!inc/file layers/railway-secondary-bridge-hatching.yml
-  - !!inc/file layers/railway-jr-bridge-hatching.yml
-
-  - !!inc/file layers/railway-jr-high-speed.yml
-  - !!inc/file layers/railway-jr-high-speed-hatching.yml
-
-  - !!inc/file layers/boundary-sea.yml
-  - !!inc/file layers/boundary.yml
-  - !!inc/file layers/building-3d.yml
-  - !!inc/file layers/structurea-3d.yml
-  - !!inc/file layers/poi.yml
-  - !!inc/file layers/oc-label-town.yml
-  - !!inc/file layers/oc-label-town-ja.yml
-  - !!inc/file layers/oc-label-pref.yml
-  - !!inc/file layers/oc-label-pref-ja.yml
-  - !!inc/file layers/oc-label-pref-capital-ja.yml
-  - !!inc/file layers/oc-label-pref-capital-popular-ja.yml
-  - !!inc/file layers/oc-label-country.yml
-  - !!inc/file layers/poi-z16.yml
-  - !!inc/file layers/poi-z16-primary.yml
-  - !!inc/file layers/poi-z15.yml
-  - !!inc/file layers/poi-z14.yml
-  - !!inc/file layers/poi-z13.yml
-  - !!inc/file layers/poi-worship.yml
-  - !!inc/file layers/poi-worship-primary.yml
-  - !!inc/file layers/poi-park.yml
-  - !!inc/file layers/poi-park-primary.yml
-  - !!inc/file layers/poi-railway.yml
-  - !!inc/file layers/poi-airport-primary.yml
-  - !!inc/file layers/poi-mountain.yml
-  - !!inc/file layers/road_shield_national.yml
-  - !!inc/file layers/road_shield_highway.yml
-  - !!inc/file layers/railway-label.yml
-  - !!inc/file layers/airport-label-major.yml
-  - !!inc/file layers/place-village.yml
-  - !!inc/file layers/place-town.yml
-  - !!inc/file layers/place-island-name.yml
-  - !!inc/file layers/place-city-rank10.yml
-  - !!inc/file layers/place-city-rank9.yml
-  - !!inc/file layers/place-city-rank8.yml
-  - !!inc/file layers/place-city-rank7.yml
-  - !!inc/file layers/place-city-rank6.yml
-  - !!inc/file layers/place-city-rank5.yml
-  - !!inc/file layers/place-city-rank4.yml
-  - !!inc/file layers/place-city-rank3.yml
-  - !!inc/file layers/place-city-rank2.yml
-  - !!inc/file layers/place-city-capital.yml
+  - !!inc/file layers/行政区画.yml
+  - !!inc/file layers/水域.yml
+  - !!inc/file layers/地形表記面.yml
+  - !!inc/file layers/海岸線.yml
+  - !!inc/file layers/河川中心線人工水路地下.yml
+  - !!inc/file layers/河川中心線枯れ川部.yml
+  - !!inc/file layers/河川中心線.yml
+  - !!inc/file layers/海岸線堤防等に接する部分破線.yml
+  - !!inc/file layers/水涯線.yml
+  - !!inc/file layers/水涯線堤防等に接する部分破線.yml
+  - !!inc/file layers/水部表記線polygon.yml
+  - !!inc/file layers/水部表記線line.yml
+  - !!inc/file layers/水部表記線point.yml
+  - !!inc/file layers/行政区画界線25000所属界（所属を明示する境界線）.yml
+  - !!inc/file layers/行政区画界線25000市区町村界.yml
+  - !!inc/file layers/行政区画界線25000都府県界及び北海道総合振興局・振興局界.yml
+  - !!inc/file layers/行政区画界線地方界.yml
+  - !!inc/file layers/行政区画界線国の所属界.yml
+  - !!inc/file layers/等高線.yml
+  - !!inc/file layers/等高線数値部.yml
+  - !!inc/file layers/等深線.yml
+  - !!inc/file layers/等深線数値部.yml
+  - !!inc/file layers/地形表記線.yml
+  - !!inc/file layers/水部構造物面.yml
+  - !!inc/file layers/水部構造物線.yml
+  - !!inc/file layers/道路中心線ZL4-10国道.yml
+  - !!inc/file layers/鉄道中心線ZL4-10.yml
+  - !!inc/file layers/道路中心線ZL4-10高速.yml
+  - !!inc/file layers/道路中心線ククリ0.yml
+  - !!inc/file layers/道路中心線色0.yml
+  - !!inc/file layers/鉄道中心線駅ククリ0.yml
+  - !!inc/file layers/鉄道中心線0.yml
+  - !!inc/file layers/鉄道中心線旗竿0.yml
+  - !!inc/file layers/道路中心線ククリ橋0.yml
+  - !!inc/file layers/道路中心線色橋0.yml
+  - !!inc/file layers/建築物0.yml
+  - !!inc/file layers/建築物の外周線0.yml
+  - !!inc/file layers/鉄道中心線橋ククリ黒0.yml
+  - !!inc/file layers/鉄道中心線橋ククリ白0.yml
+  - !!inc/file layers/鉄道中心線橋駅ククリ0.yml
+  - !!inc/file layers/鉄道中心線橋0.yml
+  - !!inc/file layers/鉄道中心線旗竿橋0.yml
+  - !!inc/file layers/道路中心線ククリ1.yml
+  - !!inc/file layers/道路中心線色1.yml
+  - !!inc/file layers/鉄道中心線駅ククリ1.yml
+  - !!inc/file layers/鉄道中心線1.yml
+  - !!inc/file layers/鉄道中心線旗竿1.yml
+  - !!inc/file layers/道路中心線ククリ橋1.yml
+  - !!inc/file layers/道路中心線色橋1.yml
+  - !!inc/file layers/鉄道中心線橋ククリ黒1.yml
+  - !!inc/file layers/鉄道中心線橋ククリ白1.yml
+  - !!inc/file layers/鉄道中心線橋駅ククリ1.yml
+  - !!inc/file layers/鉄道中心線橋1.yml
+  - !!inc/file layers/鉄道中心線旗竿橋1.yml
+  - !!inc/file layers/建築物1.yml
+  - !!inc/file layers/建築物の外周線1.yml
+  - !!inc/file layers/道路中心線ククリ2.yml
+  - !!inc/file layers/道路中心線色2.yml
+  - !!inc/file layers/鉄道中心線駅ククリ2.yml
+  - !!inc/file layers/鉄道中心線2.yml
+  - !!inc/file layers/鉄道中心線旗竿2.yml
+  - !!inc/file layers/道路中心線ククリ橋2.yml
+  - !!inc/file layers/道路中心線色橋2.yml
+  - !!inc/file layers/鉄道中心線橋ククリ黒2.yml
+  - !!inc/file layers/鉄道中心線橋ククリ白2.yml
+  - !!inc/file layers/鉄道中心線橋駅ククリ2.yml
+  - !!inc/file layers/鉄道中心線橋2.yml
+  - !!inc/file layers/鉄道中心線旗竿橋2.yml
+  - !!inc/file layers/建築物2.yml
+  - !!inc/file layers/建築物の外周線2.yml
+  - !!inc/file layers/道路中心線ククリ3.yml
+  - !!inc/file layers/道路中心線色3.yml
+  - !!inc/file layers/鉄道中心線駅ククリ3.yml
+  - !!inc/file layers/鉄道中心線3.yml
+  - !!inc/file layers/鉄道中心線旗竿3.yml
+  - !!inc/file layers/道路中心線ククリ橋3.yml
+  - !!inc/file layers/道路中心線色橋3.yml
+  - !!inc/file layers/鉄道中心線橋ククリ黒3.yml
+  - !!inc/file layers/鉄道中心線橋ククリ白3.yml
+  - !!inc/file layers/鉄道中心線橋駅ククリ3.yml
+  - !!inc/file layers/鉄道中心線橋3.yml
+  - !!inc/file layers/鉄道中心線旗竿橋3.yml
+  - !!inc/file layers/建築物3.yml
+  - !!inc/file layers/建築物の外周線3.yml
+  - !!inc/file layers/道路中心線ククリ4.yml
+  - !!inc/file layers/道路中心線色4.yml
+  - !!inc/file layers/鉄道中心線駅ククリ4.yml
+  - !!inc/file layers/鉄道中心線4.yml
+  - !!inc/file layers/鉄道中心線旗竿4.yml
+  - !!inc/file layers/道路中心線ククリ橋4.yml
+  - !!inc/file layers/道路中心線色橋4.yml
+  - !!inc/file layers/鉄道中心線橋ククリ黒4.yml
+  - !!inc/file layers/鉄道中心線橋ククリ白4.yml
+  - !!inc/file layers/鉄道中心線橋駅ククリ4.yml
+  - !!inc/file layers/鉄道中心線橋4.yml
+  - !!inc/file layers/鉄道中心線旗竿橋4.yml
+  - !!inc/file layers/建築物4.yml
+  - !!inc/file layers/建築物の外周線4.yml
+  - !!inc/file layers/道路中心線破線.yml
+  - !!inc/file layers/道路中心線階段.yml
+  - !!inc/file layers/鉄道中心線地下トンネルククリ.yml
+  - !!inc/file layers/鉄道中心線地下トンネル.yml
+  - !!inc/file layers/軌道の中心線トンネル.yml
+  - !!inc/file layers/道路縁.yml
+  - !!inc/file layers/道路構成線トンネル内の道路.yml
+  - !!inc/file layers/道路構成線分離帯.yml
+  - !!inc/file layers/軌道の中心線.yml
+  - !!inc/file layers/特定地区界.yml
+  - !!inc/file layers/構造物面.yml
+  - !!inc/file layers/構造物面の外周線.yml
+  - !!inc/file layers/構造物線.yml
+  - !!inc/file layers/送電線.yml
+  - !!inc/file layers/送電線破線.yml
+  - !!inc/file layers/注記シンボル付き重なり.yml
+  - !!inc/file layers/注記道路番号.yml
+  - !!inc/file layers/注記シンボル付きソート順100以上.yml
+  - !!inc/file layers/注記シンボルなし縦ソート順100以上.yml
+  - !!inc/file layers/注記シンボルなし横ソート順100以上.yml
+  - !!inc/file layers/注記角度付き線.yml
+  - !!inc/file layers/注記シンボル付きソート順100未満.yml
+  - !!inc/file layers/注記シンボルなし縦ソート順100未満.yml
+  - !!inc/file layers/注記シンボルなし横ソート順100未満.yml
+  

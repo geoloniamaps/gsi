@@ -1,0 +1,97 @@
+id: 鉄道中心線駅ククリ0
+minzoom: 11
+maxzoom: 17
+type: line
+source: v
+source-layer: RailCL
+filter:
+  - all
+  - - '!'
+    - - in
+      - - get
+        - vt_railstate
+      - - literal
+        - - トンネル
+          - 雪覆い
+          - 地下
+          - 橋・高架
+  - - '=='
+    - - get
+      - vt_sngldbl
+    - 駅部分
+  - - '=='
+    - - get
+      - vt_lvorder
+    - 0
+paint:
+  line-color: rgb(100,100,100)
+  line-width:
+    - let
+    - width
+    - - +
+      - 400
+      - - '*'
+        - - match
+          - - get
+            - vt_rtcode
+          - JR
+          - 600
+          - JR以外
+          - 600
+          - 地下鉄
+          - 500
+          - 路面
+          - 400
+          - 索道
+          - 400
+          - 特殊鉄道
+          - 300
+          - 側線
+          - 300
+          - 0
+        - - case
+          - - in
+            - - get
+              - vt_sngldbl
+            - - literal
+              - - 複線以上
+                - 駅部分
+          - 2
+          - 1
+    - - interpolate
+      - - exponential
+        - 2
+      - - zoom
+      - 0
+      - - match
+        - - get
+          - vt_rtcode
+        - JR
+        - - case
+          - - '=='
+            - - get
+              - vt_sngldbl
+            - 複線以上
+          - 5
+          - 4
+        - 索道
+        - 0.5
+        - 特殊鉄道
+        - 0.5
+        - - case
+          - - '=='
+            - - get
+              - vt_sngldbl
+            - 複線以上
+          - 4
+          - 3
+      - 14
+      - - '*'
+        - - ^
+          - 2
+          - -8
+        - - var
+          - width
+      - 23
+      - - var
+        - width

@@ -1,0 +1,16 @@
+id: 道路構成線トンネル内の道路
+minzoom: 17
+type: line
+source: v
+source-layer: RdCompt
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 2401
+paint:
+  line-color: rgba(100,100,100,1)
+  line-dasharray:
+    - 10
+    - 8
+  line-width: 1

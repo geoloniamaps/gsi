@@ -1,0 +1,30 @@
+id: 行政区画界線25000市区町村界
+minzoom: 11
+type: line
+source: v
+source-layer: AdmBdry
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 1212
+layout:
+  line-cap: square
+paint:
+  line-color: rgba(68,0,128,1)
+  line-dasharray:
+    - 6
+    - 2
+    - 1
+    - 2
+    - 1
+    - 2
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 5
+    - 0
+    - 6
+    - 1
+  line-width: 1.5

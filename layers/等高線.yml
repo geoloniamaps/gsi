@@ -1,0 +1,60 @@
+id: 等高線
+type: line
+source: v
+source-layer: Cntr
+paint:
+  line-color: rgba(176,196,222,0.5)
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 9
+    - 0.7
+    - 12
+    - 0.7
+    - 13
+    - - case
+      - - '=='
+        - - '%'
+          - - get
+            - vt_alti
+          - 50
+        - 0
+      - 1.4
+      - 0.7
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 9
+    - 0
+    - 10
+    - - case
+      - - '=='
+        - - '%'
+          - - get
+            - vt_alti
+          - 50
+        - 0
+      - 1
+      - 0
+    - 14
+    - - case
+      - - '=='
+        - - '%'
+          - - get
+            - vt_alti
+          - 50
+        - 0
+      - 1
+      - 0
+    - 15
+    - 1
+    - 16
+    - - case
+      - - '=='
+        - - get
+          - vt_code
+        - 7353
+      - 0
+      - 1

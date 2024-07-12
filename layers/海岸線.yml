@@ -1,0 +1,31 @@
+id: 海岸線
+type: line
+source: v
+source-layer: Cstline
+filter:
+  - in
+  - - get
+    - vt_code
+  - - literal
+    - - 5101
+      - 5103
+paint:
+  line-color:
+    - step
+    - - zoom
+    - rgb(0,176,236)
+    - 8
+    - - match
+      - - get
+        - vt_code
+      - - 5103
+      - rgba(100,100,100,1)
+      - rgba(20,90,255,1)
+  line-offset:
+    - match
+    - - get
+      - vt_code
+    - - 5103
+    - -1
+    - 0
+  line-width: 1

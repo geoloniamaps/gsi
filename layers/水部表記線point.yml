@@ -1,0 +1,16 @@
+id: 水部表記線point
+type: symbol
+source: v
+source-layer: WRltLine
+filter:
+  - '=='
+  - - geometry-type
+  - Point
+layout:
+  icon-allow-overlap: true
+  icon-image: 流水方向
+  icon-size: 1.2
+  icon-rotate:
+    - get
+    - vt_angle
+  icon-rotation-alignment: map

@@ -1,0 +1,122 @@
+id: 道路中心線ZL4-10国道
+maxzoom: 11
+type: line
+source: v
+source-layer: RdCL
+filter:
+  - in
+  - - get
+    - vt_rdctg
+  - - literal
+    - - 主要道路
+      - 国道
+      - 都道府県道
+      - 市区町村道等
+layout:
+  line-cap: round
+  line-join: round
+  line-sort-key:
+    - get
+    - vt_drworder
+paint:
+  line-color:
+    - case
+    - - in
+      - - get
+        - vt_code
+      - - literal
+        - - 2704
+          - 2714
+          - 2724
+          - 2734
+    - - case
+      - - '=='
+        - - get
+          - vt_motorway
+        - 1
+      - rgba(49,154,172,0.5)
+      - - match
+        - - get
+          - vt_rdctg
+        - - 国道
+          - 主要道路
+        - rgba(187,109,45,0.5)
+        - 都道府県道
+        - rgba(100,100,100,0.5)
+        - 市区町村道等
+        - rgba(100,100,100,0.5)
+        - 高速自動車国道等
+        - rgba(49,154,172,0.5)
+        - その他
+        - rgba(100,100,100,0.5)
+        - 不明
+        - rgba(100,100,100,0.5)
+        - rgba(100,100,100,0.5)
+    - - match
+      - - get
+        - vt_code
+      - - 2721
+        - 2722
+        - 2723
+      - rgba(173,173,173,1)
+      - - 2731
+        - 2732
+        - 2733
+      - rgba(255,255,255,1)
+      - - case
+        - - '=='
+          - - get
+            - vt_motorway
+          - 1
+        - rgba(49,154,172,1)
+        - - match
+          - - get
+            - vt_rdctg
+          - - 国道
+            - 主要道路
+          - rgba(187,109,45,1)
+          - 都道府県道
+          - rgba(235,159,55,1)
+          - 高速自動車国道等
+          - rgba(49,154,172,1)
+          - rgba(255,255,255,1)
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 10
+    - - case
+      - - all
+        - - '!'
+          - - '=='
+            - - get
+              - vt_motorway
+            - 1
+        - - '=='
+          - - get
+            - vt_rdctg
+          - 都道府県道
+      - 0
+      - 1
+    - 11
+    - 1
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 1
+    - 9
+    - - case
+      - - all
+        - - '!'
+          - - '=='
+            - - get
+              - vt_motorway
+            - 1
+        - - '=='
+          - - get
+            - vt_rdctg
+          - 都道府県道
+      - 1.5
+      - 2

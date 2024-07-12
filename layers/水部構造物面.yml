@@ -1,0 +1,14 @@
+id: 水部構造物面
+type: fill
+source: v
+source-layer: WStrA
+paint:
+  fill-color:
+    - match
+    - - get
+      - vt_code
+    - 5401
+    - rgba(200,200,200,1)
+    - 5411
+    - rgba(255,255,255,1)
+    - rgba(0,0,0,1)

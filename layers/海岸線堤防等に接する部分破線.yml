@@ -1,0 +1,17 @@
+id: 海岸線堤防等に接する部分破線
+type: line
+source: v
+source-layer: Cstline
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 5103
+layout:
+  line-cap: round
+paint:
+  line-color: rgba(100,100,100,1)
+  line-width: 1.5
+  line-dasharray:
+    - 0.2
+    - 4

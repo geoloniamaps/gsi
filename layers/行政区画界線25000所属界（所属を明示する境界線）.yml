@@ -1,0 +1,28 @@
+id: 行政区画界線25000所属界（所属を明示する境界線）
+minzoom: 11
+type: line
+source: v
+source-layer: AdmBdry
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 1221
+layout:
+  line-cap: square
+paint:
+  line-color: rgba(68,0,128,1)
+  line-dasharray:
+    - 4
+    - 1
+    - 1
+    - 5
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 5
+    - 0
+    - 6
+    - 1
+  line-width: 1.5

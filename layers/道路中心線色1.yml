@@ -1,0 +1,252 @@
+id: 道路中心線色1
+minzoom: 11
+maxzoom: 17
+type: line
+source: v
+source-layer: RdCL
+filter:
+  - all
+  - - '=='
+    - - get
+      - vt_lvorder
+    - 1
+  - - '!'
+    - - in
+      - - get
+        - vt_code
+      - - literal
+        - - 2703
+          - 2713
+          - 2723
+          - 2733
+          - 2724
+          - 2734
+layout:
+  line-join: round
+  line-round-limit: 1.57
+  line-sort-key:
+    - get
+    - vt_drworder
+paint:
+  line-color:
+    - step
+    - - zoom
+    - - case
+      - - in
+        - - get
+          - vt_code
+        - - literal
+          - - 2704
+            - 2714
+      - - case
+        - - '=='
+          - - get
+            - vt_motorway
+          - 1
+        - rgba(49,154,172,0.5)
+        - - match
+          - - get
+            - vt_rdctg
+          - 国道
+          - rgba(187,109,45,0.5)
+          - 都道府県道
+          - rgba(235,159,55,0.5)
+          - 市区町村道等
+          - rgba(100,100,100,0.5)
+          - 高速自動車国道等
+          - rgba(49,154,172,0.5)
+          - その他
+          - rgba(100,100,100,0.5)
+          - 不明
+          - rgba(100,100,100,0.5)
+          - rgba(100,100,100,0.5)
+      - - case
+        - - '=='
+          - - get
+            - vt_motorway
+          - 1
+        - rgba(49,154,172,1)
+        - - match
+          - - get
+            - vt_rdctg
+          - 国道
+          - rgba(187,109,45,1)
+          - 都道府県道
+          - rgba(235,159,55,1)
+          - 高速自動車国道等
+          - rgba(49,154,172,1)
+          - - case
+            - - '=='
+              - - get
+                - vt_rnkwidth
+              - 3m-5.5m未満
+            - rgba(173,173,173,1)
+            - - match
+              - - get
+                - vt_code
+              - - 2721
+                - 2722
+                - 2723
+              - rgba(173,173,173,1)
+              - - 2731
+                - 2732
+                - 2733
+              - rgba(200,200,200,1)
+              - rgba(255,255,255,1)
+    - 14
+    - - case
+      - - in
+        - - get
+          - vt_code
+        - - literal
+          - - 2704
+            - 2714
+      - - case
+        - - '=='
+          - - get
+            - vt_motorway
+          - 1
+        - rgba(49,154,172,0.5)
+        - - match
+          - - get
+            - vt_rdctg
+          - 国道
+          - rgba(187,109,45,0.5)
+          - 都道府県道
+          - rgba(235,159,55,0.5)
+          - 市区町村道等
+          - rgba(100,100,100,0.5)
+          - 高速自動車国道等
+          - rgba(49,154,172,0.5)
+          - その他
+          - rgba(100,100,100,0.5)
+          - 不明
+          - rgba(100,100,100,0.5)
+          - rgba(100,100,100,0.5)
+      - - case
+        - - '=='
+          - - get
+            - vt_motorway
+          - 1
+        - rgba(49,154,172,1)
+        - - match
+          - - get
+            - vt_rdctg
+          - 国道
+          - rgba(187,109,45,1)
+          - 都道府県道
+          - rgba(235,159,55,1)
+          - 高速自動車国道等
+          - rgba(49,154,172,1)
+          - - match
+            - - get
+              - vt_code
+            - - 2721
+              - 2722
+              - 2723
+            - rgba(173,173,173,1)
+            - - 2731
+              - 2732
+              - 2733
+            - rgba(200,200,200,1)
+            - rgba(255,255,255,1)
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 13
+    - - case
+      - - all
+        - - '!'
+          - - in
+            - - get
+              - vt_rdctg
+            - - literal
+              - - 国道
+                - 都道府県道
+                - 高速自動車国道等
+        - - '=='
+          - - get
+            - vt_rnkwidth
+          - 3m-5.5m未満
+      - 0
+      - 1
+    - 14
+    - 1
+  line-width:
+    - let
+    - width
+    - - case
+      - - has
+        - vt_width
+      - - get
+        - vt_width
+      - - case
+        - - has
+          - vt_rnkwidth
+        - - match
+          - - get
+            - vt_rnkwidth
+          - 3m未満
+          - 300
+          - 3m-5.5m未満
+          - 450
+          - 5.5m-13m未満
+          - 900
+          - 13m-19.5m未満
+          - 1800
+          - 19.5m以上
+          - 2700
+          - 0
+        - 3000
+    - width2
+    - - case
+      - - has
+        - vt_rnkwidth
+      - - match
+        - - get
+          - vt_rnkwidth
+        - 3m未満
+        - 700
+        - 3m-5.5m未満
+        - 1200
+        - 5.5m-13m未満
+        - 1700
+        - 13m-19.5m未満
+        - 2200
+        - 19.5m以上
+        - 2700
+        - 0
+      - 3000
+    - - interpolate
+      - - exponential
+        - 2
+      - - zoom
+      - 11
+      - - match
+        - - get
+          - vt_rdctg
+        - 国道
+        - 2
+        - 都道府県道
+        - 1.5
+        - 高速自動車国道等
+        - 4
+        - 1
+      - 12
+      - - '*'
+        - - ^
+          - 2
+          - -9
+        - - var
+          - width2
+      - 14
+      - - '*'
+        - - ^
+          - 2
+          - -9
+        - - var
+          - width2
+      - 23
+      - - var
+        - width

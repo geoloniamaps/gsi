@@ -1,0 +1,32 @@
+id: 水域
+maxzoom: 17
+type: fill
+source: v
+source-layer: WA
+paint:
+  fill-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - rgba(190,210,255,1)
+  fill-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 10
+    - - case
+      - - in
+        - - get
+          - vt_code
+        - - literal
+          - - 5201
+            - 5202
+            - 5203
+            - 5211
+            - 5212
+            - 5290
+      - 0
+      - 1
+    - 11
+    - 1

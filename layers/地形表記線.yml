@@ -1,0 +1,30 @@
+id: 地形表記線
+type: line
+source: v
+source-layer: TpgphLine
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_code
+    - - 7571
+      - 7572
+    - rgba(20,90,255,1)
+    - rgb(200,160,60)
+  line-width: 1
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 14
+    - 0
+    - 15
+    - - case
+      - - '=='
+        - - get
+          - vt_code
+        - 7509
+      - 0
+      - 1
+    - 16
+    - 1

@@ -1,0 +1,22 @@
+id: 水涯線
+type: line
+source: v
+source-layer: WL
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_code
+    - - 5203
+      - 5233
+    - rgba(109,193,238,1)
+    - rgba(109,193,238,1)
+  line-offset:
+    - match
+    - - get
+      - vt_code
+    - - 5203
+      - 5233
+    - -1
+    - 0
+  line-width: 1

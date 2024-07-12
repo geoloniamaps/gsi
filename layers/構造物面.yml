@@ -1,0 +1,14 @@
+id: 構造物面
+type: fill
+source: v
+source-layer: StrctArea
+paint:
+  fill-color:
+    - match
+    - - get
+      - vt_code
+    - 4301
+    - rgba(255,119,51,1)
+    - 4302
+    - rgba(255,230,190,1)
+    - rgba(0,0,0,0)

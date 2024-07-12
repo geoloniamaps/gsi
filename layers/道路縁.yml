@@ -1,0 +1,20 @@
+id: 道路縁
+minzoom: 17
+type: line
+source: v
+source-layer: RdEdg
+layout:
+  line-cap: square
+  line-sort-key:
+    - get
+    - vt_drworder
+paint:
+  line-color: rgba(100,100,100,1)
+  line-width:
+    - match
+    - - get
+      - vt_code
+    - - 2203
+      - 2243
+    - 3
+    - 2

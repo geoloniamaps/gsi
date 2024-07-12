@@ -1,0 +1,19 @@
+id: 水涯線堤防等に接する部分破線
+type: line
+source: v
+source-layer: WL
+filter:
+  - in
+  - - get
+    - vt_code
+  - - literal
+    - - 5203
+      - 5233
+layout:
+  line-cap: round
+paint:
+  line-color: rgba(100,100,100,1)
+  line-width: 1.5
+  line-dasharray:
+    - 0.2
+    - 4

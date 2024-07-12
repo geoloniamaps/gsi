@@ -1,0 +1,16 @@
+id: 構造物線
+type: line
+source: v
+source-layer: StrctLine
+minzoom: 17
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_code
+    - 4201
+    - rgba(0,0,0,1)
+    - 4202
+    - rgba(100,100,100,1)
+    - rgba(0,0,0,0)
+  line-width: 1.5
