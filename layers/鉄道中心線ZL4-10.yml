@@ -9,8 +9,8 @@ paint:
     - - get
       - vt_rtcode
     - 地下鉄
-    - rgba(200,160,60,1)
-    - rgb(100,100,100)
+    - rgba(153,153,153,1)
+    - rgba(153,153,153,1)
   line-opacity:
     - match
     - - get

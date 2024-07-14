@@ -2,6 +2,8 @@ id: 等高線
 type: line
 source: v
 source-layer: Cntr
+layout:
+  visibility: none
 paint:
   line-color: rgba(176,196,222,0.5)
   line-width:

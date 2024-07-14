@@ -20,6 +20,7 @@ layout:
   text-field:
     - get
     - vt_alti
+  visibility: none
 paint:
   text-color: rgba(121,134,153,1)
   text-halo-color: rgba(255,255,255,1)

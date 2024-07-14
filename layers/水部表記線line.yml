@@ -6,6 +6,8 @@ filter:
   - '=='
   - - geometry-type
   - LineString
+layout:
+  visibility: none
 paint:
-  line-color: rgba(186,108,44,1)
+  line-color: rgba(255,163,43,1)
   line-width: 1

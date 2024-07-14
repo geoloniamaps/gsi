@@ -9,6 +9,8 @@ filter:
   - - literal
     - - 5101
       - 5103
+layout:
+  visibility: none
 paint:
   line-color:
     - step
