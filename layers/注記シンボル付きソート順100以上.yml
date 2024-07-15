@@ -179,6 +179,7 @@ filter:
           - 8103
           - 8105
 layout:
+  visibility: none
   icon-allow-overlap: false
   icon-image:
     - step

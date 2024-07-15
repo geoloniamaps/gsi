@@ -2,6 +2,8 @@ id: 送電線
 type: line
 source: v
 source-layer: PwrTrnsmL
+layout:
+  visibility: none
 paint:
   line-color: rgba(100,100,100,1)
   line-width: 0.5
