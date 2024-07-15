@@ -9,5 +9,5 @@ filter:
     - vt_code
   - 2411
 paint:
-  line-color: rgba(100,100,100,1)
+  line-color: rgba(221,221,221,1)
   line-width: 2

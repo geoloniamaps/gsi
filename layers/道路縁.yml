@@ -9,7 +9,7 @@ layout:
     - get
     - vt_drworder
 paint:
-  line-color: rgba(100,100,100,1)
+  line-color: rgba(221,221,221,1)
   line-width:
     - match
     - - get
