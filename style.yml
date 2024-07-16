@@ -140,4 +140,5 @@ layers:
   - !!inc/file layers/注記シンボル付きソート順100未満.yml
   - !!inc/file layers/注記シンボルなし縦ソート順100未満.yml
   - !!inc/file layers/注記シンボルなし横ソート順100未満.yml
+  - !!inc/file layers/注記シンボルなし横ソート_学校など.yml
   
