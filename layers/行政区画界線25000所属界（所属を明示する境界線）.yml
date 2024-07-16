@@ -10,6 +10,7 @@ filter:
   - 1221
 layout:
   line-cap: square
+  visibility: none
 paint:
   line-color: rgba(68,0,128,1)
   line-dasharray:
