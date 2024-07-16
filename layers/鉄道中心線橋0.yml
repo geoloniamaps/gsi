@@ -27,7 +27,7 @@ paint:
         - vt_rtcode
       - 地下鉄
       - rgba(0,155,191,1)
-      - rgb(100,100,100)
+      - rgb(153,153,153)
   line-width:
     - let
     - width

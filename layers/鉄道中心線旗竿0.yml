@@ -1,5 +1,5 @@
 id: 鉄道中心線旗竿0
-minzoom: 14
+minzoom: 8
 maxzoom: 17
 type: line
 source: v
@@ -51,7 +51,7 @@ paint:
       - - zoom
       - 0
       - 5
-      - 14
+      - 8
       - - '*'
         - - ^
           - 2
