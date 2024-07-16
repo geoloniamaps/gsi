@@ -11,7 +11,7 @@ filter:
 layout:
   line-cap: square
 paint:
-  line-color: rgba(68,0,128,1)
+  line-color: rgba(100,100,100,1)
   line-dasharray:
     - 7
     - 5
