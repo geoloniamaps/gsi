@@ -1,0 +1,58 @@
+id: 鉄道中心線旗竿橋3
+minzoom: 14
+maxzoom: 17
+type: line
+source: v
+source-layer: RailCL
+filter:
+  - all
+  - - '=='
+    - - get
+      - vt_rtcode
+    - JR
+  - - in
+    - - get
+      - vt_railstate
+    - 橋・高架
+  - - '!='
+    - - get
+      - vt_sngldbl
+    - 駅部分
+  - - '=='
+    - - get
+      - vt_lvorder
+    - 3
+paint:
+  line-color: rgb(255,255,255)
+  line-dasharray:
+    - literal
+    - - 5
+      - 5
+  line-width:
+    - let
+    - width
+    - - '*'
+      - 450
+      - - case
+        - - '=='
+          - - get
+            - vt_sngldbl
+          - 複線以上
+        - 2
+        - 1
+    - - interpolate
+      - - exponential
+        - 2
+      - - zoom
+      - 0
+      - 5
+      - 14
+      - - '*'
+        - - ^
+          - 2
+          - -8
+        - - var
+          - width
+      - 23
+      - - var
+        - width

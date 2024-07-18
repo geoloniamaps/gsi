@@ -1,0 +1,7 @@
+id: 等深線
+type: line
+source: v
+source-layer: Isbt
+paint:
+  line-color: rgb(20,90,255)
+  line-width: 1

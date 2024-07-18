@@ -1,0 +1,40 @@
+id: 建築物の外周線1
+type: line
+source: v
+source-layer: BldA
+filter:
+  - '=='
+  - - get
+    - vt_lvorder
+  - 1
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_code
+    - 3101
+    - rgba(180,172,159,1)
+    - 3102
+    - rgba(180,172,159,1)
+    - 3103
+    - rgba(180,172,159,1)
+    - 3111
+    - rgba(180,172,159,1)
+    - 3112
+    - rgba(180,172,159,1)
+    - rgba(0,0,0,0)
+  line-width:
+    - match
+    - - get
+      - vt_code
+    - 3101
+    - 1
+    - 3102
+    - 1
+    - 3103
+    - 1
+    - 3111
+    - 1
+    - 3112
+    - 1
+    - 0

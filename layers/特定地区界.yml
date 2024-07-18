@@ -1,0 +1,25 @@
+id: 特定地区界
+type: line
+source: v
+source-layer: SpcfArea
+paint:
+  line-color: rgba(150,150,150,1)
+  line-dasharray:
+    - 5
+    - 4
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 0
+    - 13
+    - 1
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 0
+    - 16
+    - 1

@@ -1,0 +1,8 @@
+id: 水域
+maxzoom: 17
+type: fill
+source: v
+source-layer: WA
+paint:
+  fill-color: rgba(100,203,249,1)
+  fill-opacity: 1

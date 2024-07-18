@@ -1,0 +1,80 @@
+id: 鉄道中心線橋ククリ黒4
+minzoom: 15
+maxzoom: 17
+type: line
+source: v
+source-layer: RailCL
+filter:
+  - all
+  - - '>='
+    - - get
+      - vt_railstate
+    - 橋・高架
+  - - '=='
+    - - get
+      - vt_lvorder
+    - 4
+paint:
+  line-color: rgba(0,0,0,1)
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 15
+    - 0
+    - 16
+    - 1
+  line-width:
+    - let
+    - width
+    - - +
+      - 500
+      - - '*'
+        - - match
+          - - get
+            - vt_rtcode
+          - JR
+          - 600
+          - JR以外
+          - 600
+          - 地下鉄
+          - 500
+          - 路面
+          - 400
+          - 索道
+          - 400
+          - 特殊鉄道
+          - 300
+          - 側線
+          - 300
+          - 0
+        - - case
+          - - '=='
+            - - get
+              - vt_sngldbl
+            - 複線以上
+          - 2
+          - 1
+    - - interpolate
+      - - exponential
+        - 2
+      - - zoom
+      - 14
+      - - '*'
+        - - ^
+          - 2
+          - -8
+        - - var
+          - width
+      - 23
+      - - '*'
+        - - match
+          - - get
+            - vt_rtcode
+          - JR以外
+          - 0.6
+          - 地下鉄
+          - 0.6
+          - 1
+        - - var
+          - width

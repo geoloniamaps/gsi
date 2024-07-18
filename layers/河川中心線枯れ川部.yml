@@ -1,0 +1,28 @@
+id: 河川中心線枯れ川部
+type: line
+source: v
+source-layer: RvrCL
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 5302
+paint:
+  line-color:
+    - step
+    - - zoom
+    - rgba(190,210,255,1)
+    - 16
+    - rgba(20,90,255,1)
+  line-dasharray:
+    - 10
+    - 5
+  line-width: 1
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 10
+    - 0
+    - 14
+    - 1

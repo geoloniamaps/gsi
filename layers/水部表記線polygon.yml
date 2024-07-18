@@ -1,0 +1,11 @@
+id: 水部表記線polygon
+type: fill
+source: v
+source-layer: WRltLine
+filter:
+  - '=='
+  - - geometry-type
+  - Polygon
+paint:
+  fill-color: rgba(255,255,255,1)
+  fill-outline-color: rgba(100,100,100,1)

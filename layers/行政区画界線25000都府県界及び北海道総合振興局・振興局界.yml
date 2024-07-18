@@ -1,0 +1,35 @@
+id: 行政区画界線25000都府県界及び北海道総合振興局・振興局界
+type: line
+source: v
+source-layer: AdmBdry
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 1211
+layout:
+  line-cap: round
+  visibility: none
+paint:
+  line-color: rgba(107,100,113,1)
+  line-dasharray:
+    - 7
+    - 5
+    - 0.1
+    - 5
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 5
+    - 0
+    - 6
+    - 1
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 1
+    - 9
+    - 2.5

@@ -1,0 +1,59 @@
+id: 軌道の中心線トンネル
+minzoom: 17
+type: line
+source: v
+source-layer: RailTrCL
+filter:
+  - '!'
+  - - in
+    - - get
+      - vt_code
+    - - literal
+      - - 2801
+        - 2803
+        - 2806
+        - 2811
+        - 2813
+        - 2816
+        - 2821
+        - 2823
+        - 2826
+        - 2831
+        - 2833
+        - 2836
+        - 2841
+        - 2843
+        - 2846
+        - 2888
+        - 2899
+layout:
+  line-sort-key:
+    - get
+    - vt_drworder
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_code
+    - - 2802
+      - 2804
+      - 2812
+      - 2814
+      - 2832
+      - 2834
+    - rgba(100,0,0,1)
+    - rgba(100,100,100,1)
+  line-dasharray:
+    - 8
+    - 8
+  line-width:
+    - match
+    - - get
+      - vt_code
+    - - 2802
+      - 2804
+    - 3
+    - - 2812
+      - 2814
+    - 2
+    - 1

@@ -1,0 +1,28 @@
+id: 河川中心線人工水路地下
+type: line
+source: v
+source-layer: RvrCL
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 5322
+paint:
+  line-color:
+    - step
+    - - zoom
+    - rgba(190,210,255,1)
+    - 16
+    - rgba(20,90,255,1)
+  line-dasharray:
+    - 5
+    - 10
+  line-width: 1
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 10
+    - 0
+    - 14
+    - 1

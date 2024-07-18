@@ -1,0 +1,82 @@
+id: 水部構造物線
+type: line
+source: v
+source-layer: WStrL
+filter:
+  - step
+  - - zoom
+  - - any
+    - - '!'
+      - - has
+        - vt_flag17
+    - - in
+      - - get
+        - vt_flag17
+      - - literal
+        - - 0
+          - 1
+  - 17
+  - - in
+    - - get
+      - vt_flag17
+    - - literal
+      - - 1
+        - 2
+paint:
+  line-color:
+    - match
+    - - get
+      - vt_code
+    - 5521
+    - rgba(20,90,255,1)
+    - rgba(100,100,100,1)
+  line-gap-width:
+    - match
+    - - get
+      - vt_code
+    - 5514
+    - 3
+    - 0
+  line-opacity:
+    - match
+    - - get
+      - vt_code
+    - 5532
+    - 0.5
+    - 1
+  line-width:
+    - step
+    - - zoom
+    - - match
+      - - get
+        - vt_code
+      - 5501
+      - 1
+      - 5511
+      - 2
+      - 5514
+      - 1
+      - 5515
+      - 3.5
+      - 5521
+      - 2
+      - 5532
+      - 1
+      - 0
+    - 17
+    - - match
+      - - get
+        - vt_code
+      - 5501
+      - 1
+      - 5511
+      - 2
+      - 5514
+      - 1
+      - 5515
+      - 1
+      - 5521
+      - 2
+      - 5532
+      - 1
+      - 0

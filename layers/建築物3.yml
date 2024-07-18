@@ -1,0 +1,25 @@
+id: 建築物3
+type: fill
+source: v
+source-layer: BldA
+filter:
+  - '=='
+  - - get
+    - vt_lvorder
+  - 3
+paint:
+  fill-color:
+    - match
+    - - get
+      - vt_code
+    - 3101
+    - rgba(255,230,190,1)
+    - 3102
+    - rgba(255,187,153,1)
+    - 3103
+    - rgba(255,119,51,1)
+    - 3111
+    - rgba(255,187,153,1)
+    - 3112
+    - rgba(255,187,153,1)
+    - rgba(0,0,0,0)

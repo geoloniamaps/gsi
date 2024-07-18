@@ -1,0 +1,33 @@
+id: 注記シンボルなし横ソート学校など
+type: symbol
+source: v
+source-layer: Anno
+filter:
+  - all
+  - - '=='
+    - - geometry-type
+    - Point
+  - - in
+    - - get
+      - vt_code
+    - - literal
+      - - 850
+        # - 880
+        - 881
+        - 885
+layout:
+  text-allow-overlap: false
+  text-anchor: center
+  text-font: [ NotoSansJP-Regular ]
+  text-justify: auto
+  text-size: 14
+  text-field:
+    - get
+    - vt_text
+  text-max-width: 100
+  text-writing-mode:
+    - horizontal
+paint:
+  text-color: rgba(50,50,50,1)
+  text-halo-color: rgba(255,255,255,1)
+  text-halo-width: 1

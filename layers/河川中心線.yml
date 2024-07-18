@@ -1,0 +1,55 @@
+id: 河川中心線
+type: line
+source: v
+source-layer: RvrCL
+filter:
+  - '!'
+  - - in
+    - - get
+      - vt_code
+    - - literal
+      - - 5302
+        - 5322
+paint:
+  line-color:
+    - step
+    - - zoom
+    - - match
+      - - get
+        - vt_code
+      - 5321
+      - rgba(100,100,100,1)
+      - rgba(190,210,255,1)
+    - 16
+    - - match
+      - - get
+        - vt_code
+      - 5321
+      - rgba(100,100,100,1)
+      - rgba(164,201,208,1)
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 15
+    - - match
+      - - get
+        - vt_code
+      - 5321
+      - 0.5
+      - 1
+    - 16
+    - - match
+      - - get
+        - vt_code
+      - 5321
+      - 2
+      - 1
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 10
+    - 0
+    - 14
+    - 1
