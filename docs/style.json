@@ -26,7 +26,7 @@
     }
   },
   "sprite": "https://geoloniamaps.github.io/gsi/gsi",
-  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "glyphs": "https://cdn.jsdelivr.net/gh/geolonia/glyphs.geolonia.com@master/public/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",

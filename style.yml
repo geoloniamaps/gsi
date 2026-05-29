@@ -19,7 +19,7 @@ sources:
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://www.gsi.go.jp/" target="_blank">&copy; GSI Japan</a>
 sprite: https://geoloniamaps.github.io/gsi/gsi
-glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+glyphs: https://cdn.jsdelivr.net/gh/geolonia/glyphs.geolonia.com@master/public/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
